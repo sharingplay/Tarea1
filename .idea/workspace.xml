@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a817d64-b490-4f30-8939-7a1861f09ed5" name="Default Changelist" comment="" />
+    <list default="true" id="9a817d64-b490-4f30-8939-7a1861f09ed5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ Componentes/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VistaProductor/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VistaPublicoGeneral/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/brand/bootstrap-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/brand/bootstrap-solid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/css/heroic-features.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1i1PPQuHlywg1U9kfmQ3gK28Zo7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/VistaAdministrador/GestiónDeCategorias" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Computadores/Cursos Practicos/angular/my-app" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ramir\WebstormProjects\Tarea1" />
+      <recent name="C:\Users\ramir\WebstormProjects\Tarea1\VistaProductor" />
+      <recent name="C:\Users\ramir\WebstormProjects\Tarea1\VistaAdministrador\GestiónDeCategorias" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -28,11 +112,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601072100236</updated>
-      <workItem from="1601072101339" duration="337000" />
+      <workItem from="1601072101339" duration="1999000" />
+      <workItem from="1601143654915" duration="1054000" />
+      <workItem from="1601144863026" duration="1972000" />
+      <workItem from="1601174509965" duration="841000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601173754332">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-3840.0.1280.680@0.0.1536.824" timestamp="1601144878661" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601173754332" />
   </component>
 </project>

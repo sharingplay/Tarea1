@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CustomHeaderComponent } from './components/custom-header/custom-header.component';
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
 import { AdministracionAfiliacionesComponent } from './views/administracion-afiliaciones/administracion-afiliaciones.component';
+import { TitleComponent } from './components/title/title.component';
 
 
 
@@ -16,6 +17,7 @@ import { AdministracionAfiliacionesComponent } from './views/administracion-afil
     CustomFooterComponent,
     routingComponents,
     AdministracionAfiliacionesComponent,
+    TitleComponent,
 
   ],
   imports: [

@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-footer/custom-footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/custom-footer/custom-footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601342113781</updated>
-      <workItem from="1601342114954" duration="1006000" />
+      <workItem from="1601342114954" duration="1724000" />
     </task>
     <servers />
   </component>

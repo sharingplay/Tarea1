@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Tarea1"
+    }
+  },
+  "defaultProject": "Tarea1",
+  "cli": {
+    "analytics": "23461006-30ec-43c5-a457-c4777e742a84"
+  }
 }

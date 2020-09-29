@@ -1,12 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomHeaderComponent } from './components/custom-header/custom-header.component';
+import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
+import { AdministracionAfiliacionesComponent } from './views/administracion-afiliaciones/administracion-afiliaciones.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomHeaderComponent,
+    CustomFooterComponent,
+    routingComponents,
+    AdministracionAfiliacionesComponent,
+
   ],
   imports: [
     BrowserModule,

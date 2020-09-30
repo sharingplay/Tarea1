@@ -2,5 +2,10 @@
 
 <app-subtitle text="Catagorías Activas actualmente."></app-subtitle>
 
+<ul>
+
+    <app-category-tier *ngFor='let category of categories' [name]='category[0]' [id]='category[1]'></app-category-tier>
+</ul>
+
 <app-category-tier></app-category-tier>
 

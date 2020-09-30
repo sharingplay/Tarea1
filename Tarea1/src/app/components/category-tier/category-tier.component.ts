@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-category-tier',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryTierComponent implements OnInit {
 
+  @Input() id;
+  @Input() name;
   constructor() { }
 
   ngOnInit(): void {

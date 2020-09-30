@@ -8,6 +8,8 @@ import { CustomFooterComponent } from './components/custom-footer/custom-footer.
 import { AdministracionAfiliacionesComponent } from './views/administracion-afiliaciones/administracion-afiliaciones.component';
 import { TitleComponent } from './components/title/title.component';
 import { GestionCategoriasComponent } from './views/gestion-categorias/gestion-categorias.component';
+import { CategoryTierComponent } from './components/category-tier/category-tier.component';
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 
 
@@ -20,6 +22,8 @@ import { GestionCategoriasComponent } from './views/gestion-categorias/gestion-c
     AdministracionAfiliacionesComponent,
     TitleComponent,
     GestionCategoriasComponent,
+    CategoryTierComponent,
+    SubtitleComponent,
 
   ],
   imports: [

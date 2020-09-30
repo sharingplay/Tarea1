@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gestion-categorias',
-  template: `
-    <p>
-      gestion-categorias works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './gestion-categorias.component.html',
+  styleUrls: ['./gestion-categorias.component.scss']
 })
 export class GestionCategoriasComponent implements OnInit {
 

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/gestion-categorias/gestion-categorias.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/gestion-categorias/gestion-categorias.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-footer/custom-footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/custom-footer/custom-footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/title/title.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/gestion-categorias/gestion-categorias.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/gestion-categorias/gestion-categorias.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +20,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iAEhIDHjd1dYcyp7hYqwPran4X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -56,6 +63,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601342424173">

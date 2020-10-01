@@ -13,6 +13,8 @@ import { AgregarComponent } from './agregar/agregar.component';
 import { VistaClientesComponent } from './views/vista-clientes/vista-clientes.component';
 import { VistaAdministradoresComponent } from './views/vista-administradores/vista-administradores.component';
 import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
+import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
+import { GestionProductosComponent } from './views/vista-productores/gestion-productos/gestion-productos.component';
 
 
 
@@ -30,6 +32,8 @@ import { VistaProductoresComponent } from './views/vista-productores/vista-produ
     VistaClientesComponent,
     VistaAdministradoresComponent,
     VistaProductoresComponent,
+    ActualizarProductoresComponent,
+    GestionProductosComponent,
 
   ],
   imports: [

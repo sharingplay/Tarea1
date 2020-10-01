@@ -15,6 +15,12 @@ import { CarritoComponent} from './shopping-cart/carrito/carrito.component';
 import { ItemComponent } from './shopping-cart/carrito/item/item.component';
 import { ListaProductosComponent } from './shopping-cart/lista-productos/lista-productos.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { SolicitudAfiliacionComponent } from './views/vista-productores/solicitud-afiliacion/solicitud-afiliacion.component';
+import { GestionProductoresComponent } from './views/vista-administradores/gestion-productores/gestion-productores.component';
+import { AgregarComponent } from './agregar/agregar.component';
+import { VistaClientesComponent } from './views/vista-clientes/vista-clientes.component';
+import { VistaAdministradoresComponent } from './views/vista-administradores/vista-administradores.component';
+import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
 
 
 
@@ -34,6 +40,12 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ItemComponent,
     ListaProductosComponent,
     ShoppingCartComponent,
+    SolicitudAfiliacionComponent,
+    GestionProductoresComponent,
+    AgregarComponent,
+    VistaClientesComponent,
+    VistaAdministradoresComponent,
+    VistaProductoresComponent,
 
   ],
   imports: [

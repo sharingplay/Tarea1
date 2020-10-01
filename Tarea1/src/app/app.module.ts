@@ -7,6 +7,9 @@ import { CustomHeaderComponent } from './components/custom-header/custom-header.
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
 import { AdministracionAfiliacionesComponent } from './views/administracion-afiliaciones/administracion-afiliaciones.component';
 import { TitleComponent } from './components/title/title.component';
+import { SolicitudAfiliacionComponent } from './solicitud-afiliacion/solicitud-afiliacion.component';
+import { GestionProductoresComponent } from './gestion-productores/gestion-productores.component';
+import { AgregarComponent } from './agregar/agregar.component';
 
 
 
@@ -18,6 +21,9 @@ import { TitleComponent } from './components/title/title.component';
     routingComponents,
     AdministracionAfiliacionesComponent,
     TitleComponent,
+    SolicitudAfiliacionComponent,
+    GestionProductoresComponent,
+    AgregarComponent,
 
   ],
   imports: [

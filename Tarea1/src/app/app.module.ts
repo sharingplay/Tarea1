@@ -10,8 +10,11 @@ import { TitleComponent } from './components/title/title.component';
 import { GestionCategoriasComponent } from './views/gestion-categorias/gestion-categorias.component';
 import { CategoryTierComponent } from './components/category-tier/category-tier.component';
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
-import { CarritoComponent } from './views/carrito/carrito.component';
 import { GestionPedidosComponent } from './views/gestion-pedidos/gestion-pedidos.component';
+import { CarritoComponent} from './shopping-cart/carrito/carrito.component';
+import { ItemComponent } from './shopping-cart/carrito/item/item.component';
+import { ListaProductosComponent } from './shopping-cart/lista-productos/lista-productos.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -28,6 +31,9 @@ import { GestionPedidosComponent } from './views/gestion-pedidos/gestion-pedidos
     SubtitleComponent,
     CarritoComponent,
     GestionPedidosComponent,
+    ItemComponent,
+    ListaProductosComponent,
+    ShoppingCartComponent,
 
   ],
   imports: [

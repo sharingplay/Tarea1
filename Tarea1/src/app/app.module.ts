@@ -16,6 +16,8 @@ import { VistaProductoresComponent } from './views/vista-productores/vista-produ
 import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import { GestionProductosComponent } from './views/vista-productores/gestion-productos/gestion-productos.component';
 import { LogInComponent } from './views/vista-clientes/log-in/log-in.component';
+import { ProductoresComponent } from './views/vista-clientes/productores/productores.component';
+import { ProductosComponent } from './views/vista-clientes/productos/productos.component';
 
 
 
@@ -36,6 +38,8 @@ import { LogInComponent } from './views/vista-clientes/log-in/log-in.component';
     ActualizarProductoresComponent,
     GestionProductosComponent,
     LogInComponent,
+    ProductoresComponent,
+    ProductosComponent,
 
   ],
   imports: [

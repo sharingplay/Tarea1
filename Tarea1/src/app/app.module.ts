@@ -15,6 +15,7 @@ import { VistaAdministradoresComponent } from './views/vista-administradores/vis
 import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
 import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import { GestionProductosComponent } from './views/vista-productores/gestion-productos/gestion-productos.component';
+import { LogInComponent } from './views/vista-clientes/log-in/log-in.component';
 
 
 
@@ -34,6 +35,7 @@ import { GestionProductosComponent } from './views/vista-productores/gestion-pro
     VistaProductoresComponent,
     ActualizarProductoresComponent,
     GestionProductosComponent,
+    LogInComponent,
 
   ],
   imports: [

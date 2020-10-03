@@ -5,6 +5,9 @@ import {AdministracionAfiliacionesComponent} from './views/administracion-afilia
 import {GestionProductoresComponent} from './views/vista-administradores/gestion-productores/gestion-productores.component';
 import {ActualizarProductoresComponent} from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import {GestionProductosComponent} from './views/vista-productores/gestion-productos/gestion-productos.component';
+import {LogInComponent} from './views/vista-clientes/log-in/log-in.component';
+import {ProductoresComponent} from './views/vista-clientes/productores/productores.component';
+import {ProductosComponent} from './views/vista-clientes/productos/productos.component';
 
 
 const routes: Routes = [
@@ -12,7 +15,10 @@ const routes: Routes = [
   {path: 'adminAfiliaciones', component: AdministracionAfiliacionesComponent},
   {path: 'GestionProductores', component: GestionProductoresComponent},
   {path: 'ActualizarProductores', component: ActualizarProductoresComponent},
-  {path: 'GestionProductos', component: GestionProductosComponent}
+  {path: 'GestionProductos', component: GestionProductosComponent},
+  {path: 'LogIn', component: LogInComponent},
+  {path: 'Productores', component: ProductoresComponent},
+  {path: 'Productos', component: ProductosComponent}
 ];
 
 @NgModule({
@@ -21,4 +27,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [GestionCategoriasComponent, AdministracionAfiliacionesComponent,
-  ActualizarProductoresComponent, GestionProductoresComponent, GestionProductosComponent];
+  ActualizarProductoresComponent, GestionProductoresComponent, GestionProductosComponent, LogInComponent, ProductoresComponent,
+  ProductosComponent];

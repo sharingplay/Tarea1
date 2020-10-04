@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-productores',
@@ -7,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoresComponent implements OnInit {
   productos: string[][] = [['pequeno', 'le ofrecemos todo tipo de verdura'], ['ticos', 'las mejores frutas'], ['el amigo', 'lo mejor hasta su casa'], ['la pulpe', 'lo mejor en verduras']];
-  constructor() { }
 
   ngOnInit(): void {
   }

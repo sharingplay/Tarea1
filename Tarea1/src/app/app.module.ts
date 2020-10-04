@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CategoriasService } from './services/categorias.service';
 import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
+import { HeaderClienteComponent } from './components/header-cliente/header-cliente.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { HeaderProductorComponent } from './components/header-productor/header-p
     CategoryTierComponent,
     SubtitleComponent,
 
+    HeaderClienteComponent,
   ],
   imports: [
     BrowserModule,

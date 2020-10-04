@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/custom-header/custom-header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-productores/gestion-productos/gestion-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-productores/gestion-productos/gestion-productos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

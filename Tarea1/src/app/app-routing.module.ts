@@ -10,6 +10,7 @@ import {ProductoresComponent} from './views/vista-clientes/productores/productor
 import {ProductosComponent} from './views/vista-clientes/productos/productos.component';
 import {VistaProductoresComponent} from './views/vista-productores/vista-productores.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
+import { VistaReportesComponent } from './views/vista-administradores/vista-reportes/vista-reportes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'Productores', component: ProductoresComponent},
   {path: 'Productos', component: ProductosComponent},
   {path: 'VistaProductor', component: VistaProductoresComponent},
+  {path: 'VistaReportes', component: VistaReportesComponent},
 ];
 
 @NgModule({
@@ -32,4 +34,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [GestionCategoriasComponent, AdministracionAfiliacionesComponent,
   ActualizarProductoresComponent, GestionProductoresComponent, GestionProductosComponent, LogInComponent, ProductoresComponent,
-  ProductosComponent, VistaProductoresComponent, HomeViewComponent];
+  ProductosComponent, VistaProductoresComponent, HomeViewComponent, VistaReportesComponent];

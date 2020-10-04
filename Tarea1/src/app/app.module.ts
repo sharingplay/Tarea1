@@ -16,6 +16,8 @@ import { CategoriasService } from './services/categorias.service';
 import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
 import { HeaderClienteComponent } from './components/header-cliente/header-cliente.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
+import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
+import { VistaReportesComponent } from './views/vista-administradores/vista-reportes/vista-reportes.component';
 
 
 @NgModule({
@@ -34,6 +36,10 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     HeaderClienteComponent,
 
     HomeViewComponent,
+
+    HeaderAdminComponent,
+
+    VistaReportesComponent,
   ],
   imports: [
     BrowserModule,

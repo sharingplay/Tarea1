@@ -13,14 +13,14 @@ import { SubtitleComponent } from './components/subtitle/subtitle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CategoriasService } from './services/categorias.service';
-
-
+import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomHeaderComponent,
     CustomFooterComponent,
+    HeaderProductorComponent,
     routingComponents,
     AdministracionAfiliacionesComponent,
     TitleComponent,

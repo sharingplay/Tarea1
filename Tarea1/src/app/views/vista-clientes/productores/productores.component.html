@@ -1,0 +1,31 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let producto of productos">
+      <div class="tile">
+        <div class="wrapper">
+          <div class="imagen"></div>
+          <div class="stats">
+            <div>
+              <strong>Nombre</strong> {{producto[0]}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Descripcion</strong> {{producto[1]}}
+            </div>
+          </div>
+
+          <div class="footer">
+            <a href="#" class="Cbtn Cbtn-primary">Ver Productos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

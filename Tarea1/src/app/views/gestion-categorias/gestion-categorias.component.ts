@@ -7,7 +7,7 @@ import { CategoriasService } from '../../services/categorias.service';
 })
 export class GestionCategoriasComponent implements OnInit {
   categories = [['Carnes', 'car01'], ['Legumbres', 'leg01'], ['Mariscos', 'mar01'], ['Hortalizas', 'hor01']];
-  constructor( private  categoriasService: CategoriasService) {
+  constructor( public  categoriasService: CategoriasService) {
     console.log(categoriasService.info);
   }
 

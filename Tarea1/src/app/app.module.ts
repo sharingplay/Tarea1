@@ -10,6 +10,9 @@ import { TitleComponent } from './components/title/title.component';
 import { GestionCategoriasComponent } from './views/gestion-categorias/gestion-categorias.component';
 import { CategoryTierComponent } from './components/category-tier/category-tier.component';
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CategoriasService } from './services/categorias.service';
 
 
 
@@ -28,7 +31,9 @@ import { SubtitleComponent } from './components/subtitle/subtitle.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

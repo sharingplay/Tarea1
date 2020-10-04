@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomHeaderComponent } from './components/custom-header/custom-header.component';
+import { CustomHeaderComponent } from './components/header-principal/custom-header.component';
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
 import { AdministracionAfiliacionesComponent } from './views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component';
 import { TitleComponent } from './components/title/title.component';
@@ -15,6 +15,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CategoriasService } from './services/categorias.service';
 import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
 import { HeaderClienteComponent } from './components/header-cliente/header-cliente.component';
+import { HomeViewComponent } from './views/home-view/home-view.component';
 
 
 @NgModule({
@@ -31,6 +32,8 @@ import { HeaderClienteComponent } from './components/header-cliente/header-clien
     SubtitleComponent,
 
     HeaderClienteComponent,
+
+    HomeViewComponent,
   ],
   imports: [
     BrowserModule,

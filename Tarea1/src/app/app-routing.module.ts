@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {GestionCategoriasComponent} from './views/gestion-categorias/gestion-categorias.component';
-import {AdministracionAfiliacionesComponent} from './views/administracion-afiliaciones/administracion-afiliaciones.component';
+import {GestionCategoriasComponent} from './views/vista-administradores/gestion-categorias/gestion-categorias.component';
+import {AdministracionAfiliacionesComponent} from './views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component';
 import {GestionProductoresComponent} from './views/vista-administradores/gestion-productores/gestion-productores.component';
 import {ActualizarProductoresComponent} from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import {GestionProductosComponent} from './views/vista-productores/gestion-productos/gestion-productos.component';

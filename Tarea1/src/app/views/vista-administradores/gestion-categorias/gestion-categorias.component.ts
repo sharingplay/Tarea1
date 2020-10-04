@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriasService } from '../../services/categorias.service';
+import { CategoriasService } from '../../../services/categorias.service';
 @Component({
   selector: 'app-gestion-categorias',
   templateUrl: './gestion-categorias.component.html',

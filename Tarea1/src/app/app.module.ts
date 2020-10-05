@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+
+
 import { CustomHeaderComponent } from './components/header-principal/custom-header.component';
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
 import { AdministracionAfiliacionesComponent } from './views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component';
@@ -11,13 +18,13 @@ import { GestionCategoriasComponent } from './views/vista-administradores/gestio
 import { CategoryTierComponent } from './components/category-tier/category-tier.component';
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { CategoriasService } from './services/categorias.service';
 import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
 import { HeaderClienteComponent } from './components/header-cliente/header-cliente.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
 import { VistaReportesComponent } from './views/vista-administradores/vista-reportes/vista-reportes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeleteCategoryModalComponent } from './components/delete-category-modal/delete-category-modal.component';
 
 
 @NgModule({
@@ -40,14 +47,21 @@ import { VistaReportesComponent } from './views/vista-administradores/vista-repo
     HeaderAdminComponent,
 
     VistaReportesComponent,
+
+    DeleteCategoryModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule,
+    ModalModule.forRoot(),
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DeleteCategoryModalComponent]
 })
 export class AppModule { }

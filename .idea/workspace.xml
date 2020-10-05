@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-admin/header-admin.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/header-principal/custom-header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/subtitle/subtitle.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/subtitle/subtitle.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/subtitle/subtitle.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/subtitle/subtitle.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +56,8 @@
       <workItem from="1601499750400" duration="4021000" />
       <workItem from="1601683419589" duration="2327000" />
       <workItem from="1601757209192" duration="10292000" />
-      <workItem from="1601863283797" duration="2390000" />
+      <workItem from="1601863283797" duration="3062000" />
+      <workItem from="1601935380296" duration="1235000" />
     </task>
     <servers />
   </component>

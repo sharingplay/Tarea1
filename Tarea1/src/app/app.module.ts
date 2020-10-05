@@ -25,6 +25,7 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
 import { VistaReportesComponent } from './views/vista-administradores/vista-reportes/vista-reportes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeleteCategoryModalComponent } from './components/delete-category-modal/delete-category-modal.component';
+import { CenteredButtonComponent } from './components/centered-button/centered-button.component';
 
 
 @NgModule({
@@ -49,6 +50,8 @@ import { DeleteCategoryModalComponent } from './components/delete-category-modal
     VistaReportesComponent,
 
     DeleteCategoryModalComponent,
+
+    CenteredButtonComponent,
   ],
   imports: [
     BrowserModule,

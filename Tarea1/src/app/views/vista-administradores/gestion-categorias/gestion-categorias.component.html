@@ -4,7 +4,8 @@
 
 
 <app-subtitle text="Catagorías Activas actualmente."></app-subtitle>
-<app-subtitle text="      "></app-subtitle>
+<app-centered-button label="Agregar categoría"></app-centered-button>
+
 <ul>
 
     <app-category-tier (openModalWithComponent)="openModalWithComponent()" *ngFor='let category of categoriasService.info.info' [name]='category[0]' [id]='category[1]'></app-category-tier>

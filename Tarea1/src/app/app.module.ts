@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeleteCategoryModalComponent } from './components/delete-category-modal/delete-category-modal.component';
 import { CenteredButtonComponent } from './components/centered-button/centered-button.component';
 import { CreateCategoryModalComponent } from './components/create-category-modal/create-category-modal.component';
+import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-cuenta-cliente/creacion-cuenta-cliente.component';
 
 
 @NgModule({
@@ -55,6 +56,8 @@ import { CreateCategoryModalComponent } from './components/create-category-modal
     CenteredButtonComponent,
 
     CreateCategoryModalComponent,
+
+    CreacionCuentaClienteComponent,
   ],
   imports: [
     BrowserModule,

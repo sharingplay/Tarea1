@@ -52,7 +52,6 @@ nav a:hover {
   height: 100%;
   z-index: -1;
   background: rgb(50, 50, 50);
-  transition: .45s ease-in-out;
 }
 
 .bg-hidden {
@@ -78,7 +77,6 @@ h1 {
   background: rgb(50, 50, 50);
   background: url("../../../../src/image/Nombre.png") no-repeat 50% 50% fixed;
   background-size: 100%;
-  overflow: hidden;
 }
 
 .hero h1 {

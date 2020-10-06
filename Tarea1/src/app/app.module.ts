@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +24,7 @@ import { VistaClientesComponent } from './views/vista-clientes/vista-clientes.co
 import { VistaAdministradoresComponent } from './views/vista-administradores/vista-administradores.component';
 import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
 import { DetallesPedidosComponent } from './views/vista-productores/gestion-pedidos/detalles-pedidos/detalles-pedidos.component';
+import {MatButton, MatButtonModule} from '@angular/material/button';
 
 
 
@@ -51,10 +54,13 @@ import { DetallesPedidosComponent } from './views/vista-productores/gestion-pedi
 
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DetallesPedidosComponent]
 })
 export class AppModule { }

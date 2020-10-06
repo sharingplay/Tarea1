@@ -31,7 +31,12 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/vendor.min.js",
+              "src/assets/js/theme.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,7 +100,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/vendor.min.js",
+              "src/assets/js/theme.min.js",
+              "src/assets/js/custom.js"]
           }
         },
         "lint": {

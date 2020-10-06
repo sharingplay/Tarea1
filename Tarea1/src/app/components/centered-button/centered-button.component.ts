@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-centered-button',
@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CenteredButtonComponent implements OnInit {
 
   constructor() { }
-
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onClick: EventEmitter<string> = new EventEmitter();
   @Input() label;
   ngOnInit(): void {
   }

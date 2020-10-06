@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoriasService } from '../../../services/categorias.service';
 import { DeleteCategoryModalComponent } from '../../../components/delete-category-modal/delete-category-modal.component';
+import { CreateCategoryModalComponent } from '../../../components/create-category-modal/create-category-modal.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -16,15 +17,18 @@ export class GestionCategoriasComponent implements OnInit {
   // tslint:disable-next-line:typedef
   openModalWithComponent() {
     const initialState = {
-      list: [
-        'Open a modal with component',
-        'Pass your data',
-        'Do something else',
-        '...'
-      ],
       title: 'Modal with component'
     };
     this.bsModalRef = this.modalService.show(DeleteCategoryModalComponent, {initialState});
+    this.bsModalRef.content.closeBtnName = 'Close';
+  }
+
+  // tslint:disable-next-line:typedef
+  addCategory(){
+    const initialState = {
+      title: 'Modal with component'
+    };
+    this.bsModalRef = this.modalService.show(CreateCategoryModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';
   }
 

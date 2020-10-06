@@ -26,6 +26,7 @@ import { VistaReportesComponent } from './views/vista-administradores/vista-repo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeleteCategoryModalComponent } from './components/delete-category-modal/delete-category-modal.component';
 import { CenteredButtonComponent } from './components/centered-button/centered-button.component';
+import { CreateCategoryModalComponent } from './components/create-category-modal/create-category-modal.component';
 
 
 @NgModule({
@@ -52,6 +53,8 @@ import { CenteredButtonComponent } from './components/centered-button/centered-b
     DeleteCategoryModalComponent,
 
     CenteredButtonComponent,
+
+    CreateCategoryModalComponent,
   ],
   imports: [
     BrowserModule,

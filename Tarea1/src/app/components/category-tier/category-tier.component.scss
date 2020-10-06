@@ -5,6 +5,14 @@
   border: 1px solid rgba(86, 61, 124, .2);
 }
 
+.themed-grid-col-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(555, 555, 555, 1);
+  border: 1px solid rgba(555, 555, 555, 1);
+}
+
+
 .themed-container {
   padding: 15px;
   margin-bottom: 30px;
@@ -3883,6 +3891,26 @@ html {
   .ml-xl-auto,
   .mx-xl-auto {
     margin-left: auto !important;
+  }
+  .bton {
+    color: #fff;
+    border-radius: 4px;
+    background: #f15e5e;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 150px;
+    border: none;
+    min-height: 60px;
+    border-radius: 3px;
+    margin: 0 5px;
+    outline: none !important;
+  }
+  .modal-confirm .btn-dangerr {
+    background: #f15e5e;
+  }
+  .modal-confirm .btn-dangerr:hover, .modal-confirm .btn-dangerr:focus {
+    background: #ee3535;
   }
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */

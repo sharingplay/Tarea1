@@ -29,6 +29,7 @@ import { CenteredButtonComponent } from './components/centered-button/centered-b
 import { CreateCategoryModalComponent } from './components/create-category-modal/create-category-modal.component';
 import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-cuenta-cliente/creacion-cuenta-cliente.component';
 import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
+import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
 
 
 @NgModule({
@@ -61,6 +62,8 @@ import { ActualizarProductoresComponent } from './views/vista-administradores/ac
     CreacionCuentaClienteComponent,
 
     ActualizarProductoresComponent,
+
+    ActualizacionDatosClienteComponent,
   ],
   imports: [
     BrowserModule,

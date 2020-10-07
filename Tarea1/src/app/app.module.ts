@@ -25,6 +25,7 @@ import { VistaAdministradoresComponent } from './views/vista-administradores/vis
 import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
 import { DetallesPedidosComponent } from './views/vista-productores/gestion-pedidos/detalles-pedidos/detalles-pedidos.component';
 import {MatButton, MatButtonModule} from '@angular/material/button';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -57,7 +58,8 @@ import {MatButton, MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

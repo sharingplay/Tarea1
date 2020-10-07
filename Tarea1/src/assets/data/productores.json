@@ -1,0 +1,35 @@
+[
+  {
+    "cédula": "4111222444",
+    "nombre": "Fabian",
+    "apellidos": "Ramírez Arrieta",
+    "direccion": {
+      "provincia": "Heredia",
+      "canton": "Heredia",
+      "Distrito": "Mercedes"
+    },
+    "fechaNacimiento": "03/01/2000",
+    "telefono": "88888888",
+    "numeroSINPE": "88888888",
+    "puntosEntrega": ["Heredia", "San Joaquin", "Santa Barbara"],
+    "usuario": "FRA01",
+    "password": "password"
+  },
+  {
+    "cédula": "0111222333",
+    "nombre": "Mariana",
+    "apellidos": "Vargas Ramirez",
+    "direccion": {
+      "provincia": "Heredia",
+      "canton": "Santa Barbara",
+      "Distrito": "Santa Barbara"
+    },
+    "fechaNacimiento": "4/20/2000",
+    "telefono": "88888888",
+    "numeroSINPE": "88888888",
+    "puntosEntrega": ["Heredia", "Flores", "Cartago"],
+    "usuario": "MVR02",
+    "password": "password"
+  }
+
+]

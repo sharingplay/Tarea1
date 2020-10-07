@@ -76,8 +76,8 @@ html {
   background-size: 100%;
 }
 .imagenfondo{
-  position: center;
-  height: 120px;
+  position: relative;
+  height: 1200px;
   background: url("../../../../image/login2.jpg");
-  background-size: 100%;
+  background-size: cover;
 }

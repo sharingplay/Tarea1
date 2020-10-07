@@ -28,6 +28,7 @@ import { DeleteCategoryModalComponent } from './components/delete-category-modal
 import { CenteredButtonComponent } from './components/centered-button/centered-button.component';
 import { CreateCategoryModalComponent } from './components/create-category-modal/create-category-modal.component';
 import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-cuenta-cliente/creacion-cuenta-cliente.component';
+import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 
 
 @NgModule({
@@ -58,6 +59,8 @@ import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-
     CreateCategoryModalComponent,
 
     CreacionCuentaClienteComponent,
+
+    ActualizarProductoresComponent,
   ],
   imports: [
     BrowserModule,

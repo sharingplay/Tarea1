@@ -7,6 +7,8 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+
+<app-header-principal></app-header-principal>
 <div class ="imagenFondo">
 <div class="container">
   <form class="form-horizontal" role="form">
@@ -106,7 +108,8 @@
         <span class="help-block">*Campos obligatorios</span>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Register</button>
+    <button routerLink="/Home" routerLinkActive="active" type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+    <button routerLink="/Home" routerLinkActive="active" href="#" class="Cbtn btn-light btn-block">Volver</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </div>

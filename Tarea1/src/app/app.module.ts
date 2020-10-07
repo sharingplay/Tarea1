@@ -30,6 +30,7 @@ import { CreateCategoryModalComponent } from './components/create-category-modal
 import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-cuenta-cliente/creacion-cuenta-cliente.component';
 import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
+import { AfiliationTierComponent } from './components/afiliation-tier/afiliation-tier.component';
 
 
 @NgModule({
@@ -64,6 +65,8 @@ import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actua
     ActualizarProductoresComponent,
 
     ActualizacionDatosClienteComponent,
+
+    AfiliationTierComponent,
   ],
   imports: [
     BrowserModule,

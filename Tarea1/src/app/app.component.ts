@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoriasService } from './services/categorias.service';
+import { HttpClientService } from './services/http-client-service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,6 @@ import { CategoriasService } from './services/categorias.service';
 })
 export class AppComponent {
   title = 'Tarea1';
-  constructor(public categorias: CategoriasService) {
+  constructor(public categorias: HttpClientService) {
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriasService } from '../../../services/categorias.service';
+import { HttpClientService } from '../../../services/http-client-service';
 import { DeleteCategoryModalComponent } from '../../../components/delete-category-modal/delete-category-modal.component';
 import { CreateCategoryModalComponent } from '../../../components/create-category-modal/create-category-modal.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -10,14 +10,13 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./gestion-categorias.component.scss']
 })
 export class GestionCategoriasComponent implements OnInit {
-  constructor( public  categoriasService: CategoriasService, private modalService: BsModalService) {}
+  constructor(public  categoriasService: HttpClientService, private modalService: BsModalService) {}
   bsModalRef: BsModalRef;
   categories = [['Carnes', 'car01'], ['Legumbres', 'leg01'], ['Mariscos', 'mar01'], ['Hortalizas', 'hor01']];
 
   // tslint:disable-next-line:typedef
   openModalWithComponent() {
     const initialState = {
-      title: 'Modal with component'
     };
     this.bsModalRef = this.modalService.show(DeleteCategoryModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';
@@ -26,7 +25,6 @@ export class GestionCategoriasComponent implements OnInit {
   // tslint:disable-next-line:typedef
   addCategory(){
     const initialState = {
-      title: 'Modal with component'
     };
     this.bsModalRef = this.modalService.show(CreateCategoryModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';

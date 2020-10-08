@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriasService {
- info: any = {} ;
+export class HttpClientService {
+ categorias: any = {} ;
  cargada = false;
  options = {
     responseType: 'text' as const,
@@ -14,9 +14,8 @@ export class CategoriasService {
    console.log('Service Running');
    http.get('../../assets/data/categorias.json')
      .subscribe(resp => {
-       this.info = resp;
+       this.categorias = resp;
        this.cargada = true;
-       console.log(this.info);
      });
  }
 }

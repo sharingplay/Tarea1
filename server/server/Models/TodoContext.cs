@@ -13,6 +13,6 @@ namespace server.Models
         {
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<TodoItems> TodoItems { get; set; }
     }
 }

@@ -32,6 +32,7 @@ import { ActualizarProductoresComponent } from './views/vista-administradores/ac
 import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
 import { AfiliationTierComponent } from './components/afiliation-tier/afiliation-tier.component';
 import { MoreInfoAfiliationModalComponent } from './components/more-info-afiliation-modal/more-info-afiliation-modal.component';
+import { AfiliationInfoModalComponent } from './components/afiliation-info-modal/afiliation-info-modal.component';
 
 
 @NgModule({
@@ -70,6 +71,8 @@ import { MoreInfoAfiliationModalComponent } from './components/more-info-afiliat
     AfiliationTierComponent,
 
     MoreInfoAfiliationModalComponent,
+
+    AfiliationInfoModalComponent,
   ],
   imports: [
     BrowserModule,

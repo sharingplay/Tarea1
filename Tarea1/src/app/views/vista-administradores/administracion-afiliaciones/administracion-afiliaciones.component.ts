@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {MoreInfoAfiliationModalComponent} from '../../../components/more-info-afiliation-modal/more-info-afiliation-modal.component';
+import {Component, Input, OnInit} from '@angular/core';
+import {AfiliationInfoModalComponent} from '../../../components/afiliation-info-modal/afiliation-info-modal.component';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 import { HttpClientService } from '../../../services/http-client-service';
 
@@ -17,10 +17,11 @@ export class AdministracionAfiliacionesComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  addCategory(){
+  showAffiliationInfo(productor){
     const initialState = {
+      productorPropio: productor
     };
-    this.bsModalRef = this.modalService.show(MoreInfoAfiliationModalComponent, {initialState});
+    this.bsModalRef = this.modalService.show(AfiliationInfoModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';
   }
 }

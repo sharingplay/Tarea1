@@ -8,7 +8,7 @@
       "direccion": {
         "provincia": "Heredia",
         "canton": "Heredia",
-        "Distrito": "Mercedes"
+        "distrito": "Mercedes"
       },
       "fechaNacimiento": "03/01/2000",
       "telefono": "88888888",
@@ -28,11 +28,11 @@
       "direccion": {
         "provincia": "Heredia",
         "canton": "Santa Barbara",
-        "Distrito": "Santa Barbara"
+        "distrito": "Santa Barbara"
       },
       "fechaNacimiento": "4/20/2000",
       "telefono": "88888888",
-      "numeroSINPE": "88888888",
+      "numeroSINPE": "77777777",
       "puntosEntrega": [
         "Heredia",
         "Flores",

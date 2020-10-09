@@ -34,7 +34,7 @@
     <div class="col-md-3 themed-grid-col">{{productor.cedula}}</div>
     <div class="col-md-5 themed-grid-col">{{productor.nombre+" "+productor.apellidos}}</div>
     <div class="col-md-3 themed-grid-col-btn">
-      <button type="button" class="bton btn-dangerr">Ver más</button>
+      <button type="button" class="bton btn-dangerr" (click)="openInfo.emit()">Ver más</button>
     </div>
   </div>
 

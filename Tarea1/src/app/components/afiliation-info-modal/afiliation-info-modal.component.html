@@ -1,0 +1,32 @@
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header text-center">
+            <h4 class="modal-title white-text w-100 font-weight-bold py-2">Nueva Solicitud</h4>
+          </div>
+
+          <!--Body-->
+          <div class="modal-body mx-4">
+            <h4 class="modal-text">Nombre: {{productorPropio.nombre}}</h4>
+            <h4 class="modal-text">Apellidos: {{productorPropio.apellidos}}</h4>
+            <h4 class="modal-text">Cédula:  {{productorPropio.cedula}}</h4>
+            <h4 class="modal-text">Dirección:  {{productorPropio.direccion.provincia}}, {{productorPropio.direccion.canton}}, {{productorPropio.direccion.distrito}}</h4>
+            <h4 class="modal-text">Fecha de nacimiento:  {{productorPropio.fechaNacimiento}}</h4>
+            <h4 class="modal-text">Teléfono:  {{productorPropio.telefono}}</h4>
+            <h4 class="modal-text">SINPE móvil:  {{productorPropio.numeroSINPE}}</h4>
+            <h4 class="modal-text">Nombre de Usuario:  {{productorPropio.usuario}}</h4>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Aceptar</button>
+              <button type="button" class="btn btn-primary">Rechazar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

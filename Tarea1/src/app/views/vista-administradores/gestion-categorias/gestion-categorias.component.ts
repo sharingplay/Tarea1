@@ -10,9 +10,8 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./gestion-categorias.component.scss']
 })
 export class GestionCategoriasComponent implements OnInit {
-  constructor(public  categoriasService: HttpClientService, private modalService: BsModalService) {}
+  constructor(public  hhtpService: HttpClientService, private modalService: BsModalService) {}
   bsModalRef: BsModalRef;
-  categories = [['Carnes', 'car01'], ['Legumbres', 'leg01'], ['Mariscos', 'mar01'], ['Hortalizas', 'hor01']];
 
   // tslint:disable-next-line:typedef
   openModalWithComponent() {

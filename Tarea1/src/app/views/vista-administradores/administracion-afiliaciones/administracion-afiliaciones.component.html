@@ -4,4 +4,7 @@
 
 <app-subtitle text="Solicitudes de posibles productores para formar parte de FeriaTEC."></app-subtitle>
 
-<app-afiliation-tier></app-afiliation-tier>
+<ul>
+  <app-afiliation-tier *ngFor='let affiliation of hhtpService.afiliaciones.afiliaciones' [productor]="affiliation"></app-afiliation-tier>
+</ul>
+

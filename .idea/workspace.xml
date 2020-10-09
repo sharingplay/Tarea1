@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/more-info-afiliation-modal/more-info-afiliation-modal.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/more-info-afiliation-modal/more-info-afiliation-modal.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/more-info-afiliation-modal/more-info-afiliation-modal.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/components/more-info-afiliation-modal/more-info-afiliation-modal.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/services/categorias.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/services/categorias.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/services/categorias.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/services/http-client-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/services/http-client-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/services/http-client-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/gestion-categorias/gestion-categorias.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/assets/data/productores.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/assets/data/afiliaciones.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <workItem from="1601757209192" duration="10292000" />
       <workItem from="1601863283797" duration="3062000" />
       <workItem from="1601935380296" duration="6649000" />
-      <workItem from="1602197896800" duration="1035000" />
+      <workItem from="1602197896800" duration="4553000" />
     </task>
     <servers />
   </component>

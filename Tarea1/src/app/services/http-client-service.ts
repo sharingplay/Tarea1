@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse} from '@angular/common/http';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpClientService {
- categorias: any = {} ;
+ categorias: any = {};
+ afiliaciones: any = {};
  cargada = false;
  options = {
     responseType: 'text' as const,
@@ -15,7 +18,13 @@ export class HttpClientService {
    http.get('../../assets/data/categorias.json')
      .subscribe(resp => {
        this.categorias = resp;
-       this.cargada = true;
+       console.log(resp);
      });
+   http.get('../../assets/data/afiliaciones.json')
+     .subscribe((resp: HttpResponse<any>) => {
+       this.afiliaciones = resp;
+       console.log(this.afiliaciones);
+     });
+   this.cargada = true;
  }
 }

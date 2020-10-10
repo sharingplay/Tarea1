@@ -1,5 +1,4 @@
-
-*[role="form"] {
+*[role=form] {
   max-width: 600px;
   padding: 15px;
   margin: auto;
@@ -8,12 +7,8 @@
   background-color: #f2f2f2;
 }
 
-.barraBoton {
-  padding-left: 150px;
-}
-
-*[role="form"] h2 {
-  font-family: 'Open Sans' , sans-serif;
+*[role=form] h2 {
+  font-family: "Open Sans", sans-serif;
   font-size: 40px;
   font-weight: 600;
   color: #000000;
@@ -23,9 +18,11 @@
   letter-spacing: 4px;
 }
 
-.imagenFondo{
+.imagenFondo {
   position: relative;
   height: 1200px;
   background: url("../../../../image/granja.jpg");
   background-size: cover;
 }
+
+/*# sourceMappingURL=actualizar-productores.component.css.map */

@@ -1,0 +1,32 @@
+.container {
+  height: 120px;
+  position: relative;
+  border: 3px solid white;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 12.5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bton {
+  color: #fff;
+  border-radius: 4px;
+  background: #5AADF2;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 160px;
+  border: none;
+  min-height: 68px;
+  margin: 0 5px;
+  outline: none !important;
+  font-family: Helvetica, Serif, serif;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=centered-button.component.css.map */

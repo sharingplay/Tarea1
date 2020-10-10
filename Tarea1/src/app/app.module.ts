@@ -7,9 +7,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
 
 
 import { CustomHeaderComponent } from './components/header-principal/custom-header.component';
@@ -34,6 +32,19 @@ import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actua
 import { AfiliationTierComponent } from './components/afiliation-tier/afiliation-tier.component';
 import { MoreInfoAfiliationModalComponent } from './components/more-info-afiliation-modal/more-info-afiliation-modal.component';
 import { AfiliationInfoModalComponent } from './components/afiliation-info-modal/afiliation-info-modal.component';
+import {DetallesPedidosComponent} from './views/vista-productores/gestion-pedidos/detalles-pedidos/detalles-pedidos.component';
+import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
+import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
+import {ListaProductosComponent} from './shopping-cart/lista-productos/lista-productos.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+import {SolicitudAfiliacionComponent} from './views/vista-productores/solicitud-afiliacion/solicitud-afiliacion.component';
+import {VistaClientesComponent} from './views/vista-clientes/vista-clientes.component';
+import {GestionProductoresComponent} from './views/vista-administradores/gestion-productores/gestion-productores.component';
+import {VistaAdministradoresComponent} from './views/vista-administradores/vista-administradores.component';
+import {AgregarComponent} from './agregar/agregar.component';
+import {VistaProductoresComponent} from './views/vista-productores/vista-productores.component';
+import {ItemComponent} from './shopping-cart/carrito/item/item.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -96,12 +107,12 @@ import { AfiliationInfoModalComponent } from './components/afiliation-info-modal
     MatDialogModule,
     ModalModule.forRoot(),
 
-    ReactiveFormsModule
+    ReactiveFormsModule,
     MatDialogModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DeleteCategoryModalComponent]
-  entryComponents: [DetallesPedidosComponent]
+  entryComponents: [DeleteCategoryModalComponent, DetallesPedidosComponent]
 })
 export class AppModule { }

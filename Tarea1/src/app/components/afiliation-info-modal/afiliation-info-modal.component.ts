@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./afiliation-info-modal.component.scss']
 })
 export class AfiliationInfoModalComponent implements OnInit {
+  productorPropio: any;
   constructor() { }
 
   ngOnInit(): void {

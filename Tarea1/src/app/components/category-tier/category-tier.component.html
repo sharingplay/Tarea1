@@ -1,4 +1,3 @@
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,8 +30,11 @@
 <div class="container">
 
   <div class="row mb-3">
-    <div class="col-md-4 themed-grid-col">{{id}}</div>
-    <div class="col-md-8 themed-grid-col">{{name}}</div>
+    <div class="col-md-3 themed-grid-col">{{id}}</div>
+    <div class="col-md-5 themed-grid-col">{{name}}</div>
+    <div class="col-md-3 themed-grid-col-btn">
+      <button type="button" class="bton btn-dangerr" (click)="openModal()">Delete</button>
+    </div>
   </div>
 
 </div>

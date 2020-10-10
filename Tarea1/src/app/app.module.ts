@@ -5,28 +5,35 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomHeaderComponent } from './components/custom-header/custom-header.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+
+
+import { CustomHeaderComponent } from './components/header-principal/custom-header.component';
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
-import { AdministracionAfiliacionesComponent } from './views/administracion-afiliaciones/administracion-afiliaciones.component';
+import { AdministracionAfiliacionesComponent } from './views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component';
 import { TitleComponent } from './components/title/title.component';
-import { GestionCategoriasComponent } from './views/gestion-categorias/gestion-categorias.component';
+import { GestionCategoriasComponent } from './views/vista-administradores/gestion-categorias/gestion-categorias.component';
 import { CategoryTierComponent } from './components/category-tier/category-tier.component';
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
-import { GestionPedidosComponent } from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
-import { CarritoComponent} from './shopping-cart/carrito/carrito.component';
-import { ItemComponent } from './shopping-cart/carrito/item/item.component';
-import { ListaProductosComponent } from './shopping-cart/lista-productos/lista-productos.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { SolicitudAfiliacionComponent } from './views/vista-productores/solicitud-afiliacion/solicitud-afiliacion.component';
-import { GestionProductoresComponent } from './views/vista-administradores/gestion-productores/gestion-productores.component';
-import { AgregarComponent } from './agregar/agregar.component';
-import { VistaClientesComponent } from './views/vista-clientes/vista-clientes.component';
-import { VistaAdministradoresComponent } from './views/vista-administradores/vista-administradores.component';
-import { VistaProductoresComponent } from './views/vista-productores/vista-productores.component';
-import { DetallesPedidosComponent } from './views/vista-productores/gestion-pedidos/detalles-pedidos/detalles-pedidos.component';
-import {MatButton, MatButtonModule} from '@angular/material/button';
-import {ReactiveFormsModule} from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderProductorComponent } from './components/header-productor/header-productor.component';
+import { HeaderClienteComponent } from './components/header-cliente/header-cliente.component';
+import { HomeViewComponent } from './views/home-view/home-view.component';
+import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
+import { VistaReportesComponent } from './views/vista-administradores/vista-reportes/vista-reportes.component';
+import { DeleteCategoryModalComponent } from './components/delete-category-modal/delete-category-modal.component';
+import { CenteredButtonComponent } from './components/centered-button/centered-button.component';
+import { CreateCategoryModalComponent } from './components/create-category-modal/create-category-modal.component';
+import { CreacionCuentaClienteComponent } from './views/vista-clientes/creacion-cuenta-cliente/creacion-cuenta-cliente.component';
+import { ActualizarProductoresComponent } from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
+import { ActualizacionDatosClienteComponent } from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
+import { AfiliationTierComponent } from './components/afiliation-tier/afiliation-tier.component';
+import { MoreInfoAfiliationModalComponent } from './components/more-info-afiliation-modal/more-info-afiliation-modal.component';
+import { AfiliationInfoModalComponent } from './components/afiliation-info-modal/afiliation-info-modal.component';
 
 
 @NgModule({
@@ -34,6 +41,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     CustomHeaderComponent,
     CustomFooterComponent,
+    HeaderProductorComponent,
     routingComponents,
     AdministracionAfiliacionesComponent,
     TitleComponent,
@@ -53,16 +61,47 @@ import {ReactiveFormsModule} from '@angular/forms';
     VistaProductoresComponent,
     DetallesPedidosComponent,
 
+    HeaderClienteComponent,
+
+    HomeViewComponent,
+
+    HeaderAdminComponent,
+
+    VistaReportesComponent,
+
+    DeleteCategoryModalComponent,
+
+    CenteredButtonComponent,
+
+    CreateCategoryModalComponent,
+
+    CreacionCuentaClienteComponent,
+
+    ActualizarProductoresComponent,
+
+    ActualizacionDatosClienteComponent,
+
+    AfiliationTierComponent,
+
+    MoreInfoAfiliationModalComponent,
+
+    AfiliationInfoModalComponent,
   ],
   imports: [
-    BrowserAnimationsModule,
+    BrowserModule,
     AppRoutingModule,
-    MatDialogModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     MatButtonModule,
+    MatDialogModule,
+    ModalModule.forRoot(),
+
     ReactiveFormsModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [DeleteCategoryModalComponent]
   entryComponents: [DetallesPedidosComponent]
 })
 export class AppModule { }

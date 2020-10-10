@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using server.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace server.Controllers
 {
@@ -21,6 +22,7 @@ namespace server.Controllers
         }
 
         // GET: api/TodoItems
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItems>>> GetTodoItems()
         {

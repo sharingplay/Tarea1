@@ -153,3 +153,10 @@ C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\ba
 C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\obj\Debug\netcoreapp3.1\server.csproj.CoreCompileInputs.cache
 C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\obj\Debug\netcoreapp3.1\server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\afiliaciones.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Categorias.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Clientes.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Pedidos.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Productores.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Productos.json
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\DataBase\Top.json

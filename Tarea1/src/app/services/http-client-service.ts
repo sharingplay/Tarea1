@@ -18,12 +18,10 @@ export class HttpClientService {
    http.get('../../assets/data/categorias.json')
      .subscribe(resp => {
        this.categorias = resp;
-       console.log(resp);
      });
    http.get('../../assets/data/afiliaciones.json')
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
-       console.log(this.afiliaciones);
      });
    this.cargada = true;
  }

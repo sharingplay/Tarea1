@@ -5,12 +5,17 @@
 
 <div class="container">
   <div class="center">
-    <button class="bton">Productos más vendidos</button>
+    <button class="bton" (click)="showReport(hhtpService.tops.tops.masVendidos, 'Más Vendidos')">Productos más vendidos</button>
   </div>
 </div>
 <div class="container">
   <div class="center">
-    <button class="bton">Productos con más ganancias</button>
+    <button class="bton" (click)="showReport(hhtpService.tops.tops.masGanancias, 'Más ganancias')">Productos con más ganancias</button>
+  </div>
+</div>
+<div class="container">
+  <div class="center">
+    <button class="bton" (click)="showReport(hhtpService.tops.tops.clientesMasCompras, 'Clientes con más compras')">Clientes con más compras</button>
   </div>
 </div>
 <div class="container">
@@ -18,8 +23,4 @@
     <button class="bton">Productos más vendidos por productor</button>
   </div>
 </div>
-<div class="container">
-  <div class="center">
-    <button class="bton">Clientes con más compras</button>
-  </div>
-</div>
+

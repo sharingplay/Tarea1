@@ -1,0 +1,40 @@
+{
+  "tops": {
+    "masVendidos": [
+      "Manzanas",
+      "Naranjas",
+      "Limón",
+      "Jocotes",
+      "Aguacate",
+      "Culantro",
+      "Yuca",
+      "Papas",
+      "Bananos",
+      "Fresa"
+    ],
+    "masGanancias": [
+      "Aguacate",
+      "Limón",
+      "Pollo",
+      "Jocotes",
+      "Naranjas",
+      "Fresa",
+      "Banano",
+      "Sandía",
+      "Pescado",
+      "Papaya"
+    ],
+    "clientesMasCompras": [
+      "Fabián Ramírez",
+      "Mario Araya",
+      "Wajib Zaghul",
+      "Mariana Vargas",
+      "Marco Rivera",
+      "Lionel Messi",
+      "Oscar Hernandez",
+      "Miguel Coto",
+      "Diego Benitez",
+      "Alejandro Rojas"
+    ]
+  }
+}

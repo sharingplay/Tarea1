@@ -9,6 +9,7 @@ import { HttpClient, HttpResponse} from '@angular/common/http';
 export class HttpClientService {
  categorias: any = {};
  afiliaciones: any = {};
+ tops: any = {};
  cargada = false;
  options = {
     responseType: 'text' as const,
@@ -23,6 +24,10 @@ export class HttpClientService {
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
      });
+   http.get('../../assets/data/topTen.json')
+      .subscribe((resp: HttpResponse<any>) => {
+        this.tops = resp;
+      });
    this.cargada = true;
  }
 }

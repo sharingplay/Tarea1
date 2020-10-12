@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea1/src/assets/data/topTen.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/services/http-client-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/services/http-client-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/assets/data/categorias.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/assets/data/categorias.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/assets/data/topTen.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/assets/data/topTen.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,0 +1,12 @@
+<app-header-admin></app-header-admin>
+
+<app-title text="Productos más vendidos por Productor"></app-title>
+<ul style="list-style-type:none;">
+  <li *ngFor="let producer of hhtpService.tops.tops.productosPorProductor">
+    <div class="container">
+      <div class="center">
+        <button class="bton">{{producer.nombre}}</button>
+      </div>
+    </div>
+  </li>
+</ul>

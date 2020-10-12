@@ -16,6 +16,7 @@ import {CreacionCuentaClienteComponent} from './views/vista-clientes/creacion-cu
 import {SolicitudAfiliacionComponent} from './views/vista-productores/solicitud-afiliacion/solicitud-afiliacion.component';
 import {ActualizarProductoresComponent} from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import {ActualizacionDatosClienteComponent} from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
+import {ProductsPerProducerComponent} from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path: 'CrearCuentaCliente', component: CreacionCuentaClienteComponent},
   {path: 'SolicitudAfiliacion', component: SolicitudAfiliacionComponent},
   {path: 'ActualizarProductor', component: ActualizarProductoresComponent},
-  {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent}
+  {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
+  {path: 'ProductosPorProductor', component: ProductsPerProducerComponent}
 ];
 
 @NgModule({
@@ -45,4 +47,5 @@ export class AppRoutingModule { }
 export const routingComponents = [GestionCategoriasComponent, AdministracionAfiliacionesComponent,
   AgregarProductoresComponent, GestionProductoresComponent, GestionProductosComponent, LogInComponent, ProductoresComponent,
   ProductosComponent, VistaProductoresComponent, HomeViewComponent, VistaReportesComponent, VistaClientesComponent,
-  CreacionCuentaClienteComponent, SolicitudAfiliacionComponent, ActualizarProductoresComponent, ActualizacionDatosClienteComponent];
+  CreacionCuentaClienteComponent, SolicitudAfiliacionComponent, ActualizarProductoresComponent,
+  ActualizacionDatosClienteComponent, ProductsPerProducerComponent];

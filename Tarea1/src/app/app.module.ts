@@ -46,6 +46,7 @@ import {VistaProductoresComponent} from './views/vista-productores/vista-product
 import {ItemComponent} from './shopping-cart/carrito/item/item.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
+import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 
 
 @NgModule({
@@ -100,6 +101,8 @@ import { ListViewModalComponent } from './views/vista-administradores/vista-repo
     AfiliationInfoModalComponent,
 
     ListViewModalComponent,
+
+    ProductsPerProducerComponent,
   ],
   imports: [
     BrowserModule,

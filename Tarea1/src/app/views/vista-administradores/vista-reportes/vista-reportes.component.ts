@@ -22,7 +22,6 @@ export class VistaReportesComponent implements OnInit {
       infoList: lista,
       title: titulo,
     };
-    console.log(lista);
     this.bsModalRef = this.modalService.show(ListViewModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';
   }

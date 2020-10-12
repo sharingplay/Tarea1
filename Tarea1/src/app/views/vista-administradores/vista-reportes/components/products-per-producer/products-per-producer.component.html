@@ -5,7 +5,7 @@
   <li *ngFor="let producer of hhtpService.tops.tops.productosPorProductor">
     <div class="container">
       <div class="center">
-        <button class="bton">{{producer.nombre}}</button>
+        <button class="bton" (click)="showReport(producer.productos, producer.nombre)">{{producer.nombre}}</button>
       </div>
     </div>
   </li>

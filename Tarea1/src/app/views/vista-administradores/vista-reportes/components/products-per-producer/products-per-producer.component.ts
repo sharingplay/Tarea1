@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HttpClientService} from '../../../../../services/http-client-service';
-import {BsModalService} from 'ngx-bootstrap/modal';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import {ListViewModalComponent} from "../list-view-modal/list-view-modal.component";
 
 @Component({
   selector: 'app-products-per-producer',
@@ -12,8 +13,19 @@ export class ProductsPerProducerComponent implements OnInit {
 
   constructor( private modalService: BsModalService, public  hhtpService: HttpClientService  ) {
   }
+  bsModalRef: BsModalRef;
 
   ngOnInit(): void {
+  }
+
+  // tslint:disable-next-line:typedef
+  showReport(lista, titulo){
+    const initialState = {
+      infoList: lista,
+      title: titulo,
+    };
+    this.bsModalRef = this.modalService.show(ListViewModalComponent, {initialState});
+    this.bsModalRef.content.closeBtnName = 'Close';
   }
 
 }

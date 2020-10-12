@@ -70,6 +70,43 @@ namespace server.Controllers
             }
         }
 
+        
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Clientes Cliente)
+        {
+            List<Clientes> ClientesList = new List<Clientes>();
+            string fileName = "DataBase/Clientes.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ClientesList = JsonSerializer.Deserialize<List<Clientes>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < ClientesList.Count; i++)
+            {
+                if (ClientesList[i].Cedula == Cliente.Cedula)
+                {
+                    ClientesList[i] = Cliente;
+                    Debug.WriteLine("Cliente modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(ClientesList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Cliente no encontrado");
+            }
+        }
+
+
 
 
         [Route("delete")]

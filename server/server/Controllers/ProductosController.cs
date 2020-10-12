@@ -71,6 +71,41 @@ namespace server.Controllers
         }
 
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Productos Producto)
+        {
+            List<Clientes> ProductosList = new List<Clientes>();
+            string fileName = "DataBase/Productos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductosList = JsonSerializer.Deserialize<List<Clientes>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < ProductosList.Count; i++)
+            {
+                if (ProductosList[i].Cedula == Producto.Cedula)
+                {
+                    ProductosList[i] = Producto;
+                    Debug.WriteLine("Cliente modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(ProductosList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Cliente no encontrado");
+            }
+        }
+
 
         [Route("delete")]
         [EnableCors("AnotherPolicy")]

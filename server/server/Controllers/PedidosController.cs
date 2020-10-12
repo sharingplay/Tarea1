@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using server.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,34 +21,34 @@ namespace server.Controllers
         // GET: api/<AfiliacionesController>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public List<Afiliaciones> Get()
+        public List<Pedidos> Get()
         {
-            List<Afiliaciones> branchesList = new List<Afiliaciones>();
-            string fileName = "DataBase/afiliaciones.json";
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
-            branchesList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
-            return branchesList;
+            return PedidosList;
         }
 
         // POST api/<AfiliacionesController>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] Afiliaciones afiliacion)
+        public void Post([FromBody] Pedidos Pedido)
         {
-            List<Afiliaciones> ListAfiliaciones = new List<Afiliaciones>();
-            string fileName = "DataBase/afiliaciones.json";
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
-            ListAfiliaciones = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
             bool validation = true;
 
-            for (int i = 0; i < ListAfiliaciones.Count; i++)
+            for (int i = 0; i < PedidosList.Count; i++)
             {
-                if (ListAfiliaciones[i].Cedula == afiliacion.Cedula)
+                if (PedidosList[i].Cedula == Pedido.Cedula)
                 {
                     validation = false;
                     break;
@@ -51,16 +57,16 @@ namespace server.Controllers
 
             if (validation)
             {
-                ListAfiliaciones.Add(afiliacion);
+                PedidosList.Add(Pedido);
 
-                jsonString = JsonSerializer.Serialize(ListAfiliaciones);
+                jsonString = JsonSerializer.Serialize(PedidosList);
                 System.IO.File.WriteAllText(fileName, jsonString);
 
-                Debug.WriteLine("Afiliacion aceptada");
+                Debug.WriteLine("Pedido aceptado");
             }
             else
             {
-                Debug.WriteLine("Ya existe cuenta con ese id");
+                Debug.WriteLine("No se pudo realizar el pedido");
             }
         }
 
@@ -69,21 +75,21 @@ namespace server.Controllers
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void deletePost([FromBody] Afiliaciones afiliacion)
+        public void deletePost([FromBody] Pedidos pedido)
         {
-            List<Afiliaciones> afiliacionesList = new List<Afiliaciones>();
+            List<Pedidos> PedidosList = new List<Pedidos>();
             string fileName = "DataBase/afiliaciones.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
-            afiliacionesList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+            PedidosList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
 
             bool validation = false;
 
-            for (int i = 0; i < afiliacionesList.Count; i++)
+            for (int i = 0; i < PedidosList.Count; i++)
             {
-                if (afiliacionesList[i].Cedula == afiliacion.Cedula)
+                if (PedidosList[i].Cedula == pedido.Cedula)
                 {
-                    afiliacionesList.RemoveAt(i);
+                    PedidosList.RemoveAt(i);
                     Debug.WriteLine("Afiliacion eliminada");
                     validation = true;
                     break;
@@ -92,7 +98,7 @@ namespace server.Controllers
 
             if (validation)
             {
-                jsonString = JsonSerializer.Serialize(afiliacionesList);
+                jsonString = JsonSerializer.Serialize(PedidosList);
                 System.IO.File.WriteAllText(fileName, jsonString);
             }
             else

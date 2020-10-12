@@ -71,7 +71,6 @@ namespace server.Controllers
         }
 
 
-
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

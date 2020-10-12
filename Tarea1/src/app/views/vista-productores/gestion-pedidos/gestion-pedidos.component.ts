@@ -19,7 +19,7 @@ export class GestionPedidosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog(pedido: string[]): void {
+  openDialog(pedido: object[]): void {
       const dialogRef = this.dialog.open(DetallesPedidosComponent, {
        width: '70%',
         height: '70%',

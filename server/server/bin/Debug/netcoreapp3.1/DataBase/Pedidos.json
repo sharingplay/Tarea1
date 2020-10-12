@@ -1,3 +1,11 @@
-{
-
-}
+[
+  {
+    "Listado": "11500",
+    "Comprobante": "1020015",
+    "Direccion": "Direccion",
+    "Cedula": "Cedula",
+    "Nombre": "Miguel",
+    "Apellido": "Rodriguez",
+    "Telefono": "71112550"
+  }
+]

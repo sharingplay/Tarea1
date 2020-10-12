@@ -12,36 +12,93 @@ namespace server.Controllers
     [ApiController]
     public class PedidosController : ControllerBase
     {
-        // GET: api/<PedidosController>
+        // GET: api/<AfiliacionesController>
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Afiliaciones> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Afiliaciones> branchesList = new List<Afiliaciones>();
+            string fileName = "DataBase/afiliaciones.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            branchesList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+
+            return branchesList;
         }
 
-        // GET api/<PedidosController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<PedidosController>
+        // POST api/<AfiliacionesController>
+        [Route("insert")]
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Afiliaciones afiliacion)
         {
+            List<Afiliaciones> ListAfiliaciones = new List<Afiliaciones>();
+            string fileName = "DataBase/afiliaciones.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ListAfiliaciones = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+
+            bool validation = true;
+
+            for (int i = 0; i < ListAfiliaciones.Count; i++)
+            {
+                if (ListAfiliaciones[i].Cedula == afiliacion.Cedula)
+                {
+                    validation = false;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                ListAfiliaciones.Add(afiliacion);
+
+                jsonString = JsonSerializer.Serialize(ListAfiliaciones);
+                System.IO.File.WriteAllText(fileName, jsonString);
+
+                Debug.WriteLine("Afiliacion aceptada");
+            }
+            else
+            {
+                Debug.WriteLine("Ya existe cuenta con ese id");
+            }
         }
 
-        // PUT api/<PedidosController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<PedidosController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        [Route("delete")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void deletePost([FromBody] Afiliaciones afiliacion)
         {
+            List<Afiliaciones> afiliacionesList = new List<Afiliaciones>();
+            string fileName = "DataBase/afiliaciones.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            afiliacionesList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < afiliacionesList.Count; i++)
+            {
+                if (afiliacionesList[i].Cedula == afiliacion.Cedula)
+                {
+                    afiliacionesList.RemoveAt(i);
+                    Debug.WriteLine("Afiliacion eliminada");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(afiliacionesList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Afiliacion no encontrado");
+            }
         }
     }
 }

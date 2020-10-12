@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using server.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,36 +18,93 @@ namespace server.Controllers
     [ApiController]
     public class ProductoresController : ControllerBase
     {
-        // GET: api/<ProductoresController>
+        // GET: api/<AfiliacionesController>
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Productores> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Productores> Productores = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            Productores = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            return Productores;
         }
 
-        // GET api/<ProductoresController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<ProductoresController>
+        // POST api/<AfiliacionesController>
+        [Route("insert")]
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Productores Productor)
         {
+            List<Productores> ProductoresList = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = true;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Cedula == Productor.Cedula)
+                {
+                    validation = false;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                ProductoresList.Add(Productor);
+
+                jsonString = JsonSerializer.Serialize(ProductoresList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+
+                Debug.WriteLine("Productor aceptado");
+            }
+            else
+            {
+                Debug.WriteLine("Ya existe cuenta con ese id");
+            }
         }
 
-        // PUT api/<ProductoresController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<ProductoresController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        [Route("delete")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void deletePost([FromBody] Productores Productor)
         {
+            List<Productores> ProductoresList = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Cedula == Productor.Cedula)
+                {
+                    ProductoresList.RemoveAt(i);
+                    Debug.WriteLine("Productor eliminada");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(ProductoresList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Productor no encontrado");
+            }
         }
     }
 }

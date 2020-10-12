@@ -8,31 +8,35 @@
   <h1>Pedidos Realizados</h1>
   <div class = "row">
     <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let pedido of pedidos">
-      <div class="tile">
+      <ul>
+<!--        <app-category-tier (openModalWithComponent)="openModalWithComponent()" *ngFor='let pedidos of hhtpService.pedidos' [name]='pedido.nombre' [id]='pedido.codigo'>-->
+        <div class="tile">
+            <div class="stats">
+              <div>
+                <strong>Cliente: </strong> {{pedido[0]}}
+              </div>
+            </div>
+            <div class="stats">
+              <div>
+                <strong>Distrito:</strong> {{pedido[1]}}
+              </div>
+            </div>
+            <div class="stats">
+              <div>
+                <strong>Teléfono:</strong> {{pedido[3]}}
+              </div>
+            </div>
           <div class="stats">
             <div>
-              <strong>Cliente: </strong> {{pedido[0]}}
+              <strong>Total:</strong>  {{pedido[2]|currency:"₡":"symbol"}}
             </div>
           </div>
-          <div class="stats">
-            <div>
-              <strong>Distrito:</strong> {{pedido[1]}}
+            <div class="footer">
+              <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
             </div>
-          </div>
-          <div class="stats">
-            <div>
-              <strong>Teléfono:</strong> {{pedido[3]}}
-            </div>
-          </div>
-        <div class="stats">
-          <div>
-            <strong>Total:</strong>  {{pedido[2]|currency:"₡":"symbol"}}
-          </div>
         </div>
-          <div class="footer">
-            <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
-          </div>
-      </div>
+<!--        </app-category-tier>-->
+      </ul>
     </div>
   </div>
 </div>

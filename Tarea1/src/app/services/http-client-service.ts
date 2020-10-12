@@ -21,6 +21,10 @@ export class HttpClientService {
      .subscribe(resp => {
        this.categorias = resp;
      });
+   http.get('https://localhost:5001/api/Pedidos')
+      .subscribe(resp => {
+        this.pedidos = resp;
+      });
    // Cambiar este URL
    http.get('../../assets/data/afiliaciones.json')
      .subscribe((resp: HttpResponse<any>) => {

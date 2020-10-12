@@ -1,0 +1,27 @@
+[
+    
+    {
+        "Cedula": "12342",
+        "Nombre": "mario",
+        "Apellidos": "araya",
+        "Direccion": "neomnuen",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "234345545",
+        "Pedidos": "24353454",
+        "Usuario": "1232434",
+        "Password": "56432"
+    },
+    {
+        "Cedula": "29u32u1092",
+        "Nombre": "rosa",
+        "Apellidos": "ramirez",
+        "Direccion": "neomnuen",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "2343ded5",
+        "Pedidos": "2mwoadm",
+        "Usuario": "1232434",
+        "Password": "56432"
+    }
+]

@@ -14,6 +14,7 @@ namespace server.Models
         public string Nacimiento { get; set; }
         public string Telefono { get; set; }
         public string SINPE { get; set; }
+        public string PuntosEntrega { get; set; }
         public string Pedidos { get; set; }
         public string Usuario { get; set; }
         public string Password { get; set; }

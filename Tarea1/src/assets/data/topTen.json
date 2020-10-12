@@ -1,0 +1,103 @@
+{
+  "tops": {
+    "masVendidos": [
+      "Manzanas",
+      "Naranjas",
+      "Limón",
+      "Jocotes",
+      "Aguacate",
+      "Culantro",
+      "Yuca",
+      "Papas",
+      "Bananos",
+      "Fresa"
+    ],
+    "masGanancias": [
+      "Aguacate",
+      "Limón",
+      "Pollo",
+      "Jocotes",
+      "Naranjas",
+      "Fresa",
+      "Banano",
+      "Sandía",
+      "Pescado",
+      "Papaya"
+    ],
+    "clientesMasCompras": [
+      "Fabián Ramírez",
+      "Mario Araya",
+      "Wajib Zaghul",
+      "Mariana Vargas",
+      "Marco Rivera",
+      "Lionel Messi",
+      "Oscar Hernandez",
+      "Miguel Coto",
+      "Diego Benitez",
+      "Alejandro Rojas"
+    ],
+    "productosPorProductor": [
+      {
+        "nombre": "Fabián Ramírez",
+        "productos": [
+          "Aguacate",
+          "Limón",
+          "Pollo",
+          "Jocotes",
+          "Naranjas",
+          "Fresa",
+          "Banano",
+          "Sandía",
+          "Pescado",
+          "Papaya"
+        ]
+      },
+      {
+        "nombre": "Mario Araya",
+        "productos": [
+          "Pollo",
+          "Pescado",
+          "Alas de pollo",
+          "Costillas",
+          "Muslos",
+          "Filets",
+          "Pollo entero",
+          "Lomo",
+          "Bufalo",
+          "Chuleta"
+        ]
+      },
+      {
+        "nombre": "Mariana Vargas",
+        "productos": [
+          "Culantro",
+          "Cilantro",
+          "Cebollino",
+          "Pimienta",
+          "Sal",
+          "Lechuga",
+          "Repollo",
+          "Coliflor",
+          "Zanahoria",
+          "Brocoli"
+        ]
+      },
+      {
+        "nombre": "Wajib Zagul",
+        "productos": [
+          "Jocotes",
+          "Limón",
+          "Pollo",
+          "Aguacate",
+          "Pescado",
+          "Naranjas",
+          "Fresa",
+          "Sandía",
+          "Banano",
+          "Papaya"
+        ]
+      }
+
+    ]
+  }
+}

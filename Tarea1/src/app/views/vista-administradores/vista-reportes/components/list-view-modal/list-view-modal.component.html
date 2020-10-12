@@ -1,0 +1,23 @@
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header text-center">
+            <h4 class="modal-title white-text w-100 font-weight-bold py-2">{{title}}</h4>
+          </div>
+          <!--Body-->
+          <div class="modal-body mx-4">
+            <ol>
+              <li *ngFor="let item of infoList; let i = index" class="modal-text">{{item}}</li>
+            </ol>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Generar Reporte</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

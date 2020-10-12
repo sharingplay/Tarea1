@@ -10,7 +10,7 @@ import { HttpClientService } from '../../../services/http-client-service';
 })
 export class AdministracionAfiliacionesComponent implements OnInit {
 
-  constructor( private modalService: BsModalService, public  hhtpService: HttpClientService) { }
+  constructor( private modalService: BsModalService, public  hhtpService: HttpClientService ) { }
   bsModalRef: BsModalRef;
 
   ngOnInit(): void {

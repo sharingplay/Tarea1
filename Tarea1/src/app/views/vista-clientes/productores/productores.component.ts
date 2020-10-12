@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import {HttpClientService} from '../../../services/http-client-service';
+import {BsModalService, BsModalRef} from 'ngx-bootstrap/modal';
+
 
 @Component({
   selector: 'app-productores',
@@ -7,8 +10,9 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./productores.component.scss']
 })
 export class ProductoresComponent implements OnInit {
-  productos: string[][] = [['pequeno', 'le ofrecemos todo tipo de verdura'], ['ticos', 'las mejores frutas'], ['el amigo', 'lo mejor hasta su casa'], ['la pulpe', 'lo mejor en verduras']];
-
+  constructor(public httpService: HttpClientService, public modalService: BsModalService) {
+  }
+  bsModalRef: BsModalRef;
   ngOnInit(): void {
   }
 

@@ -78,10 +78,10 @@ namespace server.Controllers
         public void deletePost([FromBody] Pedidos pedido)
         {
             List<Pedidos> PedidosList = new List<Pedidos>();
-            string fileName = "DataBase/afiliaciones.json";
+            string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
-            PedidosList = JsonSerializer.Deserialize<List<Afiliaciones>>(jsonString);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
             bool validation = false;
 
@@ -90,7 +90,7 @@ namespace server.Controllers
                 if (PedidosList[i].Cedula == pedido.Cedula)
                 {
                     PedidosList.RemoveAt(i);
-                    Debug.WriteLine("Afiliacion eliminada");
+                    Debug.WriteLine("Pedido eliminado");
                     validation = true;
                     break;
                 }
@@ -103,7 +103,7 @@ namespace server.Controllers
             }
             else
             {
-                Debug.WriteLine("Afiliacion no encontrado");
+                Debug.WriteLine("Pedido no encontrado");
             }
         }
     }

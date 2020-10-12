@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ClientList.Count; i++)
             {
-                if (ClientList[i].Cedula == Cliente.Cedula)
+                if (ClientList[i].Cedula == Cliente.Cedula && ClientList[i].Usuario == Cliente.Usuario)
                 {
                     validation = false;
                     break;
@@ -103,6 +103,40 @@ namespace server.Controllers
             else
             {
                 Debug.WriteLine("Cliente no encontrado");
+            }
+        }
+
+        [Route("getlogin")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Clientes getClientFromName([FromBody] Clientes Cliente)
+        {
+            List<Clientes> ClientesList = new List<Clientes>();
+            string fileName = "DataBase/Clientes.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ClientesList = JsonSerializer.Deserialize<List<Clientes>>(jsonString);
+
+            bool validation = false;
+
+            Clientes found = null;
+
+            for (int i = 0; i < ClientesList.Count; i++)
+            {
+                if (ClientesList[i].Usuario == Cliente.Usuario && ClientesList[i].Password == Cliente.Password)
+                {
+                    found = ClientesList[i];
+                    validation = true;
+                    break;
+                }
+            }
+            if (validation)
+            {
+                return found;
+            }
+            else
+            {
+                return found;
             }
         }
 

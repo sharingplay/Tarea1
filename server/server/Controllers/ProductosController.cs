@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductList.Count; i++)
             {
-                if (ProductList[i].Productor == Producto.Productor)
+                if (ProductList[i].Productor == Producto.Productor && ProductList[i].Nombre == Producto.Nombre)
                 {
                     validation = false;
                     break;
@@ -71,6 +71,77 @@ namespace server.Controllers
         }
 
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Productos Producto)
+        {
+            List<Productos> ProductosList = new List<Productos>();
+            string fileName = "DataBase/Productos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductosList = JsonSerializer.Deserialize<List<Productos>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < ProductosList.Count; i++)
+            {
+                if (ProductosList[i].Productor == Producto.Productor && ProductosList[i].Nombre == Producto.Nombre)
+                {
+                    ProductosList[i] = Producto;
+                    Debug.WriteLine("Producto modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(ProductosList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Producto no encontrado");
+            }
+        }
+
+
+        [Route("GetPorProductor")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public List<Productos> GetProductoPorProductor([FromBody] Productos product)
+        {
+            List<Productos> ProductosList = new List<Productos>();
+            List<Productos> PrductosProductor = new List<Productos>();
+            string fileName = "DataBase/Productos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductosList = JsonSerializer.Deserialize<List<Productos>>(jsonString);
+
+            bool validation = false;
+
+            Productos found = null;
+
+            for (int i = 0; i < ProductosList.Count; i++)
+            {
+                if (ProductosList[i].Productor == product.Productor)
+                {
+                    found = ProductosList[i];
+                    PrductosProductor.Add(found);
+                    validation = true;
+                }
+            }
+            if (validation)
+            {
+                return PrductosProductor;
+            }
+            else
+            {
+                Debug.WriteLine("Producto no encontrado");
+                return PrductosProductor;
+            }
+        }
 
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
@@ -87,7 +158,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductList.Count; i++)
             {
-                if (ProductList[i].Productor == Producto.Productor)
+                if (ProductList[i].Productor == Producto.Productor && ProductList[i].Nombre == Producto.Nombre)
                 {
                     ProductList.RemoveAt(i);
                     Debug.WriteLine("Afiliacion eliminada");

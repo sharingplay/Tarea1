@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductoresList.Count; i++)
             {
-                if (ProductoresList[i].Cedula == Productor.Cedula)
+                if (ProductoresList[i].Cedula == Productor.Cedula && ProductoresList[i].Usuario == Productor.Usuario)
                 {
                     validation = false;
                     break;
@@ -70,7 +70,110 @@ namespace server.Controllers
             }
         }
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Productores Productor)
+        {
+            List<Productores> ProductoresList = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
 
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Cedula == Productor.Cedula)
+                {
+                    ProductoresList[i] = Productor;
+                    Debug.WriteLine("Productor modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(ProductoresList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Productor no encontrado");
+            }
+        }
+
+        [Route("GetRegion")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public List<Productores> GetProductFromName([FromBody] Productores Productor)
+        {
+            List<Productores> ProductoresList = new List<Productores>();
+            List<Productores> ProductoresRegion = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            Productores found = null;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Direccion == Productor.Direccion)
+                {
+                    found = ProductoresList[i];
+                    ProductoresRegion.Add(found);
+                    validation = true;
+                }
+            }
+            if (validation)
+            {
+                return ProductoresRegion;
+            }
+            else
+            {
+                Debug.WriteLine("Productor no encontrado");
+                return ProductoresRegion;
+            }
+        }
+
+        [Route("getlogin")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Productores getProductFromName([FromBody] Productores Productor)
+        {
+            List<Productores> ProductoresList = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            Productores found = null;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Usuario == Productor.Usuario && ProductoresList[i].Password == Productor.Password)
+                {
+                    found = ProductoresList[i];
+                    validation = true;
+                    break;
+                }
+            }
+            if (validation)
+            {
+                return found;
+            }
+            else
+            {
+                return found;
+            }
+        }
 
         [Route("delete")]
         [EnableCors("AnotherPolicy")]

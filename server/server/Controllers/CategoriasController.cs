@@ -71,6 +71,41 @@ namespace server.Controllers
         }
 
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Categorias Categoria)
+        {
+            List<Categorias> CategoriasList = new List<Categorias>();
+            string fileName = "DataBase/Categorias.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            CategoriasList = JsonSerializer.Deserialize<List<Categorias>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < CategoriasList.Count; i++)
+            {
+                if (CategoriasList[i].Codigo == Categoria.Codigo)
+                {
+                    CategoriasList[i] = Categoria;
+                    Debug.WriteLine("Categoria modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(CategoriasList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Categoria no encontrado");
+            }
+        }
+
 
         [Route("delete")]
         [EnableCors("AnotherPolicy")]

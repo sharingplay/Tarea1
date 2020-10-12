@@ -1,3 +1,14 @@
 [
-
+    {
+        "Codigo": "car01",
+        "Nombre": "Carnes"
+    },
+    {
+        "Codigo": "car02",
+        "Nombre": "Papa"
+    },
+    {
+        "Codigo": "car03",
+        "Nombre": "Yuca"
+    }
 ]

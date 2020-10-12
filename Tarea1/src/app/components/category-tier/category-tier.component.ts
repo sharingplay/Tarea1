@@ -16,8 +16,6 @@ export class CategoryTierComponent implements OnInit {
   @Input() name;
   @Output() openModalWithComponent: EventEmitter<string> = new EventEmitter();
 
-
-
   ngOnInit(): void {
   }
 

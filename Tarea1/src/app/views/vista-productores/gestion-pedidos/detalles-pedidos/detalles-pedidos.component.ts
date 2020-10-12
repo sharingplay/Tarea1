@@ -18,7 +18,8 @@ let flag = true;
 export class DetallesPedidosComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DetallesPedidosComponent>,
               @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos']) {console.log(message); }
-
+  total = 0;
+  productos = this.message.listado
   // tslint:disable-next-line:typedef
   onClicka(){
     if (flag){
@@ -29,7 +30,10 @@ export class DetallesPedidosComponent implements OnInit {
 
 
   ngOnInit(): void {
+    // tslint:disable-next-line:forin
+    for (let prod of this.message.listado){
+      this.total += Number(prod[2]) * Number(prod[3]);
+    }
   }
-
 }
 

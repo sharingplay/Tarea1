@@ -7,7 +7,7 @@
 <div class="container-fluid">
   <h1>Pedidos Realizados</h1>
   <div class = "row">
-    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor='let pedido of hhtpService.pedidos'>
+    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor='let pedido of httpService.pedidos'>
         <div class="tile">
             <div class="stats">
               <div>
@@ -26,7 +26,7 @@
             </div>
           <div class="stats">
             <div>
-              <strong>Total:</strong>  {{pedido.listado|currency:"₡":"symbol"}}
+              <strong>Total:</strong>  {{pedido.listado[0][2]|currency:"₡":"symbol"}}
             </div>
           </div>
             <div class="footer">

@@ -1,11 +1,1 @@
-[
-  {
-    "Listado": "11500",
-    "Comprobante": "1020015",
-    "Direccion": "Direccion",
-    "Cedula": "Cedula",
-    "Nombre": "Miguel",
-    "Apellido": "Rodriguez",
-    "Telefono": "71112550"
-  }
-]
+[{"Listado":"11500","Comprobante":"1020015","Direccion":"Direccion","Cedula":"Cedula","Nombre":"Miguel","Apellido":"Rodriguez","Telefono":"71112550"},{"Listado":"22500","Comprobante":"123456789","Direccion":"San Ramon","Cedula":"205150312","Nombre":"Laura","Apellido":"Ortega","Telefono":"22610212"}]

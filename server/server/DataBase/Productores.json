@@ -1,3 +1,55 @@
 [
 
+    {
+        "venta":  "mkdmwemd",
+        "Cedula": "12342",
+        "Nombre": "mario",
+        "Apellidos": "araya",
+        "Direccion": "San Ramon",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "234345545",
+        "Pedidos": "24353454",
+        "Usuario": "1232434",
+        "Password": "56432"
+    },
+    {
+        "Venta": "123993",
+        "Cedula": "2wemdwe2",
+        "Nombre": "djndwd",
+        "Apellidos": "ramirez",
+        "Direccion": "Heredia",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "2343ded5",
+        "Pedidos": "2mwoadm",
+        "Usuario": "rosar",
+        "Password": "julio"
+    },
+    {
+        "Venta": "123993",
+        "Cedula": "29cdcs",
+        "Nombre": "julio",
+        "Apellidos": "ramirez",
+        "Direccion": "Cartago",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "2343ded5",
+        "Pedidos": "2mwoadm",
+        "Usuario": "1232434",
+        "Password": "56432"
+    },
+    {
+        "Venta": "123993",
+        "Cedula": "29xmdc",
+        "Nombre": "rosa",
+        "Apellidos": "ramirez",
+        "Direccion": "Heredia",
+        "Nacimiento": "24/julio",
+        "Telefono": "122454523",
+        "SINPE": "2343ded5",
+        "Pedidos": "2mwoadm",
+        "Usuario": "1232434",
+        "Password": "56432"
+    }
 ]

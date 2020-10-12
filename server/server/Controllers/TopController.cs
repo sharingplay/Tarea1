@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < TopList.Count; i++)
             {
-                if (TopList[i].Cedula == Top.Cedula)
+                if (TopList[i].Vendidos == Top.Vendidos)
                 {
                     validation = false;
                     break;
@@ -87,7 +87,7 @@ namespace server.Controllers
 
             for (int i = 0; i < TopList.Count; i++)
             {
-                if (TopList[i].Cedula == Top.Cedula)
+                if (TopList[i].Vendidos == Top.Vendidos)
                 {
                     TopList.RemoveAt(i);
                     Debug.WriteLine("Top eliminada");

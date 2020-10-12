@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductList.Count; i++)
             {
-                if (ProductList[i].Cedula == Producto.Cedula)
+                if (ProductList[i].Productor == Producto.Productor)
                 {
                     validation = false;
                     break;
@@ -87,7 +87,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductList.Count; i++)
             {
-                if (ProductList[i].Cedula == Producto.Cedula)
+                if (ProductList[i].Productor == Producto.Productor)
                 {
                     ProductList.RemoveAt(i);
                     Debug.WriteLine("Afiliacion eliminada");

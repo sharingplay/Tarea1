@@ -48,7 +48,7 @@ namespace server.Controllers
 
             for (int i = 0; i < CategoriaList.Count; i++)
             {
-                if (CategoriaList[i].Cedula == Categoria.Cedula)
+                if (CategoriaList[i].Codigo == Categoria.Codigo)
                 {
                     validation = false;
                     break;
@@ -87,7 +87,7 @@ namespace server.Controllers
 
             for (int i = 0; i < CategoriaList.Count; i++)
             {
-                if (CategoriaList[i].Cedula == Categoria.Cedula)
+                if (CategoriaList[i].Codigo == Categoria.Codigo)
                 {
                     CategoriaList.RemoveAt(i);
                     Debug.WriteLine("Categoria eliminada");

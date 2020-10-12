@@ -1,8 +1,18 @@
-{
-  "info":[
-    ["Carnes", "car01"],
-    ["Legumbres", "leg01"],
-    ["Mariscos", "mar01"],
-    ["Hortalizas", "hor01"]
-  ]
-}
+[
+  {
+    "Nombre": "Carnes",
+    "Codigo": "car01"
+  },
+  {
+    "Nombre": "Legumbres",
+    "Codigo": "leg01"
+  },
+  {
+    "Nombre": "Mariscos",
+    "Codigo": "mar01"
+  },
+  {
+    "Nombre": "Hortalizas",
+    "Codigo": "hor01"
+  }
+]

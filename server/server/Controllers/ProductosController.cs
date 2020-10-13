@@ -124,6 +124,7 @@ namespace server.Controllers
         /// </summary>
         /// <param name="product"></param>
         /// <returns>
+        /// devuelve los productos de un productor
         /// </returns>
         [Route("GetPorProductor")]
         [EnableCors("AnotherPolicy")]
@@ -140,7 +141,7 @@ namespace server.Controllers
             bool validation = false;
 
             Productos found = null;
-
+            // busca los productos de un productor
             for (int i = 0; i < ProductosList.Count; i++)
             {
                 if (ProductosList[i].Productor == product.Productor)
@@ -161,6 +162,10 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// Elimina un producto de acuerdo al nombre y al productor
+        /// </summary>
+        /// <param name="Producto"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

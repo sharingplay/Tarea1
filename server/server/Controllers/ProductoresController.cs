@@ -19,6 +19,10 @@ namespace server.Controllers
     public class ProductoresController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Obtiene los datos de los productores del JSON
+        /// </summary>
+        /// <returns></returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Productores> Get()
@@ -33,6 +37,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Agrega al JSON un nuevo productor
+        /// </summary>
+        /// <param name="Productor"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -70,6 +78,11 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// 
+        /// Modifica alguno de los datos del JSON del productor
+        /// </summary>
+        /// <param name="Productor"></param>
         [Route("modify")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -105,6 +118,12 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// 
+        /// Obtiene el productor de acuerdo a la region
+        /// </summary>
+        /// <param name="Productor"></param>
+        /// <returns></returns>
         [Route("GetRegion")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -141,6 +160,13 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// Verifica si el productor esta registrado o no
+        /// </summary>
+        /// <param name="Productor"></param>
+        /// <returns>
+        /// devuelve los datos del productor si existe
+        /// </returns>
         [Route("getlogin")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -175,6 +201,11 @@ namespace server.Controllers
             }
         }
 
+
+        /// <summary>
+        /// elimina el productor de JSON
+        /// </summary>
+        /// <param name="Productor"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

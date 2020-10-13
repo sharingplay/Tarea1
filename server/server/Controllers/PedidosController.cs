@@ -35,6 +35,11 @@ namespace server.Controllers
     public class PedidosController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Obtiene los datos del JSON
+        /// </summary>
+        /// <returns>
+        /// Devuelve una lista con los peididos</returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Pedidos> Get()
@@ -49,6 +54,11 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// 
+        /// Obtiene un nuevo pedido y lo agrega al JSON
+        /// </summary>
+        /// <param name="Pedido"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -86,6 +96,10 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// modifica alguna caracteristica espesifica del pedido
+        /// </summary>
+        /// <param name="Pedido"></param>
         [Route("modify")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -121,7 +135,10 @@ namespace server.Controllers
             }
         }
 
-
+        /// <summary>
+        /// elimina un pedido de acerdo a la cuenta del cliente
+        /// </summary>
+        /// <param name="pedido"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

@@ -22,9 +22,10 @@ export class HttpClientService {
        this.categorias = resp;
      });
    // Cambiar este URL
-   http.get('../../assets/data/afiliaciones.json')
+   http.get('http://localhost:5000/api/Afiliaciones')
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
+       console.log(resp);
      });
    // Cambiar este
    http.get('../../assets/data/topTen.json')

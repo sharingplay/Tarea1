@@ -1,31 +1,32 @@
-<<<<<<< HEAD
-[{"Cedula":"4111222444","Nombre":"Fabian","Apellidos":"Ramirez Arrieta","Direccion":"Heredia","Nacimiento":"03/01/2000","Telefono":"88888888","SINPE":"88888888","PuntosEntrega":"Heredia","Pedidos":"Fresa","Usuario":"FRA01","Password":"password"},{"Cedula":"13432","Nombre":"Mario","Apellidos":"Araya","Direccion":"Heredia","Nacimiento":"03/01/2000","Telefono":"88888888","SINPE":"88888888","PuntosEntrega":"Heredia","Pedidos":"Fresa","Usuario":"FRA01","Password":"password"}]
-=======
 [
-    
     {
-        "Cedula": "12342",
-        "Nombre": "mario",
-        "Apellidos": "araya",
-        "Direccion": "neomnuen",
-        "Nacimiento": "24/julio",
-        "Telefono": "122454523",
-        "SINPE": "234345545",
-        "Pedidos": "24353454",
-        "Usuario": "1232434",
-        "Password": "56432"
+      "Cedula": "4111222444",
+      "Nombre": "Fabian",
+      "Apellidos": "Ramírez Arrieta",
+      "Direccion": "Heredia",
+      "Provincia": "Heredia",
+      "Canton": "Heredia",
+      "Distrito": "Mercedes",
+      "Nacimiento": "03/01/2000",
+      "Telefono": "88776655",
+      "SINPE": "55667788",
+      "PuntosEntrega": "Heredia, Alajuela, San Jose",
+      "Usuario": "FabianRamirez",
+      "Password": "MyPassword1234"
     },
     {
-        "Cedula": "29u32u1092",
-        "Nombre": "rosa",
-        "Apellidos": "ramirez",
-        "Direccion": "neomnuen",
-        "Nacimiento": "24/julio",
-        "Telefono": "122454523",
-        "SINPE": "2343ded5",
-        "Pedidos": "2mwoadm",
-        "Usuario": "1232434",
-        "Password": "56432"
+      "Cedula": "112233445566",
+      "Nombre": "Mariana",
+      "Apellidos": "Vargas Ramirez",
+      "Direccion": "Heredia",
+      "Provincia": "Heredia",
+      "Canton": "Santa Barbara",
+      "Distrito": "San Juan",
+      "Nacimiento": "12/9/1999",
+      "Telefono": "11223344",
+      "SINPE": "44332211",
+      "PuntosEntrega": "San Ramon, Alajuela, San Joaquin",
+      "Usuario": "MarianaSoy",
+      "Password": "NoSe1234"
     }
 ]
->>>>>>> API

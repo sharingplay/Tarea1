@@ -3,36 +3,30 @@
       "Cedula": "4111222444",
       "Nombre": "Fabian",
       "Apellidos": "Ramírez Arrieta",
-      "Direccion": "aAdasd",
-      "FechaNacimiento": "03/01/2000",
-      "Telefono": "88888888",
-      "numeroSINPE": "88888888",
-      "puntosEntrega": [
-        "Heredia",
-        "San Joaquin",
-        "Santa Barbara"
-      ],
-      "usuario": "FRA01",
-      "password": "password"
+      "Direccion": "Heredia",
+      "Provincia": "Heredia",
+      "Canton": "Heredia",
+      "Distrito": "Mercedes",
+      "Nacimiento": "03/01/2000",
+      "Telefono": "88776655",
+      "SINPE": "55667788",
+      "PuntosEntrega": "Heredia, Alajuela, San Jose",
+      "Usuario": "FabianRamirez",
+      "Password": "MyPassword1234"
     },
     {
-      "cedula": "0111222333",
-      "nombre": "Mariana",
-      "apellidos": "Vargas Ramirez",
-      "direccion": {
-        "provincia": "Heredia",
-        "canton": "Santa Barbara",
-        "distrito": "Santa Barbara"
-      },
-      "fechaNacimiento": "4/20/2000",
-      "telefono": "88888888",
-      "numeroSINPE": "77777777",
-      "puntosEntrega": [
-        "Heredia",
-        "Flores",
-        "Cartago"
-      ],
-      "usuario": "MVR02",
-      "password": "password"
+      "Cedula": "112233445566",
+      "Nombre": "Mariana",
+      "Apellidos": "Vargas Ramirez",
+      "Direccion": "Heredia",
+      "Provincia": "Heredia",
+      "Canton": "Santa Barbara",
+      "Distrito": "San Juan",
+      "Nacimiento": "12/9/1999",
+      "Telefono": "11223344",
+      "SINPE": "44332211",
+      "PuntosEntrega": "San Ramon, Alajuela, San Joaquin",
+      "Usuario": "MarianaSoy",
+      "Password": "NoSe1234"
     }
 ]

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj": {}
+    "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj": {
+    "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj",
+        "projectUniqueName": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj",
-        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\obj\\",
+        "projectPath": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj",
+        "packagesPath": "C:\\Users\\ramir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,29 +1,13 @@
 ﻿using System;
-
 using System.Collections.Generic;
-
 using System.Linq;
-
 using System.Threading.Tasks;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
-using server.Models;
-
-using Microsoft.AspNetCore.Cors;
-
-using System.Text.Json;
-
-using System.Text.Json.Serialization;
-
-using System.Diagnostics;
-
-using Microsoft.AspNetCore.Http;
-
 using server.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -86,6 +70,40 @@ namespace server.Controllers
             }
         }
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < PedidosList.Count; i++)
+            {
+                if (PedidosList[i].Cedula == Pedido.Cedula)
+                {
+                    PedidosList[i] = Pedido;
+                    Debug.WriteLine("Pedido modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(PedidosList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Pedido no encontrado");
+            }
+        }
 
 
         [Route("delete")]

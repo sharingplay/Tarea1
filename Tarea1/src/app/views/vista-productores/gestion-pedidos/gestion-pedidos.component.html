@@ -7,32 +7,33 @@
 <div class="container-fluid">
   <h1>Pedidos Realizados</h1>
   <div class = "row">
-    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let pedido of pedidos">
-      <div class="tile">
+    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor='let pedido of httpService.pedidos'>
+        <div class="tile">
+            <div class="stats">
+              <div>
+                <strong>Cliente</strong> {{pedido.nombre}} {{pedido.apellido}}
+              </div>
+            </div>
+            <div class="stats">
+              <div>
+                <strong>Direccion:</strong> {{pedido.direccion}}
+              </div>
+            </div>
+            <div class="stats">
+              <div>
+                <strong>Teléfono:</strong> {{pedido.telefono}}
+              </div>
+            </div>
           <div class="stats">
             <div>
-              <strong>Cliente: </strong> {{pedido[0]}}
+              <strong>Total:</strong>  {{pedido.listado[0][2]|currency:"₡":"symbol"}}
+              <button mat-button class = "mat-boton" (click)="post()">Postear</button>
             </div>
           </div>
-          <div class="stats">
-            <div>
-              <strong>Distrito:</strong> {{pedido[1]}}
+            <div class="footer">
+              <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
             </div>
-          </div>
-          <div class="stats">
-            <div>
-              <strong>Teléfono:</strong> {{pedido[3]}}
-            </div>
-          </div>
-        <div class="stats">
-          <div>
-            <strong>Total:</strong>  {{pedido[2]|currency:"₡":"symbol"}}
-          </div>
         </div>
-          <div class="footer">
-            <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
-          </div>
-      </div>
     </div>
   </div>
 </div>

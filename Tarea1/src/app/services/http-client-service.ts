@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse} from '@angular/common/http';
+import {catchError} from 'rxjs/operators';
 
 
 
@@ -21,6 +22,10 @@ export class HttpClientService {
      .subscribe(resp => {
        this.categorias = resp;
      });
+   http.get('https://localhost:5001/api/Pedidos')
+      .subscribe(resp => {
+        this.pedidos = resp;
+      });
    // Cambiar este URL
    http.get('../../assets/data/afiliaciones.json')
      .subscribe((resp: HttpResponse<any>) => {
@@ -47,5 +52,15 @@ export class HttpClientService {
       .subscribe((resp: HttpResponse<any>) => {
         this.productos = resp;
       });
+ }
+ post(URL: string, json: any ): void{
+    console.log(json);
+    this.http.post(URL, json, {
+     headers: {
+       'Content-Type': 'application/json; charset=UTF-8'
+     }
+   }).subscribe((resp: HttpResponse<any>) => {
+      console.log(resp);
+   });
  }
 }

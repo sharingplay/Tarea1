@@ -1,3 +1,15 @@
 [
-
+  {
+    "Listado": [
+      [ "Fresas","FR015", "2220", "3"],
+      [ "Uvas", "UV012", "1500" ,"2"]
+    ],
+   
+    "Comprobante": "123456789",
+    "Direccion": "San Ramon",
+    "Cedula": "205150312",
+    "Nombre": "Laura",
+    "Apellido": "Ortega",
+    "Telefono": "22610212"
+  }
 ]

@@ -21,6 +21,11 @@ namespace server.Controllers
     public class AfiliacionesController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Obtiene las afiliaciones que se encuentran en el JSON
+        /// </summary>
+        /// <returns>
+        /// Devuelve una lista de todas las afiliaciones</returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Afiliaciones> Get()
@@ -35,6 +40,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Inserta una nueva afiliacion
+        /// </summary>
+        /// <param name="afiliacion"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -73,7 +82,10 @@ namespace server.Controllers
         }
 
         
-
+        /// <summary>
+        /// elimina la afiliacion en el JSON
+        /// </summary>
+        /// <param name="afiliacion"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

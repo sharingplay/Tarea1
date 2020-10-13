@@ -16,7 +16,7 @@
             </div>
             <div class="stats">
               <div>
-                <strong>Direccion:</strong> {{pedido.direccion}}
+                <strong>Ubicación:</strong> {{pedido.canton}}, {{pedido.distrito}}
               </div>
             </div>
             <div class="stats">
@@ -24,12 +24,6 @@
                 <strong>Teléfono:</strong> {{pedido.telefono}}
               </div>
             </div>
-          <div class="stats">
-            <div>
-              <strong>Total:</strong>  {{pedido.listado[0][2]|currency:"₡":"symbol"}}
-              <button mat-button class = "mat-boton" (click)="post()">Postear</button>
-            </div>
-          </div>
             <div class="footer">
               <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
             </div>

@@ -1,17 +1,11 @@
-{
-  "afiliaciones":
-  [
+[
     {
-      "cedula": "4111222444",
-      "nombre": "Fabian",
-      "apellidos": "Ramírez Arrieta",
-      "direccion": {
-        "provincia": "Heredia",
-        "canton": "Heredia",
-        "distrito": "Mercedes"
-      },
-      "fechaNacimiento": "03/01/2000",
-      "telefono": "88888888",
+      "Cedula": "4111222444",
+      "Nombre": "Fabian",
+      "Apellidos": "Ramírez Arrieta",
+      "Direccion": "aAdasd",
+      "FechaNacimiento": "03/01/2000",
+      "Telefono": "88888888",
       "numeroSINPE": "88888888",
       "puntosEntrega": [
         "Heredia",
@@ -40,26 +34,5 @@
       ],
       "usuario": "MVR02",
       "password": "password"
-    },
-    {
-      "cedula": "4111222444",
-      "nombre": "Fabian",
-      "apellidos": "Ramírez Arrieta",
-      "direccion": {
-        "provincia": "Heredia",
-        "canton": "Heredia",
-        "distrito": "Mercedes"
-      },
-      "fechaNacimiento": "03/01/2000",
-      "telefono": "88888888",
-      "numeroSINPE": "88888888",
-      "puntosEntrega": [
-        "Heredia",
-        "San Joaquin",
-        "Santa Barbara"
-      ],
-      "usuario": "FRA01",
-      "password": "password"
     }
-  ]
-}
+]

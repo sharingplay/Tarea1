@@ -17,7 +17,7 @@ export class HttpClientService {
 
   constructor(private http: HttpClient) {
    console.log('Service Running');
-   http.get('https://localhost:5001/api/Categorias')
+   http.get('http://localhost:5000/api/Categorias')
      .subscribe(resp => {
        this.categorias = resp;
      });

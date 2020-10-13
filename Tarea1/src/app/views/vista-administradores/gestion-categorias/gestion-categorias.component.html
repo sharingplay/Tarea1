@@ -1,15 +1,13 @@
 <app-header-admin></app-header-admin>
 
 
-<div class ="imagenFondo">
+
 <app-title text="Gestión de Categorías"></app-title>
 
-  <app-subtitle text="Catagorías Activas actualmente."></app-subtitle>
-  <app-centered-button label="Agregar categoría" (onClick)="addCategory()"></app-centered-button>
+<app-subtitle text="Catagorías Activas actualmente."></app-subtitle>
+<app-centered-button label="Agregar categoría" (onClick)="addCategory()"></app-centered-button>
 
-  <ul>
-      <app-category-tier (openModalWithComponent)="openModalWithComponent()" *ngFor='let category of hhtpService.categorias' [name]='category.nombre' [id]='category.codigo'></app-category-tier>
-  </ul>
+<ul>
+    <app-category-tier (openModalWithComponent)="openModalWithComponent()" *ngFor='let category of hhtpService.categorias' [name]='category.nombre' [id]='category.codigo'></app-category-tier>
+</ul>
 
-
-</div>

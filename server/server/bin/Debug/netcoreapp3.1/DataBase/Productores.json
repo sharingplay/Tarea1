@@ -1,68 +1,99 @@
 [
-
     {
-        "Venta":  "Compreme porfavor me muero de hambre",
         "Cedula": "12342",
         "Nombre": "Mario",
         "Apellidos": "Araya",
         "Direccion": "San Ramon",
+        
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
         "Nacimiento": "02/03/1999",
         "Telefono": "895613",
         "SINPE": "234345545",
         "Pedidos": "24353454",
         "Usuario": "sepelion",
-        "Password": "123queso"
+        "Password": "123queso",
+        "Venta": "Compreme porfavor me muero de hambre"
     },
     {
-        "Venta": "llevalo bien fresco",
         "Cedula": "2wemdwe2",
         "Nombre": "Fabian",
         "Apellidos": "Ramirez",
         "Direccion": "Heredia",
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
         "Nacimiento": "24/julio",
         "Telefono": "24456368",
         "SINPE": "2343ded5",
         "Pedidos": "2mwoadm",
         "Usuario": "rosar",
-        "Password": "julio"
+        "Password": "julio",
+        "Venta": "llevalo bien fresco"
     },
     {
-        "Venta": "que le sirvo mi amor?",
         "Cedula": "29cdcs",
         "Nombre": "Julio",
         "Apellidos": "Solis",
         "Direccion": "Cartago",
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
         "Nacimiento": "24/julio",
         "Telefono": "24475135",
         "SINPE": "2343ded5",
         "Pedidos": "2mwoadm",
         "Usuario": "1232434",
-        "Password": "56432"
+        "Password": "56432",
+        "Venta": "que le sirvo mi amor?"
     },
     {
-        "Venta": "Mas fresco no lo encuentra en ningun lado",
         "Cedula": "29xmdc",
         "Nombre": "Wajib",
         "Apellidos": "Zaglul",
         "Direccion": "Guanacaste",
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
         "Nacimiento": "24/julio",
         "Telefono": "8512379",
         "SINPE": "2343ded5",
         "Pedidos": "2mwoadm",
         "Usuario": "1232434",
-        "Password": "56432"
+        "Password": "56432",
+        "Venta": "Mas fresco no lo encuentra en ningun lado"
     },
     {
-        "Venta": "Mas fresco no lo encuentra en ningun lado",
         "Cedula": "29xmdc",
         "Nombre": "Mariana",
         "Apellidos": "Vargas",
         "Direccion": "Puntarenas",
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
         "Nacimiento": "24/julio",
         "Telefono": "7054126",
         "SINPE": "2343ded5",
         "Pedidos": "2mwoadm",
         "Usuario": "1232434",
-        "Password": "56432"
+        "Password": "56432",
+        "Venta": "Mas fresco no lo encuentra en ningun lado"
+    },
+    {
+        "Cedula": "534i0453",
+        "Nombre": "Mario",
+        "Apellidos": "Araya",
+        "Direccion": "San Ramon",
+        "Provincia": null,
+        "Canton": null,
+        "Distrito": null,
+        "Nacimiento": "02/03/1999",
+        "Telefono": "895613",
+        "SINPE": "234345545",
+        "Pedidos": "24353454",
+        "Usuario": "kmsdmdie",
+        "Password": "123queso",
+        "Venta": "Compreme porfavor me muero de hambre"
     }
 ]

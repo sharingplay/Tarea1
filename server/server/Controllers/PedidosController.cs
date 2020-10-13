@@ -95,7 +95,7 @@ namespace server.Controllers
             string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
-            PedidosList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
             bool validation = false;
 
@@ -104,7 +104,7 @@ namespace server.Controllers
                 if (PedidosList[i].Cedula == Pedido.Cedula)
                 {
                     PedidosList[i] = Pedido;
-                    Debug.WriteLine("Productor modificado");
+                    Debug.WriteLine("Pedido modificado");
                     validation = true;
                     break;
                 }
@@ -117,7 +117,7 @@ namespace server.Controllers
             }
             else
             {
-                Debug.WriteLine("Productor no encontrado");
+                Debug.WriteLine("Pedido no encontrado");
             }
         }
 

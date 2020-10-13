@@ -11,7 +11,7 @@ import {HttpResponse, HttpClient} from '@angular/common/http';
 export class LogInComponent implements OnInit {
   private username: string;
   private password: string;
-  public usuario: HttpResponse<any>;
+  public usuario: HttpResponse<'Clientes'>;
 
   constructor(public httpService: HttpClientService, private router: Router, private server: HttpClient) { }
   async login(): Promise<void> {

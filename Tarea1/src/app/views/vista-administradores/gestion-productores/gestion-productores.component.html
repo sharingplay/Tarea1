@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="footer">
-            <button routerLink="/ActualizarProductor" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
+            <button [routerLink]= "['/ActualizarProductor', productor.cedula]" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
             <button routerLink="/GestionProductores" routerLinkActive="active" mat-button class = "btn-block btn-danger" (click) = "delete(productor)" >Eliminar</button>
           </div>
         </div>

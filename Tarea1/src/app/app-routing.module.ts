@@ -37,6 +37,7 @@ const routes: Routes = [
   {path: 'CrearCuentaCliente', component: CreacionCuentaClienteComponent},
   {path: 'SolicitudAfiliacion', component: SolicitudAfiliacionComponent},
   {path: 'ActualizarProductor', component: ActualizarProductoresComponent},
+  {path: 'ActualizarProductor/:productor', component: ActualizarProductoresComponent},
   {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
   {path: 'GestionPedidos', component: GestionPedidosComponent},
   {path: 'Carrito', component: CarritoComponent},

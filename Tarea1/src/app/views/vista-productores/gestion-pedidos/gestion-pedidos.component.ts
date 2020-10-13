@@ -33,18 +33,20 @@ export class GestionPedidosComponent implements OnInit {
       listado: [
         [
           'Bananos',
+          'Ban01',
           '980',
           '3'
         ],
         [
           'Carne',
+          'Car02',
           '2750',
           '2'
         ]
       ],
       comprobante: '65857412',
-      direccion: 'San Ramon',
-      cedula: '205150312',
+      direccion: 'Heredia',
+      cedula: '22132000',
       nombre: 'Miguel',
       apellido: 'Lagos',
       telefono: '88741520'

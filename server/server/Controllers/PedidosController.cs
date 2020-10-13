@@ -86,6 +86,40 @@ namespace server.Controllers
             }
         }
 
+        [Route("modify")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public void modifyPost([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            for (int i = 0; i < PedidosList.Count; i++)
+            {
+                if (PedidosList[i].Cedula == Pedido.Cedula)
+                {
+                    PedidosList[i] = Pedido;
+                    Debug.WriteLine("Productor modificado");
+                    validation = true;
+                    break;
+                }
+            }
+
+            if (validation)
+            {
+                jsonString = JsonSerializer.Serialize(PedidosList);
+                System.IO.File.WriteAllText(fileName, jsonString);
+            }
+            else
+            {
+                Debug.WriteLine("Productor no encontrado");
+            }
+        }
 
 
         [Route("delete")]

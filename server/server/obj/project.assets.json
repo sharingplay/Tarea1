@@ -8847,19 +8847,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mario\\.nuget\\packages\\": {}
+    "C:\\Users\\maria\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj",
+      "projectUniqueName": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mario\\Desktop\\Tarea1\\server\\server\\obj\\",
+      "projectPath": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

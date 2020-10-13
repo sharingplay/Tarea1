@@ -5,17 +5,17 @@
 
 <div class="container">
   <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.masVendidos, 'Más Vendidos')">Productos más vendidos</button>
+    <button class="bton" (click)="showReport(hhtpService.tops[0].total, 'Más Vendidos')">Productos más vendidos</button>
   </div>
 </div>
 <div class="container">
   <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.masGanancias, 'Más ganancias')">Productos con más ganancias</button>
+    <button class="bton" (click)="showReport(hhtpService.tops[0].ganancias, 'Más ganancias')">Productos con más ganancias</button>
   </div>
 </div>
 <div class="container">
   <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.clientesMasCompras, 'Clientes con más compras')">Clientes con más compras</button>
+    <button class="bton" (click)="showReport(hhtpService.tops[0].clientes, 'Clientes con más compras')">Clientes con más compras</button>
   </div>
 </div>
 <div class="container">

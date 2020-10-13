@@ -25,12 +25,12 @@ export class HttpClientService {
    http.get('http://localhost:5000/api/Afiliaciones')
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
-       console.log(resp);
      });
    // Cambiar este
-   http.get('../../assets/data/topTen.json')
+   http.get('http://localhost:5000/api/Top')
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
+        console.log(resp);
       });
    http.get('https://localhost:5001/api/Clientes')
       .subscribe((resp: HttpResponse<any>) => {

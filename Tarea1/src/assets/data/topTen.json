@@ -1,5 +1,5 @@
-{
-  "tops": {
+[
+  {
     "masVendidos": [
       "Manzanas",
       "Naranjas",
@@ -11,7 +11,8 @@
       "Papas",
       "Bananos",
       "Fresa"
-    ],
+    ]},
+  {
     "masGanancias": [
       "Aguacate",
       "Limón",
@@ -23,7 +24,8 @@
       "Sandía",
       "Pescado",
       "Papaya"
-    ],
+    ]},
+  {
     "clientesMasCompras": [
       "Fabián Ramírez",
       "Mario Araya",
@@ -35,7 +37,8 @@
       "Miguel Coto",
       "Diego Benitez",
       "Alejandro Rojas"
-    ],
+    ]},
+  {
     "productosPorProductor": [
       {
         "nombre": "Fabián Ramírez",
@@ -100,4 +103,4 @@
 
     ]
   }
-}
+]

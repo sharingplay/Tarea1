@@ -21,7 +21,7 @@ import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/Home', pathMatch: 'full' },
+  {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeViewComponent},
   {path: 'GestionCategorias', component: GestionCategoriasComponent},
   {path: 'adminAfiliaciones', component: AdministracionAfiliacionesComponent},

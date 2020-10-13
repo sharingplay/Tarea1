@@ -8847,11 +8847,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\wajib\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\maria\\.nuget\\packages\\": {}
+>>>>>>> Server
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\wajib\\OneDrive - Estudiantes ITCR\\Documentos\\TEC\\2020 II Semestre\\Bases\\Tarea1\\server\\server\\server.csproj",
       "projectName": "server",
       "projectPath": "C:\\Users\\wajib\\OneDrive - Estudiantes ITCR\\Documentos\\TEC\\2020 II Semestre\\Bases\\Tarea1\\server\\server\\server.csproj",
@@ -8860,6 +8865,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wajib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\server.csproj",
+      "projectName": "server",
+      "projectPath": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maria\\OneDrive - Estudiantes ITCR\\Escritorio\\Computadores\\6 semestre\\bases\\Tareas cortas\\Tarea corta 1\\Tarea1\\server\\server\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Server
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

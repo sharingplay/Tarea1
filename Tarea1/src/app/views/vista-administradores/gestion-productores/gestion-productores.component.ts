@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClientService} from '../../../services/http-client-service';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-gestion-productores',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gestion-productores.component.scss']
 })
 export class GestionProductoresComponent {
-  productos: string[] = ['fresa', 'uva', 'yuca', 'papa', 'chayote', 'queso', 'naranja'];
-  // precios: number[] = [100, 200, 500, 1000, 300];
-  constructor() { }
+  constructor(public httpService: HttpClientService, public modalService: BsModalService) {
+  }
+  bsModalRef: BsModalRef;
 }

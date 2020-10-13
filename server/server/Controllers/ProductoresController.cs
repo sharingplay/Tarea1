@@ -123,7 +123,7 @@ namespace server.Controllers
 
             for (int i = 0; i < ProductoresList.Count; i++)
             {
-                if (ProductoresList[i].Direccion == Productor.Direccion)
+                if (ProductoresList[i].Canton == Productor.Canton)
                 {
                     found = ProductoresList[i];
                     ProductoresRegion.Add(found);

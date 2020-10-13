@@ -18,6 +18,12 @@ namespace server.Controllers
     [ApiController]
     public class TopController : ControllerBase
     {
+        /// <summary>
+        /// Funcion encargada de obtener los datos del json
+        /// </summary>
+        /// <returns>
+        /// Devuelve una lista con los top
+        /// </returns>
         // GET: api/<AfiliacionesController>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
@@ -33,6 +39,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Funcion encargada de insertar el nuevo top al json
+        /// </summary>
+        /// <param name="Top"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -71,10 +81,14 @@ namespace server.Controllers
         }
 
 
-
+        /// <summary>
+        /// Funcion que se encarga de borrar el top que le pasan, de acuerdo al vendido
+        /// </summary>
+        /// <param name="Top"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
+       
         public void deletePost([FromBody] Top Top)
         {
             List<Top> TopList = new List<Top>();

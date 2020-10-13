@@ -63,4 +63,13 @@ export class HttpClientService {
       console.log(resp);
    });
  }
+  delete(URL: string, json: any ): void{
+    console.log(json);
+    this.http.delete(URL, json, {
+      headers: {'Content-Type': 'application/json; charset=UTF-8'
+      }
+    }).subscribe((resp: HttpResponse<any>) => {
+      console.log(resp);
+    });
+  }
 }

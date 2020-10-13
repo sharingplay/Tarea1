@@ -1,15 +1,1 @@
-[
-  {
-    "Listado": [
-      [ "Fresas","FR015", "2220", "3"],
-      [ "Uvas", "UV012", "1500" ,"2"]
-    ],
-   
-    "Comprobante": "123456789",
-    "Direccion": "San Ramon",
-    "Cedula": "205150312",
-    "Nombre": "Laura",
-    "Apellido": "Ortega",
-    "Telefono": "22610212"
-  }
-]
+[{"Listado":[["Fresas","FR015","2220","3"],["Uvas","UV012","1500","2"]],"Comprobante":"123456789","Direccion":"San Ramon","Provincia":null,"Canton":null,"Distrito":null,"Cedula":"205150312","Nombre":"Laura","Apellido":"Ortega","Telefono":"22610212"},{"Listado":[["Bananos","Ban01","980","3"],["Carne","Car02","2750","2"]],"Comprobante":"65857412","Direccion":"Heredia","Provincia":null,"Canton":null,"Distrito":null,"Cedula":"22132000","Nombre":"Miguel","Apellido":"Lagos","Telefono":"88741520"}]

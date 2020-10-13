@@ -11,4 +11,9 @@ export class GestionProductoresComponent {
   constructor(public httpService: HttpClientService, public modalService: BsModalService) {
   }
   bsModalRef: BsModalRef;
+  delete(productor): void{
+    console.log(productor);
+    this.httpService.post('https://localhost:5001/api/Productores/delete', productor);
+    window.location.reload();
+  }
 }

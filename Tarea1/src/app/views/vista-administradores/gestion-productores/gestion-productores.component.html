@@ -4,7 +4,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
 <div class="footerActualizar">
-  <a routerLink="/ActualizarProductores" routerLinkActive="active" href="#" class="Cbtn btn-light btn-lg">Agregar</a>
+  <a routerLink="/AgregarProductores" routerLinkActive="active" href="#" class="Cbtn btn-light btn-lg">Agregar</a>
 </div>
 
 <app-header-admin></app-header-admin>
@@ -37,10 +37,9 @@
               <strong>Telefono: </strong> {{productor.telefono}}
             </div>
           </div>
-
           <div class="footer">
-            <a routerLink="/ActualizarProductor" routerLinkActive="active" href="#" class="Cbtn Cbtn-primary">Actualizar</a>
-            <a href="#" class="Cbtn Cbtn-danger">Eliminar</a>
+            <button routerLink="/ActualizarProductor" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
+            <button routerLink="/GestionProductores" routerLinkActive="active" mat-button class = "btn-block btn-danger" (click) = "delete(productor)" >Eliminar</button>
           </div>
         </div>
       </div>

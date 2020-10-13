@@ -62,7 +62,7 @@ div.footerActualizar {
   margin: 20px 5px;
 }
 
-div.footerActualizar a.Cbtn{
+div.footerActualizar a.btn{
   padding: 20px 55px;
   background-color: #DADADA;
   color: #666;
@@ -74,7 +74,7 @@ div.footerActualizar a.Cbtn{
   border-radius: 10px;
 }
 
-div.footer a.Cbtn{
+div.footer a.btn{
   padding: 10px 25px;
   background-color: #DADADA;
   color: #666;
@@ -85,21 +85,21 @@ div.footer a.Cbtn{
   border-radius: 3px;
 }
 
-div.footer a.Cbtn-primary{
+div.footer a.btn-primary{
   background-color: #5AADF2;
   color: #FFF;
 }
 
-div.footer a.Cbtn-primary:hover{
+div.footer a.btn-primary:hover{
   background-color: #7dbef5;
 }
 
-div.footer a.Cbtn-danger{
+div.footer a.btn-danger{
   background-color: #fc5a5a;
   color: #FFF;
 }
 
-div.footer a.Cbtn-danger:hover{
+div.footer a.btn-danger:hover{
   background-color: #fd7676;
 }
 

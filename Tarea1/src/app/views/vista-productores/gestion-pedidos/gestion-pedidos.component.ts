@@ -28,10 +28,34 @@ export class GestionPedidosComponent implements OnInit {
       });
       dialogRef.afterClosed().subscribe(res => {console.log(res); });
   }
+  post(): void{
+    const json = {
+      listado: [
+        [
+          'Bananos',
+          '980',
+          '3'
+        ],
+        [
+          'Carne',
+          '2750',
+          '2'
+        ]
+      ],
+      comprobante: '65857412',
+      direccion: 'San Ramon',
+      cedula: '205150312',
+      nombre: 'Miguel',
+      apellido: 'Lagos',
+      telefono: '88741520'
+    };
+    this.httpService.post('https://localhost:5001/api/Pedidos/insert', json);
+  }
+
   ngOnInit(): void {
     console.log(this.httpService.pedidos.nombre);
     // tslint:disable-next-line:forin
-    for (let prod of this.httpService.pedidos.listado){
+    for (const prod of this.httpService.pedidos.listado){
       this.total += Number(prod[2]) * Number(prod[3]);
     }
   }

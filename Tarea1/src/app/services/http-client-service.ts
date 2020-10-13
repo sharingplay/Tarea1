@@ -52,4 +52,31 @@ export class HttpClientService {
         this.productos = resp;
       });
  }
+ post(URL: string, json: any ): void{
+    console.log(json);
+    this.http.post('https://localhost:5001/api/Pedidos/insert', {
+      listado: [
+        [
+          'Bananos',
+          '980',
+          '3'
+        ],
+        [
+          'Carne',
+          '2750',
+          '2'
+        ]
+      ],
+      comprobante: '65857412',
+      direccion: 'San Ramon',
+      cedula: '205150312',
+      nombre: 'Miguel',
+      apellido: 'Lagos',
+      telefono: '88741520'
+    }, {
+     headers: {
+       'Content-Type': 'application/json; charset=UTF-8'
+     }
+   });
+ }
 }

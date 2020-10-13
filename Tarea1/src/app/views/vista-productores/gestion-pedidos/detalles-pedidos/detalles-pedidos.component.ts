@@ -28,7 +28,6 @@ export class DetallesPedidosComponent implements OnInit {
     }
   }
 
-
   ngOnInit(): void {
     // tslint:disable-next-line:forin
     for (let prod of this.message.listado){

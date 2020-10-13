@@ -12,7 +12,7 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 })
 export class GestionPedidosComponent implements OnInit {
   total = 0;
-  constructor(public dialog: MatDialog, public  httpService: HttpClientService) { }
+  constructor(public dialog: MatDialog, public  httpService: HttpClientService) {console.log(this.httpService.pedidos); }
   bsModalRef: BsModalRef;
   openDialog(pedido: object[]): void {
       const dialogRef = this.dialog.open(DetallesPedidosComponent, {
@@ -53,12 +53,5 @@ export class GestionPedidosComponent implements OnInit {
     };
     this.httpService.post('https://localhost:5001/api/Pedidos/insert', json);
   }
-
-  ngOnInit(): void {
-    console.log(this.httpService.pedidos.nombre);
-    // tslint:disable-next-line:forin
-    for (const prod of this.httpService.pedidos.listado){
-      this.total += Number(prod[2]) * Number(prod[3]);
-    }
-  }
+  ngOnInit(): void {}
 }

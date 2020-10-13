@@ -4,9 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 import {JsonArray} from '@angular/compiler-cli/ngcc/src/packages/entry_point';
 import {HttpClientService} from '../../../../services/http-client-service';
-// import {GuardService}from '.././guard.service';
 declare const fileDropArea: any;
-declare const myTest: any;
 let flag = true;
 
 

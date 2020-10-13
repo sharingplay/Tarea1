@@ -19,7 +19,7 @@ import {ActualizacionDatosClienteComponent} from './views/vista-clientes/actuali
 import {ProductsPerProducerComponent} from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/Home', pathMatch: 'full' },
+  {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeViewComponent},
   {path: 'GestionCategorias', component: GestionCategoriasComponent},
   {path: 'adminAfiliaciones', component: AdministracionAfiliacionesComponent},

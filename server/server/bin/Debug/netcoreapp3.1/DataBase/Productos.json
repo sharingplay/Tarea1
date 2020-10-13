@@ -1,3 +1,43 @@
-{
+[
+    {
+        "Nombre": "fresa",
+        "Categoria": "fruta",
+        "Foto": "no hay",
+        "Precio": "2000",
+        "Modo": "kilo",
+        "Disponibilidad": "30",
+        "Productor": "Mario",
+        "Total": "2000"
+    },
+    {
+        "Nombre": "Chayote",
+        "Categoria": "verdura",
+        "Foto": "no hay",
+        "Precio": "1000",
+        "Modo": "caja",
+        "Disponibilidad": "50",
+        "Productor": "Wajib",
+        "Total": "1000"
+    },
+    {
+        "Nombre": "Mango",
+        "Categoria": "fruta",
+        "Foto": "no hay",
+        "Precio": "100",
+        "Modo": "unidad",
+        "Disponibilidad": "80",
+        "Productor": "Fabian",
+        "Total": "100"
+    },
+    {
+        "Nombre": "Yuca",
+        "Categoria": "tuberculo",
+        "Foto": "no hay",
+        "Precio": "500",
+        "Modo": "paquete",
+        "Disponibilidad": "20",
+        "Productor": "Mariana",
+        "Total": "500"
+    }
 
-}
+]

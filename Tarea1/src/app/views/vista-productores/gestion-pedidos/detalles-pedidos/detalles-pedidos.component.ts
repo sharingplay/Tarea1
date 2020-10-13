@@ -17,7 +17,7 @@ export class DetallesPedidosComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DetallesPedidosComponent>,
               @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos']) {console.log(message); }
   total = 0;
-  productos = this.message.listado
+  productos = this.message.listado;
   // tslint:disable-next-line:typedef
   onClicka(){
     if (flag){

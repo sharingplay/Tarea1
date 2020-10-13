@@ -53,14 +53,13 @@ export class HttpClientService {
         this.productos = resp;
       });
  }
- post(URL: string, json: any ): void{
+ // @ts-ignore
+  async post(URL: string, json: any): HttpResponse<any> {
     console.log(json);
-    this.http.post(URL, json, {
-     headers: {
-       'Content-Type': 'application/json; charset=UTF-8'
-     }
-   }).subscribe((resp: HttpResponse<any>) => {
-      console.log(resp);
-   });
- }
+    await this.http.post(URL, json, {
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8'
+      }
+    }).subscribe((resp: HttpResponse<any>) => resp);
+  }
 }

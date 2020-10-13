@@ -1,15 +1,32 @@
 [
   {
     "Listado": [
-      [ "Fresas","FR015", "2220", "3"],
-      [ "Uvas", "UV012", "1500" ,"2"]
+      [ "Fresas", "FR015", "2220", "3" ],
+      [ "Uvas", "UV012", "1500", "2" ]
     ],
-   
     "Comprobante": "123456789",
-    "Direccion": "San Ramon",
+    "Direccion": "Del parque 300m oeste y 100 Norte",
+    "Provincia": "Alajuela",
+    "Canton": "San Ramon",
+    "Distrito": "Centro",
     "Cedula": "205150312",
     "Nombre": "Laura",
     "Apellido": "Ortega",
     "Telefono": "22610212"
+  },
+  {
+    "Listado": [
+      [ "Bananos", "Ban01", "980", "3" ],
+      [ "Carne", "Car02", "2750", "2" ]
+    ],
+    "Comprobante": "65857412",
+    "Direccion": "De la plaza 500m norte y 50 oeste, frente al poste quebrado",
+    "Provincia": "Heredia",
+    "Canton": "Santa Barbara",
+    "Distrito": "Santa Barbara",
+    "Cedula": "22132000",
+    "Nombre": "Miguel",
+    "Apellido": "Lagos",
+    "Telefono": "88741520"
   }
 ]

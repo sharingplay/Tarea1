@@ -19,18 +19,18 @@
         <h2 class="h6 text-light mb-0">Products</h2><a class="btn btn-outline-primary btn-sm pl-2" href="shop-grid-ls.html"><i class="czi-arrow-left mr-2"></i>Continue shopping</a>
       </div>
       <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-4 pb-3 border-bottom" *ngFor="let producto of productos">
+      <div class="d-sm-flex justify-content-between align-items-center my-4 pb-3 border-bottom" *ngFor="let producto of message">
         <div class="media media-ie-fix d-block d-sm-flex align-items-center text-center text-sm-left"><a class="d-inline-block mx-auto mr-sm-4" href="shop-single-v1.html" style="width: 10rem;"><img src="img/shop/cart/02.jpg" alt="Product"></a>
           <div class="media-body pt-2">
-            <h3 class="product-title font-size-base mb-2"><a href="#">{{producto[0]}}</a></h3>
-            <div class="font-size-sm"><span class="text-muted mr-2">Detalles:</span>{{producto[2]}}</div>
-            <div class="font-size-lg text-accent pt-2">{{producto[3]|currency:"₡":"symbol"}}</div>
+            <h3 class="product-title font-size-base mb-2"><a href="#">{{producto.nombre}}</a></h3>
+            <div class="font-size-sm"><span class="text-muted mr-2">Detalles:</span>{{producto.detalles}}</div>
+            <div class="font-size-lg text-accent pt-2">{{producto.precio|currency:"₡":"symbol"}}</div>
           </div>
         </div>
         <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
           <div class="form-group mb-0">
-              <label class="font-weight-medium" for="{{producto[4]}}">Quantity</label>
-              <input class="form-control" type="number" id="{{producto[4]}}" min="0" placeholder="Quantity" value="{{producto[1]}}" formControlName="product_quantity" (click)="updateTotal()">
+              <label class="font-weight-medium" for="{{producto.nombre}}">Quantity</label>
+              <input class="form-control" type="number" id="{{producto.nombre}}" min="0" placeholder="Quantity" value="0" formControlName="product_quantity" (click)="updateTotal()">
           </div>
           <button class="btn btn-link px-0 text-danger" type="button"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Remove</span></button>
         </div>

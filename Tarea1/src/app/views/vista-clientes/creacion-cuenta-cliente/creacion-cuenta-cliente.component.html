@@ -15,19 +15,19 @@
       <div class="form-group">
         <label for="firstName" class="col-sm-3 control-label">Nombre*</label>
         <div class="col-sm-9">
-          <input type="text" id="firstName" placeholder="Nombre" class="form-control" autofocus>
+          <input type="text" id="FirstName" placeholder="Nombre" class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
         <label for="lastName" class="col-sm-3 control-label">Apellido*</label>
         <div class="col-sm-9">
-          <input type="text" id="lastName" placeholder="Apellidos" class="form-control" autofocus>
+          <input type="text" id="LastName" placeholder="Apellidos" class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
         <label for="cedula" class="col-sm-3 control-label">Cedula*</label>
         <div class="col-sm-9">
-          <input type="number" id="cedula" placeholder="Numero de cedula" class="form-control" autofocus>
+          <input type="text" id="Cedula" placeholder="Numero de cedula" class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
@@ -49,12 +49,6 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="email" class="col-sm-3 control-label">Email* </label>
-        <div class="col-sm-9">
-          <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
-        </div>
-      </div>
-      <div class="form-group">
         <label for="Usuario" class="col-sm-3 control-label">Usuario* </label>
         <div class="col-sm-9">
           <input type="text" id="Usuario" placeholder="Usuario" class="form-control" name= "Usuario">
@@ -63,7 +57,7 @@
       <div class="form-group">
         <label for="password" class="col-sm-3 control-label">Clave*</label>
         <div class="col-sm-9">
-          <input type="password" id="password" placeholder="Password" class="form-control">
+          <input type="password" id="Password" placeholder="Password" class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -75,13 +69,13 @@
       <div class="form-group">
         <label for="fechaNacimiento" class="col-sm-3 control-label">Fecha de nacimiento*</label>
         <div class="col-sm-9">
-          <input type="date" id="fechaNacimiento" class="form-control">
+          <input type="text" id="FechaNacimiento" placeholder="Fecha de Nacimiento" class="form-control">
         </div>
       </div>
       <div class="form-group">
         <label for="phoneNumber" class="col-sm-3 control-label">Numero de Telefono* </label>
         <div class="col-sm-9">
-          <input type="phoneNumber" id="phoneNumber" placeholder="Numero de telefono" class="form-control">
+          <input type="phoneNumber" id="PhoneNumber" placeholder="Numero de telefono" class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -89,7 +83,7 @@
           <span class="help-block">*Campos obligatorios</span>
         </div>
       </div>
-      <button routerLink="/Home" routerLinkActive="active" type="submit" class="btn btn-primary btn-block">Crear Cuenta</button>
+      <button routerLink="/CrearCuentaCliente" routerLinkActive="active" type="submit" (click)="agregarCliente()" class="btn btn-primary btn-block">Crear Cuenta</button>
       <button routerLink="/Home" routerLinkActive="active" href="#" class="Cbtn btn-light btn-block">Volver</button>
     </form> <!-- /form -->
   </div> <!-- ./container -->

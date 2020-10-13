@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClientService} from "../../../services/http-client-service";
-import {BsModalRef, BsModalService} from "ngx-bootstrap/modal";
+import {HttpClientService} from '../../../services/http-client-service';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-actualizar-productores',

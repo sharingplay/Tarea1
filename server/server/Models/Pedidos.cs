@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace server.Models
 {
     public class Pedidos
     {
-        public List<List<string>> Listado { get; set; }
+        public List<List<JsonElement>> Listado { get; set; }
         public string Comprobante { get; set; }
         public string Direccion { get; set; }
         public string Provincia { get; set; }
@@ -23,7 +24,7 @@ namespace server.Models
 
         }
 
-        public Pedidos(string pedProvincia, string pedCanton, string pedDistrito, List<List<string>> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono)
+        public Pedidos(string pedProvincia, string pedCanton, string pedDistrito, List<List<JsonElement>> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono)
         {
             Listado = pedListado;
             Comprobante = pedComprobante;

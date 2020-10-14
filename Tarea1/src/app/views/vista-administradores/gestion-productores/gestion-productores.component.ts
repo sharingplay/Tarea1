@@ -12,7 +12,7 @@ import {HttpResponse} from '@angular/common/http';
   styleUrls: ['./gestion-productores.component.scss']
 })
 export class GestionProductoresComponent {
-  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog,) {
+  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog) {
   }
   openDialog(productor: object[]): void {
     const dialogRef = this.dialog.open(ActualizarProductoresComponent, {

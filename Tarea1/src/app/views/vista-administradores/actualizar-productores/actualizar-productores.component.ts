@@ -1,8 +1,9 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HttpResponse} from '@angular/common/http';
-import {HttpClientService} from "../../../services/http-client-service";
+import {HttpClientService} from '../../../services/http-client-service';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import Global = WebAssembly.Global;
 
 @Component({
   selector: 'app-actualizar-productores',
@@ -19,4 +20,15 @@ export class ActualizarProductoresComponent implements OnInit {
 
   }
 
+  actualizarDatos(): void {
+    this.message.nombre = (document.getElementById('FirstName') as HTMLInputElement).value;
+    this.message.apellidos = (document.getElementById('LastName') as HTMLInputElement).value;
+    this.message.provincia = (document.getElementById('Provincia') as HTMLInputElement).value;
+    this.message.canton = (document.getElementById('Canton') as HTMLInputElement).value;
+    this.message.distrito = (document.getElementById('Distrito') as HTMLInputElement).value;
+    this.message.password = (document.getElementById('Password') as HTMLInputElement).value;
+    this.message.telefono = (document.getElementById('PhoneNumber') as HTMLInputElement).value;
+    this.message.sinpe = (document.getElementById('SinpeMovil') as HTMLInputElement).value;
+    this.httpService.post('https://localhost:5001/api/Productores/modify', this.message);
+  }
 }

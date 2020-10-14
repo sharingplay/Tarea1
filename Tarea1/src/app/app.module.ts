@@ -47,7 +47,7 @@ import {ItemComponent} from './shopping-cart/carrito/item/item.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
-
+import {Globals} from './globals';
 
 
 @NgModule({
@@ -118,7 +118,7 @@ import { ProductsPerProducerComponent } from './views/vista-administradores/vist
     MatDialogModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent],
   entryComponents: [DeleteCategoryModalComponent, DetallesPedidosComponent]
 })

@@ -5,16 +5,18 @@ import {ActualizarProductoresComponent} from '../actualizar-productores/actualiz
 import {MatDialog} from '@angular/material/dialog';
 
 import {HttpResponse} from '@angular/common/http';
+import {Globals} from "../../../globals";
 
 @Component({
   selector: 'app-gestion-productores',
   templateUrl: './gestion-productores.component.html',
-  styleUrls: ['./gestion-productores.component.scss']
+  styleUrls: ['./gestion-productores.component.scss'],
 })
 export class GestionProductoresComponent {
-  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog) {
+  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog, private globals: Globals) {
   }
   openDialog(productor: object[]): void {
+    console.log(this.globals.prueba);
     const dialogRef = this.dialog.open(ActualizarProductoresComponent, {
       width: '70%',
       height: '70%',

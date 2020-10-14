@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
 
-
 @Injectable()
 export class Globals {
-
-  var role = 'PRUEBAAAAAAA';
-
+  prueba: any = {"nombre":"Pedro",
+  "apellido":"Perico"};
 }

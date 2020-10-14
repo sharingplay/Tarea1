@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Text.Json;
 namespace server.Models
 {
     public class Clientes
@@ -19,13 +19,13 @@ namespace server.Models
         public string Pedidos { get; set; }
         public string Usuario { get; set; }
         public string Password { get; set; }
-        public string Carrito { get; set; }
+        public List<JsonElement> Carrito { get; set; }
 
         public Clientes()
         {
         }
 
-        public Clientes(string clientProvincia, string clientCanton, string clientDistrito, string clientCedula, string clientNombre, string clientApellido, string clientDireccion, string clientNacimiento, string clientTelefono, string clientCarrito, string clientPedidos, string clientUsuario, string clientPassword)
+        public Clientes(string clientProvincia, string clientCanton, string clientDistrito, string clientCedula, string clientNombre, string clientApellido, string clientDireccion, string clientNacimiento, string clientTelefono, List<JsonElement> clientCarrito, string clientPedidos, string clientUsuario, string clientPassword)
         {
             Cedula = clientCedula;
             Nombre = clientNombre;

@@ -19,11 +19,11 @@
               <strong>Localidad: </strong> {{productor.direccion}}
             </div>
             <div>
-              <strong>Telefono</strong> {{productor.telefono}}
+              <strong>Teléfono</strong> {{productor.telefono}}
             </div>
           </div>
           <div class="footer">
-            <a href="#" class="Cbtn Cbtn-primary">Ver Productos</a>
+            <a [routerLink]="['/Productos', usuario, productor.cedula]" class="Cbtn Cbtn-primary">Ver Productos</a>
           </div>
         </div>
       </div>

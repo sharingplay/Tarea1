@@ -3,6 +3,7 @@ import {FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
 import {getTemplateUrl} from 'codelyzer/util/ngQuery';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {HttpClientService} from '../../services/http-client-service';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 let flag = true;
 
 @Component({
@@ -12,13 +13,16 @@ let flag = true;
 })
 export class CarritoComponent implements OnInit, AfterViewInit {
   subTotal = 0;
-  productos: string[][] = [['Racimo Bananos', '3', 'Racimo de bananos', '1000', 'ban'], ['Fresas', '2', 'Fresas del Poás', '1500', 'fres']];
-  constructor(public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'])
-  {console.log(message); }
+  usuario: any;
+  productos: any;
+  constructor(public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'],
+              private httpService: HttpClient, private http: HttpClientService)
+  {console.log(message); this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: message}).subscribe(
+    (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); }); }
   @ViewChildren(CarritoComponent) viewChild: CarritoComponent;
   updateTotal(): void{
     this.subTotal = 0;
-    for (const prod of this.message){
+    for (const prod of this.productos){
       const cantidad = (document.getElementById(prod.nombre) as HTMLInputElement).value;
       this.subTotal += Number(cantidad) * Number(prod.precio);
     }
@@ -27,10 +31,21 @@ export class CarritoComponent implements OnInit, AfterViewInit {
   update(): void{
     if (flag){
       for (const prod of this.productos){
-        this.subTotal += Number(prod[3]);
+        this.subTotal += Number(prod.precio);
       }
       flag = false;
     }
+  }
+
+  remove(prod: any): void{
+    const index = this.productos.indexOf(prod, 0);
+    if (index > -1) {
+      this.productos.splice(index, 1);
+      console.log(this.productos);
+    }
+    this.usuario.carrito = this.productos;
+    console.log(this.usuario.carrito);
+    this.http.post('https://localhost:5001/api/Clientes/modify', this.usuario);
   }
 
   ngAfterViewInit(): void{

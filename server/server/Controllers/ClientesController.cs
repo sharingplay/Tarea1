@@ -162,6 +162,48 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// 
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Cliente"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
+        [Route("getUser")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Clientes getClientFromID([FromBody] Clientes Cliente)
+        {
+            List<Clientes> ClientesList = new List<Clientes>();
+            string fileName = "DataBase/Clientes.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ClientesList = JsonSerializer.Deserialize<List<Clientes>>(jsonString);
+
+            bool validation = false;
+
+            Clientes found = null;
+
+            for (int i = 0; i < ClientesList.Count; i++)
+            {
+                if (ClientesList[i].Cedula == Cliente.Cedula)
+                {
+                    found = ClientesList[i];
+                    validation = true;
+                    break;
+                }
+            }
+            if (validation)
+            {
+                return found;
+            }
+            else
+            {
+                return found;
+            }
+        }
+
 
 
         /// <summary>

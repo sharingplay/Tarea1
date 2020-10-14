@@ -60,6 +60,6 @@ export class HttpClientService {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8'
       }
-    }).subscribe((resp: HttpResponse<any>) => resp);
+    }).subscribe((resp: HttpResponse<any>) => {console.log(resp); return resp; });
   }
 }

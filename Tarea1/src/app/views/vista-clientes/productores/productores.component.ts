@@ -11,11 +11,13 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./productores.component.scss']
 })
 export class ProductoresComponent implements OnInit {
+  usuario: string;
   constructor(public httpService: HttpClientService, public modalService: BsModalService, private route: ActivatedRoute) {
-    console.log(this.route.snapshot.paramMap.get('usuario'));
   }
   bsModalRef: BsModalRef;
   ngOnInit(): void {
+    const user = +this.route.snapshot.paramMap.get('usuario');
+    this.usuario = user.toString();
   }
 
 }

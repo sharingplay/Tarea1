@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'GestionProductos/:usuario', component: GestionProductosComponent},
   {path: 'LogIn', component: LogInComponent},
   {path: 'Productores/:usuario', component: ProductoresComponent},
-  {path: 'Productos', component: ProductosComponent},
+  {path: 'Productos/:usuario/:productor', component: ProductosComponent},
   {path: 'VistaProductores', component: VistaProductoresComponent},
   {path: 'VistaReportes', component: VistaReportesComponent},
   {path: 'VistaClientes/:usuario', component: VistaClientesComponent},

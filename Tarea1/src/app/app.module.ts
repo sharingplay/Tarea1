@@ -48,6 +48,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 import {MessengerService} from "./MessengerService";
+import { ProductosProductorComponent } from "./views/vista-productores/productos-productor/productos-productor.component";
 
 @NgModule({
   declarations: [
@@ -94,6 +95,8 @@ import {MessengerService} from "./MessengerService";
     ListViewModalComponent,
 
     ProductsPerProducerComponent,
+
+    ProductosProductorComponent,
   ],
   imports: [
     BrowserModule,

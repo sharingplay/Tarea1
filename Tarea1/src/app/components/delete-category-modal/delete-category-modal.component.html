@@ -1,6 +1,6 @@
 <!-- Modal HTML -->
 
-<div class="outer">
+<div [hidden]="hideModal" class="outer">
   <div class="middle">
     <div class="inner">
       <div class="modal-dialog modal-confirm">
@@ -15,7 +15,6 @@
             <p>Estás seguro que quieres eliminar esta categoria? Este proceso no puede ser revertido.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
             <button type="button" class="btn btn-danger" (click)="whoDelete.emit()">Borrar</button>
           </div>
         </div>

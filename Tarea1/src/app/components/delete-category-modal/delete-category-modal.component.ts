@@ -12,9 +12,11 @@ export class DeleteCategoryModalComponent implements OnInit {
   closeBtnName: string;
   list: any[] = [];
   @Output() whoDelete: EventEmitter<string> = new EventEmitter();
+  hideModal = false;
   constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
   }
+
 
 }

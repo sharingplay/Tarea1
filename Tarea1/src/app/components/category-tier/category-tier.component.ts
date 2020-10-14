@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {HttpClientService} from "../../services/http-client-service";
+import {HttpClientService} from '../../services/http-client-service';
 
 
 // @ts-ignore

@@ -14,7 +14,7 @@ export class CreacionCuentaClienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // Agrega la nueva cuenta del cliente al Json de Clientes
   agregarCliente(): void{
     var clienteNuevo = {
       "nombre": (document.getElementById('FirstName') as HTMLInputElement).value,
@@ -29,6 +29,7 @@ export class CreacionCuentaClienteComponent implements OnInit {
       "telefono": (document.getElementById('PhoneNumber') as HTMLInputElement).value,
     };
     console.log(clienteNuevo);
+    // Agrega el cliente al json
     this.httpService.post('https://localhost:5001/api/Clientes/insert', clienteNuevo);
   }
 }

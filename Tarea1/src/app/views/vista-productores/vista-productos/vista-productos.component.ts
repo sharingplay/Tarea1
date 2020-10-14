@@ -12,6 +12,7 @@ export class VistaProductosComponent implements OnInit {
   constructor(public httpService: HttpClientService, public modalService: BsModalService) {
   }
   bsModalRef: BsModalRef;
+  // Funcion para eliminar productos del Json de productores.
   delete(producto): void{
     console.log(producto);
     this.httpService.post('https://localhost:5001/api/Productos/delete', producto);

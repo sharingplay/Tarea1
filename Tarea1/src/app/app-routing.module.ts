@@ -20,6 +20,7 @@ import {ProductsPerProducerComponent} from './views/vista-administradores/vista-
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 
+// Rutas para navegar entre ventanas
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeViewComponent},

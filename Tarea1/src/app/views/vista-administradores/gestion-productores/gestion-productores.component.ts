@@ -11,6 +11,7 @@ export class GestionProductoresComponent {
   constructor(public httpService: HttpClientService, public modalService: BsModalService) {
   }
   bsModalRef: BsModalRef;
+  //Elimina un productor enviado en formato Json al pulsar el boton de este
   delete(productor): void{
     console.log(productor);
     this.httpService.post('https://localhost:5001/api/Productores/delete', productor);

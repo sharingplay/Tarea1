@@ -36,7 +36,6 @@ export class HttpClientService {
    http.get(HttpClientService.URL + 'Top')
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
-        console.log(resp);
       });
    http.get('https://localhost:5001/api/Clientes')
       .subscribe((resp: HttpResponse<any>) => {

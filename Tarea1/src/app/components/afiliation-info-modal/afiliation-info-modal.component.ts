@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HttpClientService} from "../../services/http-client-service";
+import {HttpClientService} from '../../services/http-client-service';
 
 
 @Component({
@@ -14,8 +14,21 @@ export class AfiliationInfoModalComponent implements OnInit {
   ngOnInit(): void {
   }
   aceptar(): void {
-    // tslint:disable-next-line:prefer-const
-    this.httpClient.post(HttpClientService.URL + 'Productores/insert', this.productorPropio);
+    this.httpClient.post(HttpClientService.URL + 'Productores/insert',
+     {
+       Cedula: this.productorPropio.cedula,
+       Apellidos: this.productorPropio.apellidos,
+       Canton: this.productorPropio.canton,
+       Direccion: this.productorPropio.direccion,
+       Distrito: this.productorPropio.distrito,
+       Nacimiento: this.productorPropio.nacimiento,
+       Nombre: this.productorPropio.nombre,
+       Password: this.productorPropio.password,
+       Provincia: this.productorPropio.provincia,
+       SINPE: this.productorPropio.sinpe,
+       Telefono: this.productorPropio.telefono,
+       Usuario: this.productorPropio.usuario
+     });
     this.httpClient.post(HttpClientService.URL + 'Afiliaciones/delete', {Cedula: this.productorPropio.cedula});
     window.location.reload();
   }
@@ -23,7 +36,6 @@ export class AfiliationInfoModalComponent implements OnInit {
     // tslint:disable-next-line:prefer-const
     this.httpClient.post(HttpClientService.URL + 'Afiliaciones/delete',
       {Cedula: this.productorPropio.cedula});
-    console.log({Cedula: this.productorPropio.cedula});
     window.location.reload();
   }
 }

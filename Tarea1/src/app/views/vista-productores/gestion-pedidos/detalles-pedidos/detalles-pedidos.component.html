@@ -21,33 +21,64 @@
         <div class="tile">
           <div class="stats">
             <div>
-              <strong>Cliente: </strong> {{message[0]}}
+              <strong>Cliente: </strong> {{message.nombre}} {{message.apellido}}
+            </div>
+          </div>
+          <div class="stats">
+          <div>
+            <strong>Ubicación :</strong> {{message.canton}}, {{message.distrito}}
+          </div>
+        </div>
+          <div class="stats">
+            <div>
+              <strong>Dirección Exacta :</strong> {{message.direccion}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Dirección:</strong> {{message[1]}}
+              <strong>Teléfono:</strong> {{message.telefono}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Teléfono:</strong> {{message[3]}}
+              <strong>Total:</strong>  {{total|currency:"₡":"symbol"}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Total:</strong>  {{message[2]|currency:"₡":"symbol"}}
+              <strong>Comprobante:</strong>  {{message.comprobante}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-sm-3 col-sm-3" *ngFor="let producto of productos">
+        <div class="tile">
+          <div class="stats">
+            <div>
+              <strong>Producto </strong> {{producto[0]}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Dirección:</strong>  {{message[4]}}
+              <strong>Código </strong> {{producto[1]}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Comprobante:</strong>  {{message[5]}}
+              <strong>Precio:</strong> {{producto[2]|currency:"₡":"symbol"}}
             </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Cantidad:</strong> {{producto[3]}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="stats">
+          <div>
+            <strong>Total: </strong> {{total|currency:"₡":"symbol"}}
           </div>
         </div>
       </div>

@@ -19,6 +19,12 @@ namespace server.Controllers
     public class ClientesController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Obtiene los datos del JSON y se los envia al cliente 
+        /// </summary>
+        /// <returns>
+        /// devuelve una lista del JSON
+        /// </returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Clientes> Get()
@@ -33,6 +39,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Inserta un cliente en el JSON
+        /// </summary>
+        /// <param name="Cliente"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -71,6 +81,10 @@ namespace server.Controllers
         }
 
         
+        /// <summary>
+        /// modifica datos del cliente
+        /// </summary>
+        /// <param name="Cliente"></param>
         [Route("modify")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -106,6 +120,14 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// 
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Cliente"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
         [Route("getlogin")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -142,7 +164,10 @@ namespace server.Controllers
 
 
 
-
+        /// <summary>
+        /// elimina un cliente
+        /// </summary>
+        /// <param name="Cliente"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

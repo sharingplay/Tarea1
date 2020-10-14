@@ -3,17 +3,21 @@ import {HttpClientService} from '../../../services/http-client-service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-gestion-productores',
-  templateUrl: './gestion-productores.component.html',
-  styleUrls: ['./gestion-productores.component.scss']
+  selector: 'app-vista-productos',
+  templateUrl: './vista-productos.component.html',
+  styleUrls: ['./vista-productos.component.scss']
 })
-export class GestionProductoresComponent {
+export class VistaProductosComponent implements OnInit {
+
   constructor(public httpService: HttpClientService, public modalService: BsModalService) {
   }
   bsModalRef: BsModalRef;
-  delete(productor): void{
-    console.log(productor);
-    this.httpService.post('https://localhost:5001/api/Productores/delete', productor);
+  delete(producto): void{
+    console.log(producto);
+    this.httpService.post('https://localhost:5001/api/Productos/delete', producto);
     window.location.reload();
   }
+  ngOnInit(): void {
+  }
+
 }

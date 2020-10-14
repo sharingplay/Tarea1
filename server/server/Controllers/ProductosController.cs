@@ -19,6 +19,12 @@ namespace server.Controllers
     public class ProductosController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Funcion para obtener los datos del Json y enviarla al cliente
+        /// </summary>
+        /// <returns>
+        /// devuelve la lista de lo que se encuentra en el json
+        /// </returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Productos> Get()
@@ -33,6 +39,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Funcion para agregar un nuevo producto al Json
+        /// </summary>
+        /// <param name="Producto"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -70,7 +80,10 @@ namespace server.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Funcion encargada de modificar un producto en el JSON
+        /// </summary>
+        /// <param name="Producto"></param>
         [Route("modify")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -106,7 +119,13 @@ namespace server.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Obtiene los productos de acuerdo al productor
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns>
+        /// devuelve los productos de un productor
+        /// </returns>
         [Route("GetPorProductor")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -122,7 +141,7 @@ namespace server.Controllers
             bool validation = false;
 
             Productos found = null;
-
+            // busca los productos de un productor
             for (int i = 0; i < ProductosList.Count; i++)
             {
                 if (ProductosList[i].Productor == product.Productor)
@@ -143,6 +162,10 @@ namespace server.Controllers
             }
         }
 
+        /// <summary>
+        /// Elimina un producto de acuerdo al nombre y al productor
+        /// </summary>
+        /// <param name="Producto"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

@@ -19,6 +19,12 @@ namespace server.Controllers
     public class CategoriasController : ControllerBase
     {
         // GET: api/<AfiliacionesController>
+        /// <summary>
+        /// Obtiene los datos del JSON
+        /// </summary>
+        /// <returns>
+        /// Devuelve los datos de las categorias
+        /// </returns>
         [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Categorias> Get()
@@ -33,6 +39,10 @@ namespace server.Controllers
         }
 
         // POST api/<AfiliacionesController>
+        /// <summary>
+        /// Inserta una nueva categoria al JSON
+        /// </summary>
+        /// <param name="Categoria"></param>
         [Route("insert")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -70,7 +80,11 @@ namespace server.Controllers
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// Modifica alguna de las categorias
+        /// </summary>
+        /// <param name="Categoria"></param>
         [Route("modify")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
@@ -106,7 +120,10 @@ namespace server.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Elimina la categoria del JSON
+        /// </summary>
+        /// <param name="Categoria"></param>
         [Route("delete")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]

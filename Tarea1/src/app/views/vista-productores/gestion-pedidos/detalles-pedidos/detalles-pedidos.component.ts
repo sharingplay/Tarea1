@@ -2,9 +2,9 @@ import {Component, Inject, OnInit} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
-// import {GuardService}from '.././guard.service';
+import {JsonArray} from '@angular/compiler-cli/ngcc/src/packages/entry_point';
+import {HttpClientService} from '../../../../services/http-client-service';
 declare const fileDropArea: any;
-declare const myTest: any;
 let flag = true;
 
 
@@ -15,8 +15,9 @@ let flag = true;
 })
 export class DetallesPedidosComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DetallesPedidosComponent>,
-              @Inject(MAT_DIALOG_DATA) public message: string[]) {console.log(message); }
-
+              @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos']) {console.log(message); }
+  total = 0;
+  productos = this.message.listado
   // tslint:disable-next-line:typedef
   onClicka(){
     if (flag){
@@ -25,9 +26,11 @@ export class DetallesPedidosComponent implements OnInit {
     }
   }
 
-
   ngOnInit(): void {
+    // tslint:disable-next-line:forin
+    for (let prod of this.message.listado){
+      this.total += Number(prod[2]) * Number(prod[3]);
+    }
   }
-
 }
 

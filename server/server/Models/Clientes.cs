@@ -11,6 +11,9 @@ namespace server.Models
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
+        public string Provincia { get; set; }
+        public string Canton { get; set; }
+        public string Distrito { get; set; }
         public string Nacimiento { get; set; }
         public string Telefono { get; set; }
         public string Pedidos { get; set; }
@@ -22,12 +25,15 @@ namespace server.Models
         {
         }
 
-        public Clientes(string clientCedula, string clientNombre, string clientApellido, string clientDireccion, string clientNacimiento, string clientTelefono, string clientCarrito, string clientPedidos, string clientUsuario, string clientPassword)
+        public Clientes(string clientProvincia, string clientCanton, string clientDistrito, string clientCedula, string clientNombre, string clientApellido, string clientDireccion, string clientNacimiento, string clientTelefono, string clientCarrito, string clientPedidos, string clientUsuario, string clientPassword)
         {
             Cedula = clientCedula;
             Nombre = clientNombre;
             Apellidos = clientApellido;
             Direccion = clientDireccion;
+            Provincia = clientProvincia;
+            Canton = clientCanton;
+            Distrito = clientDistrito;
             Nacimiento = clientNacimiento;
             Telefono = clientTelefono;
             Carrito = clientCarrito;

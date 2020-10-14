@@ -17,6 +17,8 @@ import {SolicitudAfiliacionComponent} from './views/vista-productores/solicitud-
 import {ActualizarProductoresComponent} from './views/vista-administradores/actualizar-productores/actualizar-productores.component';
 import {ActualizacionDatosClienteComponent} from './views/vista-clientes/actualizacion-datos-cliente/actualizacion-datos-cliente.component';
 import {ProductsPerProducerComponent} from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
+import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
+import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -35,7 +37,10 @@ const routes: Routes = [
   {path: 'CrearCuentaCliente', component: CreacionCuentaClienteComponent},
   {path: 'SolicitudAfiliacion', component: SolicitudAfiliacionComponent},
   {path: 'ActualizarProductor', component: ActualizarProductoresComponent},
+  {path: 'ActualizarProductor/:productor', component: ActualizarProductoresComponent},
   {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
+  {path: 'GestionPedidos', component: GestionPedidosComponent},
+  {path: 'Carrito', component: CarritoComponent},
   {path: 'ProductosPorProductor', component: ProductsPerProducerComponent}
 ];
 

@@ -22,12 +22,15 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); }); }
   @ViewChildren(CarritoComponent) viewChild: CarritoComponent;
   updateTotal(): void{
-    this.subTotal = 0;
-    for (const prod of this.productos){
-      const cantidad = (document.getElementById(prod.nombre) as HTMLInputElement).value;
-      this.subTotal += Number(cantidad) * Number(prod.precio);
+    console.log(this.productos);
+    if (this.productos !== undefined){
+      this.subTotal = 0;
+      for (const prod of this.productos){
+        const cantidad = (document.getElementById(prod.nombre) as HTMLInputElement).value;
+        this.subTotal += Number(cantidad) * Number(prod.precio);
+      }
+      (console.log(this.subTotal));
     }
-    (console.log(this.subTotal));
   }
   update(): void{
     if (flag){

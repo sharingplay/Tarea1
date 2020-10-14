@@ -30,7 +30,6 @@ export class ProductosComponent implements OnInit {
   listaProductos: object[] = [];
   bsModalRef: BsModalRef;
   openDialog(productos: object[]): void {
-    this.listaProductos = this.listaProductos.concat(productos);
     if (this.cliente.carrito !=  null){
       this.listaProductos = this.listaProductos.concat(this.cliente.carrito);
     }
@@ -48,10 +47,11 @@ export class ProductosComponent implements OnInit {
         right: ''
       }
     });
-    dialogRef.afterClosed().subscribe(res => {console.log(res);
-                                              this.httpService.post('https://localhost:5001/api/Clientes/getUser',
-                                                { Cedula: this.usuario}).subscribe(
-      (resp: HttpResponse<any>) => { this.cliente = resp; this.listaProductos = this.cliente.carrito; }); });
+    dialogRef.afterClosed().subscribe(res => {console.log(res); if (res != null){
+      this.listaProductos = res; }
+      else{
+        this.listaProductos = []; }
+    });
   }
   ngOnInit(): void {
   }

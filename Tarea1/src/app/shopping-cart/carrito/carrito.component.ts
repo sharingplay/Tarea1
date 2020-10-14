@@ -17,7 +17,8 @@ export class CarritoComponent implements OnInit, AfterViewInit {
   productos: any;
   constructor(public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'],
               private httpService: HttpClient, private http: HttpClientService)
-  {console.log(message); this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: message}).subscribe(
+  // tslint:disable-next-line:max-line-length
+  {dialogRef.disableClose = true; console.log(message); this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: message}).subscribe(
     (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); }); }
   @ViewChildren(CarritoComponent) viewChild: CarritoComponent;
   updateTotal(): void{

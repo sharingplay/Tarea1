@@ -47,8 +47,7 @@ import {ItemComponent} from './shopping-cart/carrito/item/item.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
-import {Globals} from './globals';
-
+import {MessengerService} from "./MessengerService";
 
 @NgModule({
   declarations: [
@@ -74,23 +73,14 @@ import {Globals} from './globals';
     VistaAdministradoresComponent,
     VistaProductoresComponent,
     DetallesPedidosComponent,
-
     HeaderClienteComponent,
-
     HomeViewComponent,
-
     HeaderAdminComponent,
-
     VistaReportesComponent,
-
     DeleteCategoryModalComponent,
-
     CenteredButtonComponent,
-
     CreateCategoryModalComponent,
-
     CreacionCuentaClienteComponent,
-
     ActualizarProductoresComponent,
 
     ActualizacionDatosClienteComponent,
@@ -118,7 +108,7 @@ import {Globals} from './globals';
     MatDialogModule,
     FormsModule,
   ],
-  providers: [Globals],
+  providers: [MessengerService],
   bootstrap: [AppComponent],
   entryComponents: [DeleteCategoryModalComponent, DetallesPedidosComponent]
 })

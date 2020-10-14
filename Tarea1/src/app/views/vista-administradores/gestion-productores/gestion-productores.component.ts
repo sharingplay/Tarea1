@@ -3,9 +3,7 @@ import {HttpClientService} from '../../../services/http-client-service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 import {ActualizarProductoresComponent} from '../actualizar-productores/actualizar-productores.component';
 import {MatDialog} from '@angular/material/dialog';
-
 import {HttpResponse} from '@angular/common/http';
-import {Globals} from "../../../globals";
 
 @Component({
   selector: 'app-gestion-productores',
@@ -13,10 +11,9 @@ import {Globals} from "../../../globals";
   styleUrls: ['./gestion-productores.component.scss'],
 })
 export class GestionProductoresComponent {
-  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog, private globals: Globals) {
+  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog) {
   }
   openDialog(productor: object[]): void {
-    console.log(this.globals.prueba);
     const dialogRef = this.dialog.open(ActualizarProductoresComponent, {
       width: '70%',
       height: '70%',

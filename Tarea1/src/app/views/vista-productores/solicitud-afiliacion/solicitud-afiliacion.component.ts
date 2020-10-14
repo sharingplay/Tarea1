@@ -25,7 +25,7 @@ export class SolicitudAfiliacionComponent implements OnInit {
       "password": (document.getElementById('Password') as HTMLInputElement).value,
       "nacimiento": (document.getElementById('FechaNacimiento') as HTMLInputElement).value,
       "telefono": (document.getElementById('PhoneNumber') as HTMLInputElement).value,
-      "sinpe": (document.getElementById('SinpeMovil') as HTMLInputElement).value
+      "sinpe": (document.getElementById('Sinpe') as HTMLInputElement).value
     };
     console.log(solicitudNueva);
     this.httpService.post('https://localhost:5001/api/Afiliaciones/insert', solicitudNueva);

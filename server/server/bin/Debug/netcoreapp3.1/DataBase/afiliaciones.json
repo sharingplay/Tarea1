@@ -1,32 +1,17 @@
-[
-    {
-      "Cedula": "4111222444",
-      "Nombre": "Fabian",
-      "Apellidos": "Ramirez Arrieta",
-      "Direccion": "Heredia",
-      "Provincia": "Heredia",
-      "Canton": "Heredia",
-      "Distrito": "Mercedes",
-      "Nacimiento": "03/01/2000",
-      "Telefono": "88776655",
-      "SINPE": "55667788",
-      "PuntosEntrega": "Heredia, Alajuela, San Jose",
-      "Usuario": "FabianRamirez",
-      "Password": "MyPassword1234"
-    },
-    {
-      "Cedula": "112233445566",
-      "Nombre": "Mariana",
-      "Apellidos": "Vargas Ramirez",
-      "Direccion": "Heredia",
-      "Provincia": "Heredia",
-      "Canton": "Santa Barbara",
-      "Distrito": "San Juan",
-      "Nacimiento": "12/9/1999",
-      "Telefono": "11223344",
-      "SINPE": "44332211",
-      "PuntosEntrega": "San Ramon, Alajuela, San Joaquin",
-      "Usuario": "MarianaSoy",
-      "Password": "NoSe1234"
-    }
-]
+[{"Cedula":"112233445566","Nombre":"Mariana","Apellidos":"Vargas Ramirez","Direccion":"Heredia","Provincia":"Heredia","Canton":"Santa Barbara","Distrito":"San Juan","Nacimiento":"12/9/1999","Telefono":"11223344","SINPE":"44332211","PuntosEntrega":"San Ramon, Alajuela, San Joaquin","Pedidos":null,"Usuario":"MarianaSoy","Password":"NoSe1234"},
+{
+        "cedula": "4111222444",
+        "nombre": "Fabian",
+        "apellidos": "Ramirez Arrieta",
+        "direccion": "Heredia",
+        "provincia": "Heredia",
+        "canton": "Heredia",
+        "distrito": "Mercedes",
+        "nacimiento": "03/01/2000",
+        "telefono": "88776655",
+        "sinpe": "55667788",
+        "puntosEntrega": "Heredia, Alajuela, San Jose",
+        "pedidos": null,
+        "usuario": "FabianRamirez",
+        "password": "MyPassword1234"
+    }]

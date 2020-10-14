@@ -28,7 +28,14 @@ export class CarritoComponent implements OnInit, AfterViewInit {
       for (const prod of this.productos){
         const cantidad = (document.getElementById(prod.nombre) as HTMLInputElement).value;
         this.subTotal += Number(cantidad) * Number(prod.precio);
+        prod.cantidad = cantidad;
+        if (Number(prod.disponibilidad) - Number(cantidad) <= 0){
+          alert("Sorry bro, ya no quedan...")
+        }
       }
+      this.usuario.carrito = this.productos;
+      console.log(this.usuario.carrito);
+      this.httpService.post('https://localhost:5001/api/Clientes/modify', this.usuario);
       (console.log(this.subTotal));
     }
   }
@@ -50,6 +57,21 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     this.usuario.carrito = this.productos;
     console.log(this.usuario.carrito);
     this.http.post('https://localhost:5001/api/Clientes/modify', this.usuario);
+  }
+
+  comprar():void{
+    for (let prod of this.usuario.carrito){
+      if (prod.productor != this.usuario.carrito[0].productor){
+        alert("Lo sentimos, de momento solo se pueden hacer compras de un productor a la vez.");
+        return;
+      }
+    }
+    this.http.post('https://localhost:5001/api/Pedidos/insert',
+      {Listado: this.usuario.carrito, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
+        Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula, Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor });
+        this.usuario.carrito = [];
+        this.productos = [];
+    alert("Gracias! Su pedido ha sido registrado.")
   }
 
   ngAfterViewInit(): void{

@@ -21,5 +21,6 @@ export class CreateCategoryModalComponent implements OnInit {
       Nombre: (document.getElementById('name') as HTMLInputElement).value,
     };
     this.httpClient.post('http://localhost:5000/api/Categorias/insert', nuevaCategoria);
+    window.location.reload();
   }
 }

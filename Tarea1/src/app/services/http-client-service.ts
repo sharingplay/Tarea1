@@ -8,17 +8,18 @@ import {catchError} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HttpClientService {
- categorias: any = {};
- afiliaciones: any = {};
- tops: any = {};
- clientes: any = {};
- pedidos: any = {};
- productores: any = {};
- productos: any = {};
+ static URL = `http://localhost:5000/api/`;
+  categorias: any = {};
+  afiliaciones: any = {};
+  tops: any = {};
+  clientes: any = {};
+  pedidos: any = {};
+  productores: any = {};
+  productos: any = {};
 
   constructor(private http: HttpClient) {
    console.log('Service Running');
-   http.get('http://localhost:5000/api/Categorias')
+   http.get(HttpClientService.URL + 'Categorias')
      .subscribe(resp => {
        this.categorias = resp;
      });
@@ -27,12 +28,12 @@ export class HttpClientService {
         this.pedidos = resp;
       });
    // Cambiar este URL
-   http.get('http://localhost:5000/api/Afiliaciones')
+   http.get(HttpClientService.URL + 'Afiliaciones')
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
      });
    // Cambiar este
-   http.get('http://localhost:5000/api/Top')
+   http.get(HttpClientService.URL + 'Top')
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
         console.log(resp);

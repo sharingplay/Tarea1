@@ -22,7 +22,7 @@ export class CategoryTierComponent implements OnInit {
 
   openModal(): void{
     // @ts-ignore
-    this.openModalWithComponent.emit(this.deleteCategory());
+    this.openModalWithComponent.emit(this.deleteCategory);
   }
   deleteCategory(): void{
     this.hhtpService.post('http://localhost:5000/api/Categorias/delete' ,

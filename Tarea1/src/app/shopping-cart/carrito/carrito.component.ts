@@ -29,8 +29,8 @@ export class CarritoComponent implements OnInit, AfterViewInit {
         const cantidad = (document.getElementById(prod.nombre) as HTMLInputElement).value;
         this.subTotal += Number(cantidad) * Number(prod.precio);
         prod.cantidad = cantidad;
-        if (Number(prod.disponibilidad) - Number(cantidad) <= 0){
-          alert("Sorry bro, ya no quedan...")
+        if (Number(prod.disponibilidad) - Number(cantidad) < 0){
+          alert("Lo sentimos, no hay más disponibles por el momento")
         }
       }
       this.usuario.carrito = this.productos;
@@ -68,7 +68,8 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     }
     this.http.post('https://localhost:5001/api/Pedidos/insert',
       {Listado: this.usuario.carrito, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
-        Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula, Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor });
+        Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula,
+        Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor, Comentarios: (document.getElementById('notas') as HTMLInputElement).value });
         this.usuario.carrito = [];
         this.productos = [];
     alert("Gracias! Su pedido ha sido registrado.")

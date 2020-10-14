@@ -20,12 +20,14 @@ namespace server.Models
         public string Telefono { get; set; }
         public string productor { get; set; }
 
+        public string Comentarios { get; set; }
+
         public Pedidos()
         {
 
         }
 
-        public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono)
+        public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono, string pedComentarios)
         {
            
             productor = lisproductor;
@@ -39,6 +41,7 @@ namespace server.Models
             Nombre = pedNomnbre;
             Apellido = pedApellido;
             Telefono = pedTelefono;
+            Comentarios = pedComentarios;
         }
     }
 }

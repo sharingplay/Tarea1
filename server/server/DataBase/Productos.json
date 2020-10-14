@@ -40,22 +40,22 @@
     "Total": "500"
   },
   {
-    "Nombre": "fresa",
-    "Categoria": null,
+    "Nombre": "Fresa",
+    "Categoria": "Frutas",
     "Foto": null,
-    "Precio": null,
-    "Modo": null,
-    "Disponibilidad": null,
+    "Precio": "1500",
+    "Modo": "Caja",
+    "Disponibilidad": "35",
     "Productor": "12342",
     "Total": null
   },
   {
-    "Nombre": "chayotes",
+    "Nombre": "Chayotes",
     "Categoria": null,
     "Foto": null,
     "Precio": "500",
-    "Modo": null,
-    "Disponibilidad": null,
+    "Modo": "Kilogramo",
+    "Disponibilidad": "45",
     "Productor": "12342",
     "Total": null
   },
@@ -70,22 +70,22 @@
     "Total": null
   },
   {
-    "Nombre": "Kiwi organico",
-    "Categoria": null,
+    "Nombre": "Kiwi Organico",
+    "Categoria": "Frutas",
     "Foto": null,
-    "Precio": "500000",
-    "Modo": null,
-    "Disponibilidad": null,
+    "Precio": "5000",
+    "Modo": "Individual",
+    "Disponibilidad": "2",
     "Productor": "12342",
     "Total": null
   },
   {
     "Nombre": "Aguacate Artesanal",
-    "Categoria": null,
+    "Categoria": "Frutas",
     "Foto": null,
     "Precio": "3000",
-    "Modo": null,
-    "Disponibilidad": null,
+    "Modo": "Kilogramo",
+    "Disponibilidad": "20",
     "Productor": "12342",
     "Total": null
   }

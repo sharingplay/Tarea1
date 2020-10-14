@@ -11,7 +11,7 @@ import {HttpResponse, HttpClient} from '@angular/common/http';
 export class LogInComponent implements OnInit {
   private username: string;
   private password: string;
-  public usuario: HttpResponse<'Clientes'>;
+  public usuario: any;
 
   constructor(public httpService: HttpClientService, private router: Router, private server: HttpClient) { }
   async login(): Promise<void> {
@@ -45,7 +45,7 @@ export class LogInComponent implements OnInit {
                                                          }
                                                        });
       } else{
-        this.router.navigate(['/Productores', this.usuario.password]);
+        this.router.navigate(['/Productores', this.usuario.cedula]);
       } }
     );
         resolve();

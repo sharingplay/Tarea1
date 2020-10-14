@@ -1,1 +1,17 @@
-[{"Cedula":null,"Nombre":null,"Apellidos":null,"Direccion":null,"Provincia":null,"Canton":null,"Distrito":null,"Nacimiento":null,"Telefono":null,"Pedidos":null,"Usuario":"wajo10","Password":"123456","Carrito":null}]
+[
+  {
+    "Cedula": "117810801",
+    "Nombre": 'Wajib',
+    "Apellidos": 'Zaglul',
+    "Direccion": 'Lugar Feliz',
+    "Provincia": null,
+    "Canton": null,
+    "Distrito": null,
+    "Nacimiento": null,
+    "Telefono": null,
+    "Pedidos": null,
+    "Usuario": "wajo10",
+    "Password": "123456",
+    "Carrito": null
+  }
+]

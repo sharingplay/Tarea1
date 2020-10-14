@@ -4,6 +4,8 @@ import {DetallesPedidosComponent} from './detalles-pedidos/detalles-pedidos.comp
 import {HttpClientService} from '../../../services/http-client-service';
 import {DeleteCategoryModalComponent} from '../../../components/delete-category-modal/delete-category-modal.component';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import {MessengerService} from '../../../MessengerService';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-gestion-pedidos',
@@ -12,7 +14,13 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 })
 export class GestionPedidosComponent implements OnInit {
   total = 0;
-  constructor(public dialog: MatDialog, public  httpService: HttpClientService) {console.log(this.httpService.pedidos); }
+  pedidos: any;
+  productor: any;
+  constructor(public dialog: MatDialog, public  httpService: HttpClientService, public http: HttpClient, private messengerService: MessengerService) {
+    this.messengerService.message.subscribe(value => {this.productor = value});
+    this.http.post('https://localhost:5001/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
+      (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });
+  }
   bsModalRef: BsModalRef;
   openDialog(pedido: object[]): void {
       const dialogRef = this.dialog.open(DetallesPedidosComponent, {
@@ -26,32 +34,9 @@ export class GestionPedidosComponent implements OnInit {
           right: ''
         }
       });
-      dialogRef.afterClosed().subscribe(res => {console.log(res); });
+      dialogRef.afterClosed().subscribe(res => { this.http.post('https://localhost:5001/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
+        (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });});
   }
-  post(): void{
-    const json = {
-      listado: [
-        [
-          'Bananos',
-          'Ban01',
-          '980',
-          '3'
-        ],
-        [
-          'Carne',
-          'Car02',
-          '2750',
-          '2'
-        ]
-      ],
-      comprobante: '65857412',
-      direccion: 'Heredia',
-      cedula: '22132000',
-      nombre: 'Miguel',
-      apellido: 'Lagos',
-      telefono: '88741520'
-    };
-    this.httpService.post('https://localhost:5001/api/Pedidos/insert', json);
-  }
+
   ngOnInit(): void {}
 }

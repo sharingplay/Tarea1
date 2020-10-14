@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'LogIn', component: LogInComponent},
   {path: 'Productores/:usuario', component: ProductoresComponent},
   {path: 'Productores', component: ProductoresComponent},
-  {path: 'Productos/:usuario/:productor', component: ProductosComponent},
+  {path: 'Productos/:productor', component: ProductosComponent},
   {path: 'VistaProductores', component: VistaProductoresComponent},
   {path: 'VistaReportes', component: VistaReportesComponent},
   {path: 'VistaClientes/', component: VistaClientesComponent},

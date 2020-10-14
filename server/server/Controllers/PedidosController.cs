@@ -48,6 +48,8 @@ namespace server.Controllers
         [HttpPost]
         public void Post([FromBody] Pedidos Pedido)
         {
+            Random rand = new Random();
+            Pedido.Comprobante = rand.Next(100000, 999999999).ToString();
             List<Pedidos> PedidosList = new List<Pedidos>();
             string fileName = "DataBase/Pedidos.json";
 
@@ -75,9 +77,10 @@ namespace server.Controllers
         [Route("getPedido")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public Pedidos getClientFromID([FromBody] Pedidos Pedido)
+        public List<Pedidos> getClientFromID([FromBody] Pedidos Pedido)
         {
             List<Pedidos> PedidosList = new List<Pedidos>();
+            List<Pedidos> PedidosProductor = new List<Pedidos>();
             string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
@@ -92,17 +95,19 @@ namespace server.Controllers
                 if (PedidosList[i].productor == Pedido.productor)
                 {
                     found = PedidosList[i];
+                    PedidosProductor.Add(found);
                     validation = true;
-                    break;
                 }
+                    
             }
             if (validation)
             {
-                return found;
+                return PedidosProductor;
             }
             else
             {
-                return found;
+                    Debug.WriteLine("No hay pedidos asociados a este productor");
+                return PedidosProductor;
             }
         }
 
@@ -205,7 +210,7 @@ namespace server.Controllers
 
             for (int i = 0; i < PedidosList.Count; i++)
             {
-                if (PedidosList[i].Cedula == pedido.Cedula)
+                if (PedidosList[i].Comprobante == pedido.Comprobante)
                 {
                     PedidosList.RemoveAt(i);
                     Debug.WriteLine("Pedido eliminado");

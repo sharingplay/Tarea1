@@ -4,6 +4,7 @@ import {HttpClientService} from '../../../services/http-client-service';
 import {BsModalService, BsModalRef} from 'ngx-bootstrap/modal';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient, HttpResponse} from '@angular/common/http';
+import {MessengerService} from '../../../MessengerService';
 
 
 @Component({
@@ -12,18 +13,12 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
   styleUrls: ['./productores.component.scss']
 })
 export class ProductoresComponent implements OnInit {
-  usuario: string;
   productores: any;
   cliente: any;
   // tslint:disable-next-line:max-line-length
-  constructor(public httpService: HttpClientService, public modalService: BsModalService, private route: ActivatedRoute, private http: HttpClient) {
-    const user = +this.route.snapshot.paramMap.get('usuario');
-    this.usuario = user.toString();
-    // tslint:disable-next-line:max-line-length
-    http.post('https://localhost:5001/api/Clientes/getUser', {Cedula: this.usuario}).subscribe((resp: HttpResponse<any>) => {this.cliente = resp;
-    console.log(this.cliente);
+  constructor(public httpService: HttpClientService, public modalService: BsModalService, private route: ActivatedRoute, private http: HttpClient, private messengerService: MessengerService) {
+    this.messengerService.message.subscribe(value => {this.cliente = value});
     http.post('https://localhost:5001/api/Productores/GetRegion', {Canton: this.cliente.canton}).subscribe((ans: HttpResponse<any>) => {this.productores = ans; });
-    });
     // tslint:disable-next-line:max-line-length
   }
   bsModalRef: BsModalRef;

@@ -27,6 +27,7 @@ namespace server.Models
 
         public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono)
         {
+           
             productor = lisproductor;
             Listado = pedListado;
             Comprobante = pedComprobante;

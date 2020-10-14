@@ -1,1 +1,50 @@
-[{"Listado":[["Fresas","FR015","2220","3"],["Uvas","UV012","1500","2"]],"Comprobante":"123456789","Direccion":"Del parque 300m oeste y 100 Norte","Provincia":"Alajuela","Canton":"San Ramon","Distrito":"Centro","Cedula":"205150312","Nombre":"Laura","Apellido":"Ortega","Telefono":"22610212","productor":null},{"Listado":[["Bananos","Ban01","980","3"],["Carne","Car02","2750","2"]],"Comprobante":"65857412","Direccion":"De la plaza 500m norte y 50 oeste, frente al poste quebrado","Provincia":"Heredia","Canton":"Santa Barbara","Distrito":"Santa Barbara","Cedula":"22132000","Nombre":"Miguel","Apellido":"Lagos","Telefono":"88741520","productor":null},{"Listado":[{"nombre":"Kiwi organico","categoria":null,"foto":null,"precio":"500000","modo":null,"disponibilidad":null,"productor":"12342","total":null,"cantidad":"1"},{"nombre":"Kiwi organico","categoria":null,"foto":null,"precio":"500000","modo":null,"disponibilidad":null,"productor":"12342","total":null,"cantidad":"1"}],"Comprobante":null,"Direccion":"Lugar Feliz","Provincia":null,"Canton":"Alajuela","Distrito":null,"Cedula":"117810801","Nombre":"wajib","Apellido":null,"Telefono":null,"productor":null},{"Listado":[{"nombre":"Kiwi organico","categoria":null,"foto":null,"precio":"500000","modo":null,"disponibilidad":null,"productor":"12342","total":null,"cantidad":"2"},{"nombre":"Kiwi organico","categoria":null,"foto":null,"precio":"500000","modo":null,"disponibilidad":null,"productor":"12342","total":null,"cantidad":"2"}],"Comprobante":null,"Direccion":"Lugar Feliz","Provincia":null,"Canton":"Alajuela","Distrito":null,"Cedula":"117810801","Nombre":"wajib","Apellido":null,"Telefono":null,"productor":"12342"},{"Listado":[{"nombre":"Aguacate Artesanal","categoria":null,"foto":null,"precio":"3000","modo":null,"disponibilidad":null,"productor":"12342","total":null,"cantidad":"1"}],"Comprobante":null,"Direccion":"Lugar Feliz","Provincia":null,"Canton":"Alajuela","Distrito":null,"Cedula":"117810801","Nombre":"wajib","Apellido":null,"Telefono":null,"productor":"12342"}]
+[
+  {
+    "Listado": [
+      
+      {
+        "nombre": "Aguacate Artesanal",
+        "categoria": null,
+        "foto": null,
+        "precio": "3000",
+        "modo": null,
+        "disponibilidad": null,
+        "productor": "12342",
+        "total": null,
+        "cantidad": "1"
+      },
+      {
+        "nombre": "chayotes",
+        "categoria": null,
+        "foto": null,
+        "precio": "500",
+        "modo": null,
+        "disponibilidad": null,
+        "productor": "12342",
+        "total": null,
+        "cantidad": "1"
+      },
+      {
+        "nombre": "Aguacate Artesanal",
+        "categoria": null,
+        "foto": null,
+        "precio": "3000",
+        "modo": null,
+        "disponibilidad": null,
+        "productor": "12342",
+        "total": null,
+        "cantidad": "1"
+      }
+    ],
+    "Comprobante": "700055291",
+    "Direccion": "Lugar Feliz",
+    "Provincia": null,
+    "Canton": "Alajuela",
+    "Distrito": null,
+    "Cedula": "117810801",
+    "Nombre": "wajib",
+    "Apellido": null,
+    "Telefono": null,
+    "productor": "12342"
+  }
+]

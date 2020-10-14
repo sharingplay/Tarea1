@@ -1,11 +1,11 @@
 [
     {
-        "Cedula": "61422",
+        "Cedula": "12342",
         "Nombre": "Mario",
         "Apellidos": "Araya",
         "Direccion": "Puntarenas",
         "Provincia": null,
-        "Canton": null,
+        "Canton": "Alajuela",
         "Distrito": null,
         "Nacimiento": "24/julio",
         "Telefono": "7054126",

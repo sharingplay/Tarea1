@@ -20,7 +20,7 @@ export class LogInComponent implements OnInit {
   async login(): Promise<void> {
 
     this.username = (document.getElementById('username') as HTMLInputElement).value;
-    this.password = (document.getElementById('password') as HTMLInputElement).value;
+    this.password = (document.getElementById('password')as HTMLInputElement).value;
     console.log(this.username);
     console.log(this.password);
     // tslint:disable-next-line:prefer-const
@@ -48,7 +48,7 @@ export class LogInComponent implements OnInit {
                                                            this.messageSubscription = this.messengerService.message.subscribe(m => {
                                                              this.messengerService.setMessage(this.usuario);
                                                            });
-                                                           this.router.navigate(['/GestionProductos', this.usuario.cedula]);
+                                                           this.router.navigate(['/VistaProductores']);
                                                          }
                                                        });
       } else{
@@ -56,7 +56,7 @@ export class LogInComponent implements OnInit {
        this.messageSubscription = this.messengerService.message.subscribe(m => {
          this.messengerService.setMessage(this.usuario);
        });
-        this.router.navigate(['/Productores', this.usuario.cedula]);
+        this.router.navigate(['/','Productores']);
       } }
     );
         resolve();

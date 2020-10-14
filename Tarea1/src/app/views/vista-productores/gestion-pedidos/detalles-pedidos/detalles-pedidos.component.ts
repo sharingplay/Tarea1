@@ -15,7 +15,7 @@ let flag = true;
 })
 export class DetallesPedidosComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DetallesPedidosComponent>,
-              @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos']) {console.log(message); }
+              @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos'], public httpService: HttpClientService) {console.log(message); }
   total = 0;
   productos = this.message.listado;
   // tslint:disable-next-line:typedef
@@ -29,8 +29,13 @@ export class DetallesPedidosComponent implements OnInit {
   ngOnInit(): void {
     // tslint:disable-next-line:forin
     for (let prod of this.message.listado){
-      this.total += Number(prod[2]) * Number(prod[3]);
+      this.total += Number(prod.cantidad) * Number(prod.precio);
     }
+  }
+  eliminar(): void{
+    this.httpService.post('https://localhost:5001/api/Pedidos/delete', {Comprobante: this.message.comprobante});
+    alert('El pedido fue eliminado satisfactoriamente. Recargue la página');
+    this.dialogRef.close();
   }
 }
 

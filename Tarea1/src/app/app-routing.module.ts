@@ -19,7 +19,7 @@ import {ActualizacionDatosClienteComponent} from './views/vista-clientes/actuali
 import {ProductsPerProducerComponent} from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
-
+import {ProductosProductorComponent} from './views/vista-productores/productos-productor/productos-productor.component';
 // Rutas para navegar entre ventanas
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -43,7 +43,8 @@ const routes: Routes = [
   {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
   {path: 'GestionPedidos', component: GestionPedidosComponent},
   {path: 'Carrito', component: CarritoComponent},
-  {path: 'ProductosPorProductor', component: ProductsPerProducerComponent}
+  {path: 'ProductosPorProductor', component: ProductsPerProducerComponent},
+  {path: 'ProductosProductor', component: ProductosProductorComponent}
 ];
 
 @NgModule({
@@ -55,4 +56,4 @@ export const routingComponents = [GestionCategoriasComponent, AdministracionAfil
   AgregarProductoresComponent, GestionProductoresComponent, GestionProductosComponent, LogInComponent, ProductoresComponent,
   ProductosComponent, VistaProductoresComponent, HomeViewComponent, VistaReportesComponent, VistaClientesComponent,
   CreacionCuentaClienteComponent, SolicitudAfiliacionComponent, ActualizarProductoresComponent,
-  ActualizacionDatosClienteComponent, ProductsPerProducerComponent];
+  ActualizacionDatosClienteComponent, ProductsPerProducerComponent, ProductosProductorComponent];

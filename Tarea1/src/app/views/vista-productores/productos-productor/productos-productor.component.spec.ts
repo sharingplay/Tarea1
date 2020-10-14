@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VistaProductosComponent } from './vista-productos.component';
+import { ProductosProductorComponent } from './productos-productor.component';
 
-describe('VistaProductosComponent', () => {
-  let component: VistaProductosComponent;
-  let fixture: ComponentFixture<VistaProductosComponent>;
+describe('ProductosProductorComponent', () => {
+  let component: ProductosProductorComponent;
+  let fixture: ComponentFixture<ProductosProductorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VistaProductosComponent ]
+      declarations: [ ProductosProductorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VistaProductosComponent);
+    fixture = TestBed.createComponent(ProductosProductorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

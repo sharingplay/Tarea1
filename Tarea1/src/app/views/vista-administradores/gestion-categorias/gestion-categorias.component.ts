@@ -14,8 +14,9 @@ export class GestionCategoriasComponent implements OnInit {
   bsModalRef: BsModalRef;
 
   // tslint:disable-next-line:typedef
-  openModalWithComponent() {
+  openModalWithComponent(deleteFunction) {
     const initialState = {
+      whoDelete: deleteFunction
     };
     this.bsModalRef = this.modalService.show(DeleteCategoryModalComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';

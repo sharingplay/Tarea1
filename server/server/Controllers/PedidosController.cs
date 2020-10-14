@@ -54,29 +54,96 @@ namespace server.Controllers
             string jsonString = System.IO.File.ReadAllText(fileName);
             PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
-            bool validation = true;
+            PedidosList.Add(Pedido);
+
+            jsonString = JsonSerializer.Serialize(PedidosList);
+            System.IO.File.WriteAllText(fileName, jsonString);
+
+            Debug.WriteLine("Pedido aceptado");
+            
+            Debug.WriteLine("No se pudo realizar el pedido");
+        }
+
+        /// <summary>
+        /// 
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Pedido"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
+        [Route("getPedido")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Pedidos getClientFromID([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
+
+            bool validation = false;
+
+            Pedidos found = null;
+
+            for (int i = 0; i < PedidosList.Count; i++)
+            {
+                if (PedidosList[i].productor == Pedido.productor)
+                {
+                    found = PedidosList[i];
+                    validation = true;
+                    break;
+                }
+            }
+            if (validation)
+            {
+                return found;
+            }
+            else
+            {
+                return found;
+            }
+        }
+
+        /// <summary>
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Pedido"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
+        [Route("getPedidoCliente")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Pedidos getpedidoClient([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
+
+            bool validation = false;
+
+            Pedidos found = null;
 
             for (int i = 0; i < PedidosList.Count; i++)
             {
                 if (PedidosList[i].Cedula == Pedido.Cedula)
                 {
-                    validation = false;
+                    found = PedidosList[i];
+                    validation = true;
                     break;
                 }
             }
-
             if (validation)
             {
-                PedidosList.Add(Pedido);
-
-                jsonString = JsonSerializer.Serialize(PedidosList);
-                System.IO.File.WriteAllText(fileName, jsonString);
-
-                Debug.WriteLine("Pedido aceptado");
+                return found;
             }
             else
             {
-                Debug.WriteLine("No se pudo realizar el pedido");
+                return found;
             }
         }
 

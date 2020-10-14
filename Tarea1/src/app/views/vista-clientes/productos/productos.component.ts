@@ -1,3 +1,4 @@
+/* tslint:disable:align */
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {CarritoComponent} from '../../../shopping-cart/carrito/carrito.component';
@@ -25,15 +26,15 @@ export class ProductosComponent implements OnInit {
     this.httpService.post('https://localhost:5001/api/Productos/GetPorProductor', { Productor: this.productor}).subscribe(
       (resp: HttpResponse<any>) => { this.productos = resp; });
     this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: this.usuario}).subscribe(
-      (resp: HttpResponse<any>) => { this.cliente = resp; });
+      (resp: HttpResponse<any>) => { this.cliente = resp;
+      if (this.cliente.carrito !=  null){
+        this.listaProductos = this.listaProductos.concat(this.cliente.carrito);
+      }});
   }
   listaProductos: object[] = [];
   bsModalRef: BsModalRef;
   openDialog(productos: object[]): void {
     this.listaProductos = this.listaProductos.concat(productos);
-    if (this.cliente.carrito !=  null){
-      this.listaProductos = this.listaProductos.concat(this.cliente.carrito);
-    }
     this.cliente.carrito = this.listaProductos;
     this.http.post('https://localhost:5001/api/Clientes/modify', this.cliente);
     console.log(this.cliente);
@@ -48,10 +49,11 @@ export class ProductosComponent implements OnInit {
         right: ''
       }
     });
-    dialogRef.afterClosed().subscribe(res => {console.log(res);
-                                              this.httpService.post('https://localhost:5001/api/Clientes/getUser',
-                                                { Cedula: this.usuario}).subscribe(
-      (resp: HttpResponse<any>) => { this.cliente = resp; this.listaProductos = this.cliente.carrito; }); });
+    dialogRef.afterClosed().subscribe(res => {console.log(res); if (res !== undefined){
+      this.listaProductos = res; }
+      else{
+        this.listaProductos = []; }
+    });
   }
   ngOnInit(): void {
   }

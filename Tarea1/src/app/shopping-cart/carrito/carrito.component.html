@@ -16,21 +16,22 @@
     <!-- List of items-->
     <section class="col-lg-8">
       <div class="d-flex justify-content-between align-items-center pt-3 pb-2 pb-sm-5 mt-1">
-        <h2 class="h6 text-light mb-0">Products</h2><a class="btn btn-outline-primary btn-sm pl-2" href="shop-grid-ls.html"><i class="czi-arrow-left mr-2"></i>Continue shopping</a>
+        <h2 class="h6 text-light mb-0">Productos</h2><a mat-button [mat-dialog-close]="productos" class="btn btn-light btn-lg"><i class="czi-arrow-left mr-2"></i>Continuar Comprando</a>
       </div>
       <!-- Item-->
       <div class="d-sm-flex justify-content-between align-items-center my-4 pb-3 border-bottom" *ngFor="let producto of productos">
         <div class="media media-ie-fix d-block d-sm-flex align-items-center text-center text-sm-left"><a class="d-inline-block mx-auto mr-sm-4" href="shop-single-v1.html" style="width: 10rem;"><img src="img/shop/cart/02.jpg" alt="Product"></a>
           <div class="media-body pt-2">
             <h3 class="product-title font-size-base mb-2"><a href="#">{{producto.nombre}}</a></h3>
-            <div class="font-size-sm"><span class="text-muted mr-2">Detalles:</span>{{producto.detalles}}</div>
+            <div class="font-size-sm"><span class="text-muted mr-2">En Bodega:</span>{{producto.disponibilidad}}</div>
+            <div class="font-size-sm"><span class="text-muted mr-2">Modo de venta:</span>{{producto.modo}}</div>
             <div class="font-size-lg text-accent pt-2">{{producto.precio|currency:"₡":"symbol"}}</div>
           </div>
         </div>
         <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
           <div class="form-group mb-0">
               <label class="font-weight-medium" for="{{producto.nombre}}">Quantity</label>
-              <input class="form-control" type="number" id="{{producto.nombre}}" min="1" placeholder="Quantity" value="1" formControlName="product_quantity" (click)="updateTotal()">
+              <input class="form-control" type="number" id="{{producto.nombre}}" min="1" placeholder="Quantity" value="{{producto.cantidad}}" formControlName="product_quantity" (click)="updateTotal()">
           </div>
           <button class="btn btn-link px-0 text-danger" type="button" (click)="remove(producto)"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Quitar</span></button>
         </div>
@@ -49,7 +50,7 @@
           <textarea class="form-control" rows="6" id="order-comments"></textarea>
         </div>
         <div class="accordion" id="order-options">
-        </div><a class="btn btn-primary btn-shadow btn-block mt-4" href="#top"><i class="czi-card font-size-lg mr-2"></i>Realizar Compra</a>
+        </div><a class="btn btn-primary btn-shadow btn-block mt-4" (click)="comprar()"><i class="czi-card font-size-lg mr-2"></i>Realizar Compra</a>
       </div>
     </aside>
   </div>

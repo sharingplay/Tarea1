@@ -15,6 +15,7 @@ namespace server.Models
         public string Disponibilidad { get; set; }
         public string Productor { get; set; }
         public string Total { get; set; }
+        public string Cantidad { get; set; }
 
 
         public Productos()
@@ -22,8 +23,9 @@ namespace server.Models
 
         }
 
-        public Productos(string proNombre, string proCategoria, string proFoto, string proPrecio, string proModo, string proDisponibilidad, string proProductor, string proTotal)
+        public Productos(string proCantidad, string proNombre, string proCategoria, string proFoto, string proPrecio, string proModo, string proDisponibilidad, string proProductor, string proTotal)
         {
+            Cantidad = proCantidad;
             Nombre = proNombre;
             Categoria = proCategoria;
             Foto = proFoto;

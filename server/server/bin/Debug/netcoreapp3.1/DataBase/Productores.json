@@ -46,5 +46,21 @@
         "Usuario": "",
         "Password": "",
         "Venta": null
+    },
+    {
+        "Cedula": "12342",
+        "Nombre": "Productor",
+        "Apellidos": null,
+        "Direccion": "Centroamerica",
+        "Provincia": null,
+        "Canton": "Alajuela",
+        "Distrito": null,
+        "Nacimiento": null,
+        "Telefono": null,
+        "SINPE": null,
+        "Pedidos": null,
+        "Usuario": null,
+        "Password": null,
+        "Venta": null
     }
 ]

@@ -10,31 +10,31 @@
       <div class="form-group">
         <label for="producto" class="col-sm-3 control-label">Producto*</label>
         <div class="col-sm-9">
-          <input type="text" id="producto" placeholder="Producto" class="form-control" autofocus>
+          <input type="text" id="producto" placeholder="Producto" value={{message.nombre}} class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
         <label for="categoria" class="col-sm-3 control-label">categoria*</label>
         <div class="col-sm-9">
-          <input type="text" id="categoria" placeholder="categoria" class="form-control" autofocus>
+          <input type="text" id="categoria" placeholder="categoria" value={{message.categoria}} class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
         <label for="precio" class="col-sm-3 control-label">Precio*</label>
         <div class="col-sm-9">
-          <input type="text" id="precio" placeholder="Precio" class="form-control" autofocus>
+          <input type="text" id="precio" placeholder="Precio" value={{message.precio}} class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
-        <label for="Modo de venta" class="col-sm-3 control-label">Modo de venta*</label>
+        <label for="Mododeventa" class="col-sm-3 control-label">Modo de venta*</label>
         <div class="col-sm-9">
-          <input type="text" id="Modo de venta" placeholder="Modo de venta" class="form-control" autofocus>
+          <input type="text" id="Mododeventa" placeholder="Mododeventa" value={{message.modo}} class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
-        <label for="Disponibilidad Producto" class="col-sm-3 control-label">Disponibilidad Producto*</label>
+        <label for="DisponibilidadProducto" class="col-sm-3 control-label">Disponibilidad Producto*</label>
         <div class="col-sm-9">
-          <input type="text" id="Disponibilidad Producto" placeholder="Disponibilidad Producto" class="form-control" autofocus>
+          <input type="text" id="DisponibilidadProducto" value={{message.disponibilidad}} placeholder="DisponibilidadProducto" class="form-control" autofocus>
         </div>
       </div>
       <div class="form-group">
@@ -42,7 +42,7 @@
           <span class="help-block">*Campos obligatorios</span>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Agregar Producto</button>
+      <button type="submit" (click)="actualizarDatos()" class="btn btn-primary btn-block">Agregar Producto</button>
     </form> <!-- /form -->
   </div> <!-- ./container -->
 </div>

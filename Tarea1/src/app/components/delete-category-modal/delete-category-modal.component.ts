@@ -17,6 +17,9 @@ export class DeleteCategoryModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line:typedef
+  close() {
+    this.hideModal = true;
+  }
 
 }

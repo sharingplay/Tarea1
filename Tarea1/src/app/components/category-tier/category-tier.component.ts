@@ -25,7 +25,7 @@ export class CategoryTierComponent implements OnInit {
     this.openModalWithComponent.emit(this.deleteCategory);
   }
   deleteCategory(): void{
-    this.hhtpService.post('http://localhost:5000/api/Categorias/delete' ,
+    this.hhtpService.post(HttpClientService.URL + 'Categorias/delete' ,
       {
         Codigo: this.id,
       });

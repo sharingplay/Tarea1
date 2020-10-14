@@ -4,3 +4,5 @@
 server/.vs/server/v16/
 
 server/server/bin/Debug/netcoreapp3.1/server.dll
+
+*.v2

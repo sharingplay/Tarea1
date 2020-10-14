@@ -49,6 +49,7 @@ import { ListViewModalComponent } from './views/vista-administradores/vista-repo
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

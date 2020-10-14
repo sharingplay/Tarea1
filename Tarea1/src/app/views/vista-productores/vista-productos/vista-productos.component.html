@@ -11,41 +11,35 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let productor of httpService.productores">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let producto of httpService.productos">
       <div class="tile">
         <div class="wrapper">
           <div class="imagen"></div>
           <div class="stats">
             <div>
-              <strong>Nombre: </strong> {{productor.nombre+ " " + productor.apellidos}}
+              <strong>Nombre: </strong> {{producto.nombre}}
             </div>
             <div>
-              <strong>Cedula: </strong> {{productor.cedula}}
+              <strong>Precio: </strong> {{producto.precio}}
             </div>
             <div>
-              <strong>Direccion: </strong> {{productor.direccion}}
+              <strong>Modo de venta: </strong> {{producto.venta}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Usuario: </strong> {{productor.usuario}}
+              <strong>Disponibilidad: </strong> {{producto.disponibilidad}}
             </div>
             <div>
-              <strong>Password: </strong> {{productor.password}}
-            </div>
-            <div>
-              <strong>Telefono: </strong> {{productor.telefono}}
+              <strong>Categoria: </strong> {{producto.categoria}}
             </div>
           </div>
           <div class="footer">
-            <button [routerLink]= "['/ActualizarProductor', productor.cedula]" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
-            <button routerLink="/GestionProductores" routerLinkActive="active" mat-button class = "btn-block btn-danger" (click) = "delete(productor)" >Eliminar</button>
+            <button [routerLink]= "['/GestionProductos', producto.cedula]" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
+            <button routerLink="/GestionProductores" routerLinkActive="active" mat-button class = "btn-block btn-danger" (click) = "delete(producto)" >Eliminar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-

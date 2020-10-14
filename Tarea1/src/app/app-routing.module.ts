@@ -20,6 +20,7 @@ import {ProductsPerProducerComponent} from './views/vista-administradores/vista-
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 
+// Rutas para navegar entre ventanas
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeViewComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path: 'CrearCuentaCliente', component: CreacionCuentaClienteComponent},
   {path: 'SolicitudAfiliacion', component: SolicitudAfiliacionComponent},
   {path: 'ActualizarProductor', component: ActualizarProductoresComponent},
+  {path: 'ActualizarProductor/:productor', component: ActualizarProductoresComponent},
   {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
   {path: 'GestionPedidos', component: GestionPedidosComponent},
   {path: 'Carrito', component: CarritoComponent},

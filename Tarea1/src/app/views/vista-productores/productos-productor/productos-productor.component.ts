@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClientService} from '../../../services/http-client-service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 import {MatDialog} from '@angular/material/dialog';
-import {HttpResponse} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import{GestionProductosComponent} from '../gestion-productos/gestion-productos.component';
+import {MessengerService} from '../../../MessengerService';
 
 @Component({
   selector: 'app-productos-productor',
@@ -11,8 +12,15 @@ import{GestionProductosComponent} from '../gestion-productos/gestion-productos.c
   styleUrls: ['./productos-productor.component.scss']
 })
 export class ProductosProductorComponent implements OnInit {
-
-  constructor(public httpService: HttpClientService, public modalService: BsModalService, public dialog: MatDialog) { }
+  productos: any;
+  productor:any;
+  constructor(public httpService: HttpClientService, public http: HttpClient, private messengerService: MessengerService, public modalService: BsModalService, public dialog: MatDialog) {
+    this.messengerService.message.subscribe(value => {
+      console.log(value);
+      this.productor = value;
+    });
+    http.post('https://localhost:5001/api/Productos/GetPorProductor', {Productor: this.productor.cedula}).subscribe((resp:any) => {this.productos = resp; console.log(resp)});
+  }
   openDialog(producto: object[]): void {
     const dialogRef = this.dialog.open(GestionProductosComponent, {
       width: '70%',

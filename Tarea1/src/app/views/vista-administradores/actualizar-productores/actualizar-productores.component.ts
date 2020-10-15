@@ -24,11 +24,14 @@ export class ActualizarProductoresComponent implements OnInit {
     this.message.nombre = (document.getElementById('FirstName') as HTMLInputElement).value;
     this.message.apellidos = (document.getElementById('LastName') as HTMLInputElement).value;
     this.message.provincia = (document.getElementById('Provincia') as HTMLInputElement).value;
+    this.message.foto = (document.getElementById('Foto') as HTMLInputElement).value;
     this.message.canton = (document.getElementById('Canton') as HTMLInputElement).value;
     this.message.distrito = (document.getElementById('Distrito') as HTMLInputElement).value;
     this.message.password = (document.getElementById('Password') as HTMLInputElement).value;
     this.message.telefono = (document.getElementById('PhoneNumber') as HTMLInputElement).value;
     this.message.sinpe = (document.getElementById('SinpeMovil') as HTMLInputElement).value;
+    console.log("ENVIAR A ACTUALIZAR");
+    console.log(this.message);
     this.httpService.post('https://localhost:5001/api/Productores/modify', this.message);
   }
 }

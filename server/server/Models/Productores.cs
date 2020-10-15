@@ -14,7 +14,7 @@ namespace server.Models
         public string Provincia { get; set; }
         public string Canton { get; set; }
         public string Distrito { get; set; }
-
+        public string Foto { get; set; }
         public string Nacimiento { get; set; }
         public string Telefono { get; set; }
         public string SINPE { get; set; }
@@ -27,8 +27,9 @@ namespace server.Models
         {
         }
 
-        public Productores(string productProvincia, string productCanton, string productDistrito, string productVenta, string productCedula, string productNombre, string productApellido, string productDireccion, string productNacimiento, string productTelefono, string productSINPE, string productPedidos, string productUsuario, string productPassword)
+        public Productores(string productFoto, string productProvincia, string productCanton, string productDistrito, string productVenta, string productCedula, string productNombre, string productApellido, string productDireccion, string productNacimiento, string productTelefono, string productSINPE, string productPedidos, string productUsuario, string productPassword)
         {
+            Foto = productFoto;
             Venta = productVenta;
             Cedula = productCedula;
             Nombre = productNombre;

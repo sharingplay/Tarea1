@@ -65,6 +65,7 @@ export class CarritoComponent implements OnInit, AfterViewInit {
         alert("Lo sentimos, de momento solo se pueden hacer compras de un productor a la vez.");
         return;
       }
+      prod.disponibilidad = prod.disponibilidad - prod.cantidad;
     }
     this.http.post('https://localhost:5001/api/Pedidos/insert',
       {Listado: this.usuario.carrito, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
@@ -72,6 +73,7 @@ export class CarritoComponent implements OnInit, AfterViewInit {
         Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor, Comentarios: (document.getElementById('notas') as HTMLInputElement).value });
         this.usuario.carrito = [];
         this.productos = [];
+        this.http.post('https://localhost:5001/api/Clientes/modify', this.usuario);
     alert("Gracias! Su pedido ha sido registrado.")
   }
 

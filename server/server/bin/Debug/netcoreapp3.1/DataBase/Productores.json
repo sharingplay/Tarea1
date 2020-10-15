@@ -1,9 +1,9 @@
 [
-    
     {
         "Cedula": "12342",
-        "Nombre": "Pepe",
+        "Nombre": "Carlos",
         "Apellidos": "Bola\u00F1os",
+        "Foto":  null,
         "Direccion": "Centroamerica",
         "Provincia": "Alajuela",
         "Canton": "Alajuela",
@@ -20,6 +20,7 @@
         "Cedula": "",
         "Nombre": "Marco",
         "Apellidos": "Augusto",
+        "Foto": null,
         "Direccion": null,
         "Provincia": "Cartgao",
         "Canton": "",
@@ -36,6 +37,7 @@
         "Cedula": "321",
         "Nombre": "Paco",
         "Apellidos": "Sans",
+        "Foto": null,
         "Direccion": null,
         "Provincia": "Heredia",
         "Canton": "skfush",
@@ -52,6 +54,7 @@
         "Cedula": "512223",
         "Nombre": "Carlos",
         "Apellidos": "Alvarado",
+        "Foto": null,
         "Direccion": null,
         "Provincia": "Heredia",
         "Canton": "",
@@ -67,6 +70,7 @@
     {
         "Cedula": "12342",
         "Nombre": "Productor",
+        "Foto": null,
         "Apellidos": null,
         "Direccion": "Centroamerica",
         "Provincia": null,

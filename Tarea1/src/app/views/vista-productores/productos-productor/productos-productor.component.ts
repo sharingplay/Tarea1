@@ -21,11 +21,12 @@ export class ProductosProductorComponent implements OnInit {
     });
     http.post('https://localhost:5001/api/Productos/GetPorProductor', {Productor: this.productor.cedula}).subscribe((resp:any) => {this.productos = resp; console.log(resp)});
   }
-  openDialog(producto: object[]): void {
+  openDialog(producto: object[], modify: boolean): void {
+    let param = [producto, modify, this.productor]
     const dialogRef = this.dialog.open(GestionProductosComponent, {
       width: '70%',
       height: '70%',
-      data: producto,
+      data: param,
       position: {
         top: '',
         bottom: '',

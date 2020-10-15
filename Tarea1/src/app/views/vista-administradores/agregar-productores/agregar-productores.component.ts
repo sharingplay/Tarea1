@@ -20,6 +20,7 @@ export class AgregarProductoresComponent implements OnInit {
     let productorNuevo = {
       nombre: (document.getElementById('FirstName') as HTMLInputElement).value,
       apellidos: (document.getElementById('LastName') as HTMLInputElement).value,
+      foto: (document.getElementById('foto') as HTMLInputElement).value,
       cedula: (document.getElementById('Cedula') as HTMLInputElement).value,
       provincia: (document.getElementById('Provincia') as HTMLInputElement).value,
       canton: (document.getElementById('Canton') as HTMLInputElement).value,

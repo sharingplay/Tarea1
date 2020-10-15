@@ -47,9 +47,11 @@ export class ProductosComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(res => {console.log(res); if (res !== undefined){
-      this.listaProductos = res; }
+      this.listaProductos = res; this.cliente.carrito = res }
       else{
-        this.listaProductos = []; }
+        this.listaProductos = [];
+        this.cliente.carrito = [];
+      }
     });
   }
   ngOnInit(): void {

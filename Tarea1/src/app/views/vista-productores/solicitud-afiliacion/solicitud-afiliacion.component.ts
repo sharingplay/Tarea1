@@ -20,6 +20,7 @@ export class SolicitudAfiliacionComponent implements OnInit {
       "apellidos": (document.getElementById('LastName') as HTMLInputElement).value,
       "cedula": (document.getElementById('Cedula') as HTMLInputElement).value,
       "provincia": (document.getElementById('Provincia') as HTMLInputElement).value,
+      "foto": (document.getElementById('foto') as HTMLInputElement).value,
       "canton": (document.getElementById('Canton') as HTMLInputElement).value,
       "distrito": (document.getElementById('Distrito') as HTMLInputElement).value,
       "usuario": (document.getElementById('Usuario') as HTMLInputElement).value,

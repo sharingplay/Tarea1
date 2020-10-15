@@ -34,6 +34,7 @@ export class AgregarProductoresComponent implements OnInit {
     console.log(productorNuevo);
     //Se agregar el productor nuevo al json
     this.httpService.post('https://localhost:5001/api/Productores/insert', productorNuevo);
+    window.location.reload();
   }
 
 }

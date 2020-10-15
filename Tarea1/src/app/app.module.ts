@@ -49,6 +49,9 @@ import { ListViewModalComponent } from './views/vista-administradores/vista-repo
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 import {MessengerService} from "./MessengerService";
 import { ProductosProductorComponent } from "./views/vista-productores/productos-productor/productos-productor.component";
+import { PedidosComponent } from './views/vista-clientes/pedidos/pedidos.component';
+import {DatePipe} from '@angular/common';
+import { PedidoClientesComponent } from './views/vista-clientes/pedidos/pedido-clientes/pedido-clientes.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +100,10 @@ import { ProductosProductorComponent } from "./views/vista-productores/productos
     ProductsPerProducerComponent,
 
     ProductosProductorComponent,
+
+    PedidosComponent,
+
+    PedidoClientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,7 +118,7 @@ import { ProductosProductorComponent } from "./views/vista-productores/productos
     MatDialogModule,
     FormsModule,
   ],
-  providers: [MessengerService],
+  providers: [MessengerService, DatePipe],
   bootstrap: [AppComponent],
   entryComponents: [DeleteCategoryModalComponent, DetallesPedidosComponent]
 })

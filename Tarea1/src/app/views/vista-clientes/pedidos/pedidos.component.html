@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<app-header-cliente></app-header-cliente>
+<div class="container pb-5 mb-2 mb-md-4">
+  <h1>Pedidos Realizados</h1>
+  <div class = "row">
+    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor='let pedido of pedidos'>
+      <div class="tile">
+        <div class="stats">
+          <div>
+            <strong>Comprobante</strong> {{pedido.comprobante}}
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <strong>Fecha de Compra</strong> {{pedido.fecha}}
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <strong>Dirección de entrega:</strong> {{pedido.canton}}, {{pedido.distrito}}, {{pedido.direccion}}
+          </div>
+        </div>
+        <div class="footer">
+          <button mat-button class = "mat-boton" (click)="openDialog(pedido)">Ver Pedido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

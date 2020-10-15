@@ -20,6 +20,7 @@ import {ProductsPerProducerComponent} from './views/vista-administradores/vista-
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 import {ProductosProductorComponent} from './views/vista-productores/productos-productor/productos-productor.component';
+import {PedidosComponent} from './views/vista-clientes/pedidos/pedidos.component';
 // Rutas para navegar entre ventanas
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -44,7 +45,8 @@ const routes: Routes = [
   {path: 'GestionPedidos', component: GestionPedidosComponent},
   {path: 'Carrito', component: CarritoComponent},
   {path: 'ProductosPorProductor', component: ProductsPerProducerComponent},
-  {path: 'ProductosProductor', component: ProductosProductorComponent}
+  {path: 'ProductosProductor', component: ProductosProductorComponent},
+  {path: 'PedidosClientes', component: PedidosComponent}
 ];
 
 @NgModule({

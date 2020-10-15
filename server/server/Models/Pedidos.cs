@@ -22,12 +22,18 @@ namespace server.Models
 
         public string Comentarios { get; set; }
 
+        public string Fecha { get; set; }
+
+        public string Estado { get; set; }
+        
+        public string Feedback { get; set; }
+
         public Pedidos()
         {
 
         }
 
-        public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono, string pedComentarios)
+        public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono, string pedComentarios, string pedFecha, string pedEstado, string pedFeed)
         {
            
             productor = lisproductor;
@@ -42,6 +48,9 @@ namespace server.Models
             Apellido = pedApellido;
             Telefono = pedTelefono;
             Comentarios = pedComentarios;
+            Fecha = pedFecha;
+            Estado = pedEstado;
+            Feedback = pedFeed;
         }
     }
 }

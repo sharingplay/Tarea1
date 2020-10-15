@@ -4,6 +4,7 @@ import {getTemplateUrl} from 'codelyzer/util/ngQuery';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {HttpClientService} from '../../services/http-client-service';
 import {HttpClient, HttpResponse} from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 let flag = true;
 
 @Component({
@@ -15,11 +16,13 @@ export class CarritoComponent implements OnInit, AfterViewInit {
   subTotal = 0;
   usuario: any;
   productos: any;
-  constructor(public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'],
+  fecha = new Date().toDateString();
+  constructor(private datePipe: DatePipe, public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'],
               private httpService: HttpClient, private http: HttpClientService)
   // tslint:disable-next-line:max-line-length
   {dialogRef.disableClose = true; console.log(message); this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: message}).subscribe(
-    (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); }); }
+    (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); });
+    this.fecha = this.datePipe.transform(this.fecha, 'dd-MM-yyyy');}
   @ViewChildren(CarritoComponent) viewChild: CarritoComponent;
   updateTotal(): void{
     console.log(this.productos);
@@ -69,7 +72,7 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     }
     this.http.post('https://localhost:5001/api/Pedidos/insert',
       {Listado: this.usuario.carrito, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
-        Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula,
+        Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula, Fecha: this.fecha,
         Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor, Comentarios: (document.getElementById('notas') as HTMLInputElement).value });
         this.usuario.carrito = [];
         this.productos = [];

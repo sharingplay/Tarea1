@@ -30,7 +30,7 @@ export class GestionProductoresComponent {
   // Elimina un productor enviado en formato Json al pulsar el boton de este
   delete(producto): void{
     console.log(producto);
-    this.httpService.post('https://localhost:5001/api/Productos/delete', producto);
+    this.httpService.post('https://localhost:5001/api/Productores/delete', producto);
     window.location.reload();
   }
 }

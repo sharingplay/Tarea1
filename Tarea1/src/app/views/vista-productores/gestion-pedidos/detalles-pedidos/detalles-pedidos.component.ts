@@ -37,5 +37,10 @@ export class DetallesPedidosComponent implements OnInit {
     alert('El pedido fue eliminado satisfactoriamente. Recargue la página');
     this.dialogRef.close();
   }
+
+  estado() {
+    this.message.estado = (document.getElementById("Estado") as HTMLInputElement).value;
+    this.httpService.post('https://localhost:5001/api/Pedidos/modify', this.message);
+  }
 }
 

@@ -121,9 +121,10 @@ namespace server.Controllers
         [Route("getPedidoCliente")]
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public Pedidos getpedidoClient([FromBody] Pedidos Pedido)
+        public List<Pedidos> getpedidoClient([FromBody] Pedidos Pedido)
         {
             List<Pedidos> PedidosList = new List<Pedidos>();
+            List<Pedidos> PedidosCliente = new List<Pedidos>();
             string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
@@ -138,17 +139,18 @@ namespace server.Controllers
                 if (PedidosList[i].Cedula == Pedido.Cedula)
                 {
                     found = PedidosList[i];
+                    PedidosCliente.Add(found);
                     validation = true;
-                    break;
+          
                 }
             }
             if (validation)
             {
-                return found;
+                return PedidosCliente;
             }
             else
             {
-                return found;
+                return PedidosCliente;
             }
         }
 

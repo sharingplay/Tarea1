@@ -33,12 +33,11 @@ export class ProductosComponent implements OnInit {
   openDialog(productos: object[]): void {
     this.listaProductos = this.listaProductos.concat(productos);
     this.cliente.carrito = this.listaProductos;
-    this.http.post('https://localhost:5001/api/Clientes/modify', this.cliente);
     console.log(this.cliente);
     const dialogRef = this.dialog.open(CarritoComponent, {
       width: '70%',
       height: '70%',
-      data: this.cliente.cedula,
+      data: this.cliente,
       position: {
         top: '',
         bottom: '',

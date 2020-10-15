@@ -17,7 +17,7 @@ export class HeaderClienteComponent implements OnInit {
     const dialogRef = this.dialog.open(CarritoComponent, {
       width: '70%',
       height: '70%',
-      data: this.cliente.cedula,
+      data: this.cliente,
       position: {
         top: '',
         bottom: '',

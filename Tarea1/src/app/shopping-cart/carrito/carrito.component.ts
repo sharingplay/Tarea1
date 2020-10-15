@@ -19,10 +19,12 @@ export class CarritoComponent implements OnInit, AfterViewInit {
   fecha = new Date().toDateString();
   constructor(private datePipe: DatePipe, public dialogRef: MatDialogRef<CarritoComponent>, @Inject(MAT_DIALOG_DATA) public message: HttpClientService['productos'],
               private httpService: HttpClient, private http: HttpClientService)
-  // tslint:disable-next-line:max-line-length
-  {dialogRef.disableClose = true; console.log(message); this.httpService.post('https://localhost:5001/api/Clientes/getUser', { Cedula: message}).subscribe(
-    (resp: HttpResponse<any>) => { this.usuario = resp; this.productos = this.usuario.carrito; console.log(this.productos); });
-    this.fecha = this.datePipe.transform(this.fecha, 'dd-MM-yyyy');}
+
+  {dialogRef.disableClose = true; console.log(message);
+  this.fecha = this.datePipe.transform(this.fecha, 'dd-MM-yyyy');
+  this.usuario = message;
+  this.productos = this.message.carrito;
+  }
   @ViewChildren(CarritoComponent) viewChild: CarritoComponent;
   updateTotal(): void{
     console.log(this.productos);

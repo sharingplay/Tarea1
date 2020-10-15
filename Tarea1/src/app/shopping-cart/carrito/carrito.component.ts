@@ -65,15 +65,21 @@ export class CarritoComponent implements OnInit, AfterViewInit {
   }
 
   comprar():void{
+    let lista=[];
     for (let prod of this.usuario.carrito){
       if (prod.productor != this.usuario.carrito[0].productor){
         alert("Lo sentimos, de momento solo se pueden hacer compras de un productor a la vez.");
         return;
       }
-      prod.disponibilidad = prod.disponibilidad - prod.cantidad;
+      prod.disponibilidad = (prod.disponibilidad - prod.cantidad).toString();
+      const temp = prod;
+      temp.cantidad = "0";
+      console.log(temp);
+      this.http.post('https://localhost:5001/api/Productos/modify', temp);
+      lista = lista.concat(prod);
     }
     this.http.post('https://localhost:5001/api/Pedidos/insert',
-      {Listado: this.usuario.carrito, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
+      {Listado: lista, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
         Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula, Fecha: this.fecha,
         Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor, Comentarios: (document.getElementById('notas') as HTMLInputElement).value });
         this.usuario.carrito = [];

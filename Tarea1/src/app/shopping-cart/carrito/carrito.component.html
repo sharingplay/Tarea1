@@ -31,8 +31,8 @@
         </div>
         <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
           <div class="form-group mb-0">
-              <label class="font-weight-medium" for="{{producto.nombre}}">Quantity</label>
-              <input class="form-control" type="number" id="{{producto.nombre}}" min="1" placeholder="Quantity" value="{{producto.cantidad}}" formControlName="product_quantity" (click)="updateTotal()">
+            <label class="font-weight-medium" for="{{producto.nombre}}">Cantidad</label>
+            <input class="form-control-file" type="number" id="{{producto.nombre}}" min="1"  max="{{producto.disponibilidad}}" placeholder="Quantity" [value]="producto.cantidad == undefined ? 1:producto.cantidad" formControlName="product_quantity" (click)="updateTotal()">
           </div>
           <button class="btn btn-link px-0 text-danger" type="button" (click)="remove(producto)"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Quitar</span></button>
         </div>

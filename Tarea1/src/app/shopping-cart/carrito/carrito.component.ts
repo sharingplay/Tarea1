@@ -71,12 +71,14 @@ export class CarritoComponent implements OnInit, AfterViewInit {
         alert("Lo sentimos, de momento solo se pueden hacer compras de un productor a la vez.");
         return;
       }
-      prod.disponibilidad = (prod.disponibilidad - prod.cantidad).toString();
+      prod.disponibilidad = (Number(prod.disponibilidad) - Number(prod.cantidad)).toString();
       const temp = prod;
-      temp.cantidad = "0";
-      console.log(temp);
-      this.http.post('https://localhost:5001/api/Productos/modify', temp);
+      const cant = prod.cantidad;
       lista = lista.concat(prod);
+      console.log(prod.cantidad);
+      temp.cantidad = "0";
+      this.http.post('https://localhost:5001/api/Productos/modify', temp);
+      prod.cantidad = cant;
     }
     this.http.post('https://localhost:5001/api/Pedidos/insert',
       {Listado: lista, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,

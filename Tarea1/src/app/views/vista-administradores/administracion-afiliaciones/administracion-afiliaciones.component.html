@@ -1,5 +1,8 @@
 <app-header-admin></app-header-admin>
 
+<div class ="imagenFondo">
+  <div class="container">
+
 <app-title text="Gestión de Afiliaciones"></app-title>
 
 <app-subtitle text="Solicitudes de posibles productores para formar parte de FeriaTEC."></app-subtitle>
@@ -8,3 +11,5 @@
   <app-afiliation-tier *ngFor='let affiliation of hhtpService.afiliaciones' [productor]="affiliation" (openInfo)="showAffiliationInfo(affiliation)"></app-afiliation-tier>
 </ul>
 
+  </div>
+</div>

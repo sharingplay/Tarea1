@@ -47,8 +47,11 @@ import {ItemComponent} from './shopping-cart/carrito/item/item.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
-
-
+import {MessengerService} from "./MessengerService";
+import { ProductosProductorComponent } from "./views/vista-productores/productos-productor/productos-productor.component";
+import { PedidosComponent } from './views/vista-clientes/pedidos/pedidos.component';
+import {DatePipe} from '@angular/common';
+import { PedidoClientesComponent } from './views/vista-clientes/pedidos/pedido-clientes/pedido-clientes.component';
 
 @NgModule({
   declarations: [
@@ -74,23 +77,14 @@ import { ProductsPerProducerComponent } from './views/vista-administradores/vist
     VistaAdministradoresComponent,
     VistaProductoresComponent,
     DetallesPedidosComponent,
-
     HeaderClienteComponent,
-
     HomeViewComponent,
-
     HeaderAdminComponent,
-
     VistaReportesComponent,
-
     DeleteCategoryModalComponent,
-
     CenteredButtonComponent,
-
     CreateCategoryModalComponent,
-
     CreacionCuentaClienteComponent,
-
     ActualizarProductoresComponent,
 
     ActualizacionDatosClienteComponent,
@@ -104,6 +98,12 @@ import { ProductsPerProducerComponent } from './views/vista-administradores/vist
     ListViewModalComponent,
 
     ProductsPerProducerComponent,
+
+    ProductosProductorComponent,
+
+    PedidosComponent,
+
+    PedidoClientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,7 +118,7 @@ import { ProductsPerProducerComponent } from './views/vista-administradores/vist
     MatDialogModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [MessengerService, DatePipe],
   bootstrap: [AppComponent],
   entryComponents: [DeleteCategoryModalComponent, DetallesPedidosComponent]
 })

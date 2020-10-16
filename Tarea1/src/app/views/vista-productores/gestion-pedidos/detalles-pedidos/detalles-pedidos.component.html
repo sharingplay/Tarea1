@@ -2,6 +2,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
 <div mat-dialog-title>Detalles</div>
 <div mat-dialog-content>
@@ -49,28 +50,38 @@
               <strong>Comprobante:</strong>  {{message.comprobante}}
             </div>
           </div>
+          <div class="stats">
+            <div>
+              <strong>Comentarios del Cliente:</strong>  {{message.comentarios}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Estado del pedido:</strong>  {{message.estado}}
+            </div>
+          </div>
+          <div *ngIf="message.estado == 'Entregado' ">
+            <div>
+              <strong>Feedback del Cliente:</strong>  {{message.feedback}}
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-sm-3 col-sm-3 col-sm-3" *ngFor="let producto of productos">
         <div class="tile">
           <div class="stats">
             <div>
-              <strong>Producto </strong> {{producto[0]}}
+              <strong>Producto </strong> {{producto.nombre}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Código </strong> {{producto[1]}}
+              <strong>Precio:</strong> {{producto.precio|currency:"₡":"symbol"}}
             </div>
           </div>
           <div class="stats">
             <div>
-              <strong>Precio:</strong> {{producto[2]|currency:"₡":"symbol"}}
-            </div>
-          </div>
-          <div class="stats">
-            <div>
-              <strong>Cantidad:</strong> {{producto[3]}}
+              <strong>Cantidad:</strong> {{producto.cantidad}}
             </div>
           </div>
         </div>
@@ -86,5 +97,13 @@
   </div>
 </div>
 <div class="footer">
-  <button mat-button [mat-dialog-close]="true" class="btn btn-light btn-lg">Salir</button>
+  <label for="Estado">Estado del Pedido:</label>
+  <select name="Estado" id="Estado" (click)="estado()">
+    <option value="Orden Recibida">Orden Recibida</option>
+    <option value="En Preparación">En preparación</option>
+    <option value="En Tránsito">En Tránsito</option>
+    <option value="Entregado">Entregado</option>
+  </select>
+  <button mat-button [mat-dialog-close]="true" class="btn btn-dark btn-lg">Salir</button>
+  <button mat-button (click)="eliminar()" class="btn btn-primary btn-block">Eliminar Pedido</button>
 </div>

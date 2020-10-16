@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace server.Models
 {
     public class Pedidos
     {
-        public List<List<string>> Listado { get; set; }
+        public List<JsonElement> Listado { get; set; }
         public string Comprobante { get; set; }
         public string Direccion { get; set; }
         public string Provincia { get; set; }
@@ -17,14 +18,25 @@ namespace server.Models
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }
+        public string productor { get; set; }
+
+        public string Comentarios { get; set; }
+
+        public string Fecha { get; set; }
+
+        public string Estado { get; set; }
+        
+        public string Feedback { get; set; }
 
         public Pedidos()
         {
 
         }
 
-        public Pedidos(string pedProvincia, string pedCanton, string pedDistrito, List<List<string>> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono)
+        public Pedidos(string lisproductor, string pedProvincia, string pedCanton, string pedDistrito, List<JsonElement> pedListado, string pedComprobante, string pedDireccion, string pedCedula, string pedNomnbre, string pedApellido, string pedTelefono, string pedComentarios, string pedFecha, string pedEstado, string pedFeed)
         {
+           
+            productor = lisproductor;
             Listado = pedListado;
             Comprobante = pedComprobante;
             Direccion = pedDireccion;
@@ -35,6 +47,10 @@ namespace server.Models
             Nombre = pedNomnbre;
             Apellido = pedApellido;
             Telefono = pedTelefono;
+            Comentarios = pedComentarios;
+            Fecha = pedFecha;
+            Estado = pedEstado;
+            Feedback = pedFeed;
         }
     }
 }

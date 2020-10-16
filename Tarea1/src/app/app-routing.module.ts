@@ -19,7 +19,9 @@ import {ActualizacionDatosClienteComponent} from './views/vista-clientes/actuali
 import {ProductsPerProducerComponent} from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
-
+import {ProductosProductorComponent} from './views/vista-productores/productos-productor/productos-productor.component';
+import {PedidosComponent} from './views/vista-clientes/pedidos/pedidos.component';
+// Rutas para navegar entre ventanas
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeViewComponent},
@@ -27,13 +29,14 @@ const routes: Routes = [
   {path: 'adminAfiliaciones', component: AdministracionAfiliacionesComponent},
   {path: 'GestionProductores', component: GestionProductoresComponent},
   {path: 'AgregarProductores', component: AgregarProductoresComponent},
-  {path: 'GestionProductos', component: GestionProductosComponent},
+  {path: 'GestionProductos/:usuario', component: GestionProductosComponent},
   {path: 'LogIn', component: LogInComponent},
+  {path: 'Productores/:usuario', component: ProductoresComponent},
   {path: 'Productores', component: ProductoresComponent},
-  {path: 'Productos', component: ProductosComponent},
+  {path: 'Productos/:productor', component: ProductosComponent},
   {path: 'VistaProductores', component: VistaProductoresComponent},
   {path: 'VistaReportes', component: VistaReportesComponent},
-  {path: 'VistaClientes', component: VistaClientesComponent},
+  {path: 'VistaClientes/', component: VistaClientesComponent},
   {path: 'CrearCuentaCliente', component: CreacionCuentaClienteComponent},
   {path: 'SolicitudAfiliacion', component: SolicitudAfiliacionComponent},
   {path: 'ActualizarProductor', component: ActualizarProductoresComponent},
@@ -41,7 +44,9 @@ const routes: Routes = [
   {path: 'ActualizarCliente', component: ActualizacionDatosClienteComponent},
   {path: 'GestionPedidos', component: GestionPedidosComponent},
   {path: 'Carrito', component: CarritoComponent},
-  {path: 'ProductosPorProductor', component: ProductsPerProducerComponent}
+  {path: 'ProductosPorProductor', component: ProductsPerProducerComponent},
+  {path: 'ProductosProductor', component: ProductosProductorComponent},
+  {path: 'PedidosClientes', component: PedidosComponent}
 ];
 
 @NgModule({
@@ -53,4 +58,4 @@ export const routingComponents = [GestionCategoriasComponent, AdministracionAfil
   AgregarProductoresComponent, GestionProductoresComponent, GestionProductosComponent, LogInComponent, ProductoresComponent,
   ProductosComponent, VistaProductoresComponent, HomeViewComponent, VistaReportesComponent, VistaClientesComponent,
   CreacionCuentaClienteComponent, SolicitudAfiliacionComponent, ActualizarProductoresComponent,
-  ActualizacionDatosClienteComponent, ProductsPerProducerComponent];
+  ActualizacionDatosClienteComponent, ProductsPerProducerComponent, ProductosProductorComponent];

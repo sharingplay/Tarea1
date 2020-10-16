@@ -4,26 +4,26 @@
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
 <div class="footerActualizar">
-  <a routerLink="/AgregarProductores" routerLinkActive="active" href="#" class="Cbtn btn-light btn-lg">Agregar</a>
 </div>
 
-<app-header-admin></app-header-admin>
+<app-header-productor></app-header-productor>
 
 <div class="container-fluid">
+  <a (click)="openDialog(null, false)" routerLinkActive="active"  class="btn btn-danger btn-lg">Agregar</a>
   <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let producto of httpService.productos">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let producto of productos">
       <div class="tile">
         <div class="wrapper">
-          <div class="imagen"></div>
+          <img src={{producto.foto}}, style="height:400px; width:350px; border: 5px solid black; position:relative; background-size: cover">
           <div class="stats">
             <div>
               <strong>Nombre: </strong> {{producto.nombre}}
             </div>
             <div>
-              <strong>Precio: </strong> {{producto.precio}}
+              <strong>Modo: </strong> {{producto.modo}}
             </div>
             <div>
-              <strong>Modo de venta: </strong> {{producto.venta}}
+              <strong>Categoria: </strong> {{producto.categoria}}
             </div>
           </div>
           <div class="stats">
@@ -31,11 +31,11 @@
               <strong>Disponibilidad: </strong> {{producto.disponibilidad}}
             </div>
             <div>
-              <strong>Categoria: </strong> {{producto.categoria}}
+              <strong>Precio: </strong> {{producto.precio}}
             </div>
           </div>
           <div class="footer">
-            <button [routerLink]= "['/GestionProductos', producto.cedula]" routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
+            <button (click)="openDialog(producto, true)"  routerLinkActive="active" href="#" class="btn-block btn-primary">Actualizar</button>
             <button routerLink="/GestionProductores" routerLinkActive="active" mat-button class = "btn-block btn-danger" (click) = "delete(producto)" >Eliminar</button>
           </div>
         </div>

@@ -79,6 +79,47 @@ namespace server.Controllers
         }
 
         /// <summary>
+        /// busca productor por el id
+        /// </summary>
+        /// <param name="Productor"></param>
+        /// <returns>
+        /// devuelve los datos del productor si existe
+        /// </returns>
+        [Route("getProductId")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public Productores getProductID([FromBody] Productores Productor)
+        {
+            List<Productores> ProductoresList = new List<Productores>();
+            string fileName = "DataBase/Productores.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            ProductoresList = JsonSerializer.Deserialize<List<Productores>>(jsonString);
+
+            bool validation = false;
+
+            Productores found = null;
+
+            for (int i = 0; i < ProductoresList.Count; i++)
+            {
+                if (ProductoresList[i].Cedula == Productor.Cedula)
+                {
+                    found = ProductoresList[i];
+                    validation = true;
+                    break;
+                }
+            }
+            if (validation)
+            {
+                return found;
+            }
+            else
+            {
+                return found;
+            }
+        }
+
+        /// <summary>
         /// 
         /// Modifica alguno de los datos del JSON del productor
         /// </summary>

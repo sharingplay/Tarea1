@@ -1,0 +1,106 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<div mat-dialog-title>Detalles</div>
+<div mat-dialog-content>
+  <!--  <div class="cz-file-drop-area form-group">-->
+  <!--    <div *ngIf="onClicka()">-->
+  <!--      {{onClicka() ? onClicka() : ""}}-->
+  <!--    </div>-->
+  <!--    <div class="cz-file-drop-icon czi-cloud-upload"></div><span class="cz-file-drop-message">Arrastre y Suelte Para subir una Imagen</span>-->
+  <!--    <input class="cz-file-drop-input" type="file">-->
+  <!--    <button class="cz-file-drop-btn btn btn-primary btn-sm mb-2" type="button">O Seleccione Uno</button><small class="form-text text-muted">1000 x 800px ideal size for hi-res displays</small>-->
+  <!--  </div>-->
+  <!--  <script src="src/assets/js/vendor.min.js"></script>-->
+  <!--  <script src="src/assets/js/theme.min.js"></script>-->
+  <div class="container-fluid">
+    <div class = "row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="tile">
+          <div class="stats">
+            <div>
+              <strong>Cliente: </strong> {{message.nombre}} {{message.apellido}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Ubicación :</strong> {{message.canton}}, {{message.distrito}}, {{message.direccion}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Productor :</strong> {{productor.nombre}} {{productor.apellido}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Teléfono Productor:</strong> {{productor.telefono}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Total:</strong>  {{total|currency:"₡":"symbol"}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Comprobante:</strong>  {{message.comprobante}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Fecha del Pedido:</strong>  {{message.fecha}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Estado del Pedido:</strong>  {{message.estado}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Comentarios del Cliente:</strong>  {{message.comentarios}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-sm-3 col-sm-3" *ngFor="let producto of productos">
+        <div class="tile">
+          <div class="stats">
+            <div>
+              <strong>Producto </strong> {{producto.nombre}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Precio:</strong> {{producto.precio|currency:"₡":"symbol"}}
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>Cantidad:</strong> {{producto.cantidad}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="stats">
+          <div>
+            <strong>Total: </strong> {{total|currency:"₡":"symbol"}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+    <div *ngIf="message.estado == 'Entregado' ">
+      <label class="mb-3" for="feedback"><span class="badge badge-info font-size-xs mr-2">Feedback:</span><span class="font-weight-medium">Feedback para el productor:</span></label>
+      <textarea class="form-control" rows="6" id="feedback"></textarea>
+      <button (click)="feedBack()" class="btn btn-dark btn-lg">Enviar</button>
+    </div>
+  <button mat-button [mat-dialog-close]="true" class="btn btn-primary btn-block">Salir</button>
+</div>

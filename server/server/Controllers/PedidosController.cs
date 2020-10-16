@@ -48,35 +48,109 @@ namespace server.Controllers
         [HttpPost]
         public void Post([FromBody] Pedidos Pedido)
         {
+            Random rand = new Random();
+            Pedido.Comprobante = rand.Next(100000, 999999999).ToString();
             List<Pedidos> PedidosList = new List<Pedidos>();
             string fileName = "DataBase/Pedidos.json";
 
             string jsonString = System.IO.File.ReadAllText(fileName);
             PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
 
-            bool validation = true;
+            PedidosList.Add(Pedido);
+
+            jsonString = JsonSerializer.Serialize(PedidosList);
+            System.IO.File.WriteAllText(fileName, jsonString);
+
+            Debug.WriteLine("Pedido aceptado");
+            
+            Debug.WriteLine("No se pudo realizar el pedido");
+        }
+
+        /// <summary>
+        /// 
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Pedido"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
+        [Route("getPedido")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public List<Pedidos> getClientFromID([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            List<Pedidos> PedidosProductor = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
+
+            bool validation = false;
+
+            Pedidos found = null;
+
+            for (int i = 0; i < PedidosList.Count; i++)
+            {
+                if (PedidosList[i].productor == Pedido.productor)
+                {
+                    found = PedidosList[i];
+                    PedidosProductor.Add(found);
+                    validation = true;
+                }
+                    
+            }
+            if (validation)
+            {
+                return PedidosProductor;
+            }
+            else
+            {
+                    Debug.WriteLine("No hay pedidos asociados a este productor");
+                return PedidosProductor;
+            }
+        }
+
+        /// <summary>
+        /// Verifica si el usuario existe
+        /// </summary>
+        /// <param name="Pedido"></param>
+        /// <returns>
+        /// el usuario o null si no existe
+        /// </returns>
+        [Route("getPedidoCliente")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPost]
+        public List<Pedidos> getpedidoClient([FromBody] Pedidos Pedido)
+        {
+            List<Pedidos> PedidosList = new List<Pedidos>();
+            List<Pedidos> PedidosCliente = new List<Pedidos>();
+            string fileName = "DataBase/Pedidos.json";
+
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            PedidosList = JsonSerializer.Deserialize<List<Pedidos>>(jsonString);
+
+            bool validation = false;
+
+            Pedidos found = null;
 
             for (int i = 0; i < PedidosList.Count; i++)
             {
                 if (PedidosList[i].Cedula == Pedido.Cedula)
                 {
-                    validation = false;
-                    break;
+                    found = PedidosList[i];
+                    PedidosCliente.Add(found);
+                    validation = true;
+          
                 }
             }
-
             if (validation)
             {
-                PedidosList.Add(Pedido);
-
-                jsonString = JsonSerializer.Serialize(PedidosList);
-                System.IO.File.WriteAllText(fileName, jsonString);
-
-                Debug.WriteLine("Pedido aceptado");
+                return PedidosCliente;
             }
             else
             {
-                Debug.WriteLine("No se pudo realizar el pedido");
+                return PedidosCliente;
             }
         }
 
@@ -138,7 +212,7 @@ namespace server.Controllers
 
             for (int i = 0; i < PedidosList.Count; i++)
             {
-                if (PedidosList[i].Cedula == pedido.Cedula)
+                if (PedidosList[i].Comprobante == pedido.Comprobante)
                 {
                     PedidosList.RemoveAt(i);
                     Debug.WriteLine("Pedido eliminado");

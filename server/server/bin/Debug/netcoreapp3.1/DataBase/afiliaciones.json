@@ -1,17 +1,54 @@
-[{"Cedula":"112233445566","Nombre":"Mariana","Apellidos":"Vargas Ramirez","Direccion":"Heredia","Provincia":"Heredia","Canton":"Santa Barbara","Distrito":"San Juan","Nacimiento":"12/9/1999","Telefono":"11223344","SINPE":"44332211","PuntosEntrega":"San Ramon, Alajuela, San Joaquin","Pedidos":null,"Usuario":"MarianaSoy","Password":"NoSe1234"},
-{
-        "cedula": "4111222444",
-        "nombre": "Fabian",
-        "apellidos": "Ramirez Arrieta",
-        "direccion": "Heredia",
-        "provincia": "Heredia",
-        "canton": "Heredia",
-        "distrito": "Mercedes",
-        "nacimiento": "03/01/2000",
-        "telefono": "88776655",
-        "sinpe": "55667788",
-        "puntosEntrega": "Heredia, Alajuela, San Jose",
-        "pedidos": null,
-        "usuario": "FabianRamirez",
-        "password": "MyPassword1234"
-    }]
+[
+    {
+        "Cedula": "4111222444",
+        "Nombre": "Fabian",
+        "Apellidos": "Ramirez Arrieta",
+        "Direccion": "Heredia",
+        "Nacimiento": "03/01/2000",
+        "Telefono": "88888888",
+        "SINPE": "88888888",
+        "PuntosEntrega": "Heredia",
+        "Pedidos": "Fresa",
+        "Usuario": "FRA01",
+        "Password": "password"
+    },
+    {
+        "Cedula": "13432",
+        "Nombre": "Mario",
+        "Apellidos": "Araya",
+        "Direccion": "Heredia",
+        "Nacimiento": "03/01/2000",
+        "Telefono": "88888888",
+        "SINPE": "88888888",
+        "PuntosEntrega": "Heredia",
+        "Pedidos": "Fresa",
+        "Usuario": "FRA01",
+        "Password": "password"
+    },
+    {
+        "Cedula": "Cedula",
+        "Nombre": "Miguel",
+        "Apellidos": null,
+        "Direccion": "Direccion",
+        "Nacimiento": null,
+        "Telefono": "71112550",
+        "SINPE": null,
+        "PuntosEntrega": null,
+        "Pedidos": null,
+        "Usuario": null,
+        "Password": null
+    },
+    {
+        "Cedula": "1213",
+        "Nombre": "Mariana",
+        "Apellidos": "Vargas",
+        "Direccion": null,
+        "Nacimiento": "25/12/1855",
+        "Telefono": "568795",
+        "SINPE": "568895",
+        "PuntosEntrega": null,
+        "Pedidos": null,
+        "Usuario": "elpepe",
+        "Password": "mariana12"
+    }
+]

@@ -8847,19 +8847,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramir\\.nuget\\packages\\": {}
+    "C:\\Users\\wajib\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj",
+      "projectUniqueName": "C:\\Users\\wajib\\OneDrive - Estudiantes ITCR\\Documentos\\TEC\\2020 II Semestre\\Bases\\Tarea1\\server\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\ramir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramir\\WebstormProjects\\Tarea1\\server\\server\\obj\\",
+      "projectPath": "C:\\Users\\wajib\\OneDrive - Estudiantes ITCR\\Documentos\\TEC\\2020 II Semestre\\Bases\\Tarea1\\server\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\wajib\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wajib\\OneDrive - Estudiantes ITCR\\Documentos\\TEC\\2020 II Semestre\\Bases\\Tarea1\\server\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ramir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wajib\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8924,7 +8924,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

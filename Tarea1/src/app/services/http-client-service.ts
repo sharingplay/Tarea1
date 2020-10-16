@@ -8,7 +8,9 @@ import {catchError} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HttpClientService {
- static URL = `http://localhost:5000/api/`;
+  // `http://localhost:5000/api/`
+  // `https://localhost:5001/api/`
+  static URL = `http://localhost:5000/api/`;
   categorias: any = {};
   afiliaciones: any = {};
   tops: any = {};
@@ -23,7 +25,7 @@ export class HttpClientService {
      .subscribe(resp => {
        this.categorias = resp;
      });
-   http.get('https://localhost:5001/api/Pedidos')
+   http.get(HttpClientService.URL + 'Pedidos')
       .subscribe(resp => {
         this.pedidos = resp;
       });
@@ -37,19 +39,19 @@ export class HttpClientService {
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
       });
-   http.get('https://localhost:5001/api/Clientes')
+   http.get(HttpClientService.URL + 'Clientes')
       .subscribe((resp: HttpResponse<any>) => {
         this.clientes = resp;
       });
-   http.get('https://localhost:5001/api/Pedidos')
+   http.get(HttpClientService.URL + 'Pedidos')
       .subscribe((resp: HttpResponse<any>) => {
         this.pedidos = resp;
       });
-   http.get('https://localhost:5001/api/Productores')
+   http.get(HttpClientService.URL + 'Productores')
       .subscribe((resp: HttpResponse<any>) => {
         this.productores = resp;
       });
-   http.get('https://localhost:5001/api/Productos')
+   http.get(HttpClientService.URL + 'Productos')
       .subscribe((resp: HttpResponse<any>) => {
         this.productos = resp;
       });

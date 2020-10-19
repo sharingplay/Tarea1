@@ -28,10 +28,23 @@ export class ProductosComponent implements OnInit {
         this.listaProductos = this.listaProductos.concat(this.cliente.carrito);
       }});
   }
-  listaProductos: object[] = [];
+  listaProductos: any[] = [];
   bsModalRef: BsModalRef;
-  openDialog(productos: object[]): void {
-    this.listaProductos = this.listaProductos.concat(productos);
+  openDialog(productos: any): void {
+    let found = false;
+    for(let prodAnt of this.listaProductos ){
+      if(productos.nombre == prodAnt.nombre){
+        prodAnt.cantidad = (Number(prodAnt.cantidad) + 1);
+        found = true;
+        console.log("Encontre coincidencia");
+      }
+    }
+    if(!found){
+      this.listaProductos = this.listaProductos.concat(productos);
+    }
+    if(productos.cantidad == 0){
+      productos.cantidad = 1;
+    }
     this.cliente.carrito = this.listaProductos;
     console.log(this.cliente);
     const dialogRef = this.dialog.open(CarritoComponent, {

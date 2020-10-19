@@ -26,14 +26,14 @@ export class LogInComponent implements OnInit {
     // tslint:disable-next-line:prefer-const
     let promise = new Promise((resolve, reject) => {
       setTimeout(() => {
-        this.server.post('https://localhost:5001/api/Clientes/getlogin',
+        this.server.post('http://localhost/server/api/Clientes/getlogin',
           {Usuario: this.username, Password: this.password}, {
             headers: {
               'Content-Type': 'application/json; charset=UTF-8'
             }
           }).subscribe((resp: HttpResponse<any>) => {console.log(resp); this.usuario = resp;
                                                      if (this.usuario == null){
-                                                       this.server.post('https://localhost:5001/api/Productores/getlogin',
+                                                       this.server.post('http://localhost/server/api/Productores/getlogin',
                                                          {Usuario: this.username, Password: this.password}, {
                                                            headers: {
                                                              'Content-Type': 'application/json; charset=UTF-8'

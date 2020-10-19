@@ -18,7 +18,7 @@ export class ProductoresComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   constructor(public httpService: HttpClientService, public modalService: BsModalService, private route: ActivatedRoute, private http: HttpClient, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.cliente = value});
-    http.post('https://localhost:5001/api/Productores/GetRegion', {Canton: this.cliente.canton}).subscribe((ans: HttpResponse<any>) => {this.productores = ans; });
+    http.post('http://localhost/server/api/Productores/GetRegion', {Canton: this.cliente.canton}).subscribe((ans: HttpResponse<any>) => {this.productores = ans; });
     // tslint:disable-next-line:max-line-length
   }
   bsModalRef: BsModalRef;

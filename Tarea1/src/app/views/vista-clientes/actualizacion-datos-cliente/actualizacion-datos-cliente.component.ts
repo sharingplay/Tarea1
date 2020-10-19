@@ -26,11 +26,11 @@ export class ActualizacionDatosClienteComponent implements OnInit {
     this.cliente.distrito = (document.getElementById('Distrito') as HTMLInputElement).value;
     this.cliente.password = (document.getElementById('Password') as HTMLInputElement).value;
     this.cliente.telefono = (document.getElementById('PhoneNumber') as HTMLInputElement).value;
-    this.httpService.post('https://localhost:5001/api/Clientes/modify', this.cliente);
+    this.httpService.post('http://localhost/server/api/Clientes/modify', this.cliente);
   }
 
   delete(cliente): void{
     console.log(cliente);
-    this.httpService.post('https://localhost:5001/api/Clientes/delete', cliente);
+    this.httpService.post('http://localhost/server/api/Clientes/delete', cliente);
   }
 }

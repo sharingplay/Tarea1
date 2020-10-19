@@ -35,7 +35,6 @@ import { AfiliationInfoModalComponent } from './components/afiliation-info-modal
 import {DetallesPedidosComponent} from './views/vista-productores/gestion-pedidos/detalles-pedidos/detalles-pedidos.component';
 import {CarritoComponent} from './shopping-cart/carrito/carrito.component';
 import {GestionPedidosComponent} from './views/vista-productores/gestion-pedidos/gestion-pedidos.component';
-import {ListaProductosComponent} from './shopping-cart/lista-productos/lista-productos.component';
 import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 import {SolicitudAfiliacionComponent} from './views/vista-productores/solicitud-afiliacion/solicitud-afiliacion.component';
 import {VistaClientesComponent} from './views/vista-clientes/vista-clientes.component';
@@ -43,7 +42,6 @@ import {GestionProductoresComponent} from './views/vista-administradores/gestion
 import {VistaAdministradoresComponent} from './views/vista-administradores/vista-administradores.component';
 import {AgregarComponent} from './agregar/agregar.component';
 import {VistaProductoresComponent} from './views/vista-productores/vista-productores.component';
-import {ItemComponent} from './shopping-cart/carrito/item/item.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListViewModalComponent } from './views/vista-administradores/vista-reportes/components/list-view-modal/list-view-modal.component';
 import { ProductsPerProducerComponent } from './views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component';
@@ -67,8 +65,6 @@ import { PedidoClientesComponent } from './views/vista-clientes/pedidos/pedido-c
     SubtitleComponent,
     CarritoComponent,
     GestionPedidosComponent,
-    ItemComponent,
-    ListaProductosComponent,
     ShoppingCartComponent,
     SolicitudAfiliacionComponent,
     GestionProductoresComponent,

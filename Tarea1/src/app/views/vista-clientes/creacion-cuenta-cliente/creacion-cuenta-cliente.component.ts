@@ -30,6 +30,6 @@ export class CreacionCuentaClienteComponent implements OnInit {
     };
     console.log(clienteNuevo);
     // Agrega el cliente al json
-    this.httpService.post('https://localhost:5001/api/Clientes/insert', clienteNuevo);
+    this.httpService.post('http://localhost/server/api/Clientes/insert', clienteNuevo);
   }
 }

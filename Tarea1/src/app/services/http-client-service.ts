@@ -18,11 +18,11 @@ export class HttpClientService {
 
   constructor(private http: HttpClient) {
    console.log('Service Running');
-   http.get('https://localhost:5001/api/Categorias')
+   http.get('http://localhost/server/api/Categorias')
      .subscribe(resp => {
        this.categorias = resp;
      });
-   http.get('https://localhost:5001/api/Pedidos')
+   http.get('http://localhost/server/api/Pedidos')
       .subscribe(resp => {
         this.pedidos = resp;
       });
@@ -36,19 +36,19 @@ export class HttpClientService {
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
       });
-   http.get('https://localhost:5001/api/Clientes')
+   http.get('http://localhost/server/api/Clientes')
       .subscribe((resp: HttpResponse<any>) => {
         this.clientes = resp;
       });
-   http.get('https://localhost:5001/api/Pedidos')
+   http.get('http://localhost/server/api/Pedidos')
       .subscribe((resp: HttpResponse<any>) => {
         this.pedidos = resp;
       });
-   http.get('https://localhost:5001/api/Productores')
+   http.get('http://localhost/server/api/Productores')
       .subscribe((resp: HttpResponse<any>) => {
         this.productores = resp;
       });
-   http.get('https://localhost:5001/api/Productos')
+   http.get('http://localhost/server/api/Productos')
       .subscribe((resp: HttpResponse<any>) => {
         this.productos = resp;
       });

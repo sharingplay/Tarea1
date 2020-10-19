@@ -22,7 +22,7 @@ export class ProductosComponent implements OnInit {
     const prod = +this.route.snapshot.paramMap.get('productor');
       this.messengerService.message.subscribe(value => {this.cliente = value});
       this.productor = prod.toString();
-    this.httpService.post('https://localhost:5001/api/Productos/GetPorProductor', { Productor: this.productor}).subscribe(
+    this.httpService.post('http://localhost/server/api/Productos/GetPorProductor', { Productor: this.productor}).subscribe(
       (resp: HttpResponse<any>) => { this.productos = resp;
       if (this.cliente.carrito !=  null){
         this.listaProductos = this.listaProductos.concat(this.cliente.carrito);

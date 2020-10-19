@@ -19,7 +19,7 @@ export class PedidosComponent implements OnInit {
   cliente: any;
   constructor(public dialog: MatDialog, public  httpService: HttpClientService, public http: HttpClient, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.cliente = value});
-    this.http.post('https://localhost:5001/api/Pedidos/getPedidoCliente', { Cedula: this.cliente.cedula}).subscribe(
+    this.http.post('http://localhost/server/api/Pedidos/getPedidoCliente', { Cedula: this.cliente.cedula}).subscribe(
       (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });
   }
   bsModalRef: BsModalRef;
@@ -35,7 +35,7 @@ export class PedidosComponent implements OnInit {
         right: ''
       }
     });
-    dialogRef.afterClosed().subscribe(res => { this.http.post('https://localhost:5001/api/Pedidos/getPedidoCliente', { Cedula: this.cliente.cedula}).subscribe(
+    dialogRef.afterClosed().subscribe(res => { this.http.post('http://localhost/server/api/Pedidos/getPedidoCliente', { Cedula: this.cliente.cedula}).subscribe(
       (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });});
   }
   ngOnInit(): void {}

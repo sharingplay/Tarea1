@@ -61,7 +61,7 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     }
     this.usuario.carrito = this.productos;
     console.log(this.usuario.carrito);
-    this.http.post('https://localhost:5001/api/Clientes/modify', this.usuario);
+    this.http.post('http://localhost/server/api/Clientes/modify', this.usuario);
   }
 
   comprar():void{
@@ -77,16 +77,16 @@ export class CarritoComponent implements OnInit, AfterViewInit {
       lista = lista.concat(prod);
       console.log(prod.cantidad);
       temp.cantidad = "0";
-      this.http.post('https://localhost:5001/api/Productos/modify', temp);
+      this.http.post('http://localhost/server/api/Productos/modify', temp);
       prod.cantidad = cant;
     }
-    this.http.post('https://localhost:5001/api/Pedidos/insert',
+    this.http.post('http://localhost/server/api/Pedidos/insert',
       {Listado: lista, Nombre: this.usuario.nombre, Apellido: this.usuario.apellido, Direccion: this.usuario.direccion,
         Provincia: this.usuario.provincia, Canton: this.usuario.canton, Distrito: this.usuario.distrito, Cedula: this.usuario.cedula, Fecha: this.fecha,
         Telefono: this.usuario.telefono, Productor: this.usuario.carrito[0].productor, Comentarios: (document.getElementById('notas') as HTMLInputElement).value });
         this.usuario.carrito = [];
         this.productos = [];
-        this.http.post('https://localhost:5001/api/Clientes/modify', this.usuario);
+        this.http.post('http://localhost/server/api/Clientes/modify', this.usuario);
     alert("Gracias! Su pedido ha sido registrado.")
   }
 

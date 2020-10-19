@@ -18,7 +18,7 @@ export class GestionPedidosComponent implements OnInit {
   productor: any;
   constructor(public dialog: MatDialog, public  httpService: HttpClientService, public http: HttpClient, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.productor = value});
-    this.http.post('https://localhost:5001/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
+    this.http.post('http://localhost/server/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
       (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });
   }
   bsModalRef: BsModalRef;
@@ -34,7 +34,7 @@ export class GestionPedidosComponent implements OnInit {
           right: ''
         }
       });
-      dialogRef.afterClosed().subscribe(res => { this.http.post('https://localhost:5001/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
+      dialogRef.afterClosed().subscribe(res => { this.http.post('http://localhost/server/api/Pedidos/getPedido', { Productor: this.productor.cedula}).subscribe(
         (resp: HttpResponse<any>) => { this.pedidos = resp; console.log(resp); });});
   }
 

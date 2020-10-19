@@ -32,6 +32,6 @@ export class ActualizarProductoresComponent implements OnInit {
     this.message.sinpe = (document.getElementById('SinpeMovil') as HTMLInputElement).value;
     console.log("ENVIAR A ACTUALIZAR");
     console.log(this.message);
-    this.httpService.post('https://localhost:5001/api/Productores/modify', this.message);
+    this.httpService.post('http://localhost/server/api/Productores/modify', this.message);
   }
 }

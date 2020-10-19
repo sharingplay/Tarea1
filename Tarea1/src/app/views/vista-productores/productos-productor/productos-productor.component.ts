@@ -19,7 +19,7 @@ export class ProductosProductorComponent implements OnInit {
       console.log(value);
       this.productor = value;
     });
-    http.post('https://localhost:5001/api/Productos/GetPorProductor', {Productor: this.productor.cedula}).subscribe((resp:any) => {this.productos = resp; console.log(resp)});
+    http.post('http://localhost/server/api/Productos/GetPorProductor', {Productor: this.productor.cedula}).subscribe((resp:any) => {this.productos = resp; console.log(resp)});
   }
   openDialog(producto: object[], modify: boolean): void {
     let param = [producto, modify, this.productor]
@@ -39,7 +39,7 @@ export class ProductosProductorComponent implements OnInit {
   // Elimina un productor enviado en formato Json al pulsar el boton de este
   delete(producto): void{
     console.log(producto);
-    this.httpService.post('https://localhost:5001/api/Productos/delete', producto);
+    this.httpService.post('http://localhost/server/api/Productos/delete', producto);
     window.location.reload();
   }
   ngOnInit(): void {

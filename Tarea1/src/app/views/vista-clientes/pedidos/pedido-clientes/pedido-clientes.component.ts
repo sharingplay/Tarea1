@@ -13,7 +13,7 @@ export class PedidoClientesComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<PedidoClientesComponent>,
               @Inject(MAT_DIALOG_DATA) public message: HttpClientService['pedidos'], public httpService: HttpClientService, public http: HttpClient) {
     console.log(message);
-    this.http.post('https://localhost:5001/api/Productores/getProductId', { Cedula: this.message.productor}).subscribe(
+    this.http.post('http://localhost/server/api/Productores/getProductId', { Cedula: this.message.productor}).subscribe(
       (resp: HttpResponse<any>) => { this.productor = resp; console.log(resp); });
   }
   productos = this.message.listado;
@@ -27,7 +27,7 @@ export class PedidoClientesComponent implements OnInit {
   feedBack(): void{
     const feedback = (document.getElementById("feedback") as HTMLInputElement).value;
     this.message.feedback = feedback;
-    this.httpService.post('https://localhost:5001/api/Pedidos/modify', this.message);
+    this.httpService.post('http://localhost/server/api/Pedidos/modify', this.message);
   }
 
 }

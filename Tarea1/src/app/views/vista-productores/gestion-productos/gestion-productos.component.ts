@@ -28,10 +28,10 @@ export class GestionProductosComponent implements OnInit {
       this.message.precio = (document.getElementById('precio') as HTMLInputElement).value;
       this.message.foto = (document.getElementById('foto') as HTMLInputElement).value;
       console.log(this.message);
-      this.httpService.post('https://localhost:5001/api/Productos/modify', this.message);
+      this.httpService.post('http://localhost/server/api/Productos/modify', this.message);
     }
     else{
-      this.httpService.post('https://localhost:5001/api/Productos/insert', {
+      this.httpService.post('http://localhost/server/api/Productos/insert', {
         Nombre: (document.getElementById('producto') as HTMLInputElement).value,
         Categoria: (document.getElementById('categoria') as HTMLInputElement).value,
         Foto: (document.getElementById('foto') as HTMLInputElement).value,

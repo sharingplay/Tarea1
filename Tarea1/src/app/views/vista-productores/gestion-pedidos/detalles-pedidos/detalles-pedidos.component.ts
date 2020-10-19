@@ -33,14 +33,14 @@ export class DetallesPedidosComponent implements OnInit {
     }
   }
   eliminar(): void{
-    this.httpService.post('https://localhost:5001/api/Pedidos/delete', {Comprobante: this.message.comprobante});
+    this.httpService.post('http://localhost/server/api/Pedidos/delete', {Comprobante: this.message.comprobante});
     alert('El pedido fue eliminado satisfactoriamente. Recargue la página');
     this.dialogRef.close();
   }
 
   estado() {
     this.message.estado = (document.getElementById("Estado") as HTMLInputElement).value;
-    this.httpService.post('https://localhost:5001/api/Pedidos/modify', this.message);
+    this.httpService.post('http://localhost/server/api/Pedidos/modify', this.message);
   }
 }
 

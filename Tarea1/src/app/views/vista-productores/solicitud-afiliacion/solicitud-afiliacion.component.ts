@@ -31,7 +31,7 @@ export class SolicitudAfiliacionComponent implements OnInit {
     };
     console.log(solicitudNueva);
     //Agrega la cuenta al Json de solicitud de afiliaciones
-    this.httpService.post('https://localhost:5001/api/Afiliaciones/insert', solicitudNueva);
+    this.httpService.post('http://localhost/server/api/Afiliaciones/insert', solicitudNueva);
   }
 
 }

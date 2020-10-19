@@ -17,7 +17,6 @@ export class ActualizacionDatosClienteComponent implements OnInit {
   bsModalRef: BsModalRef;
   ngOnInit(): void {
   }
-
   actualizarDatosCliente(): void {
     this.cliente.nombre = (document.getElementById('FirstName') as HTMLInputElement).value;
     this.cliente.apellidos = (document.getElementById('LastName') as HTMLInputElement).value;
@@ -26,6 +25,7 @@ export class ActualizacionDatosClienteComponent implements OnInit {
     this.cliente.distrito = (document.getElementById('Distrito') as HTMLInputElement).value;
     this.cliente.password = (document.getElementById('Password') as HTMLInputElement).value;
     this.cliente.telefono = (document.getElementById('PhoneNumber') as HTMLInputElement).value;
+    this.cliente.direccion = (document.getElementById('Direccion') as HTMLInputElement).value;
     this.httpService.post('http://localhost/server/api/Clientes/modify', this.cliente);
   }
 

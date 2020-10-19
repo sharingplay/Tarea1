@@ -27,6 +27,7 @@ export class CreacionCuentaClienteComponent implements OnInit {
       "password": (document.getElementById('Password') as HTMLInputElement).value,
       "nacimiento": (document.getElementById('FechaNacimiento') as HTMLInputElement).value,
       "telefono": (document.getElementById('PhoneNumber') as HTMLInputElement).value,
+      "direccion": (document.getElementById('Direccion') as HTMLInputElement).value,
     };
     console.log(clienteNuevo);
     // Agrega el cliente al json

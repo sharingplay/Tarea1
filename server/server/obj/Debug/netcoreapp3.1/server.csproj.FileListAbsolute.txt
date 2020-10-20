@@ -486,3 +486,4 @@ C:\Users\wajib\OneDrive - Estudiantes ITCR\Documentos\TEC\2020 II Semestre\Bases
 C:\Users\wajib\OneDrive - Estudiantes ITCR\Documentos\TEC\2020 II Semestre\Bases\Tarea1\server\server\obj\Debug\netcoreapp3.1\server.pdb
 C:\Users\wajib\OneDrive - Estudiantes ITCR\Documentos\TEC\2020 II Semestre\Bases\Tarea1\server\server\obj\Debug\netcoreapp3.1\server.genruntimeconfig.cache
 C:\Users\Mario\Desktop\Tarea1\server\server\bin\Debug\netcoreapp3.1\web.config
+C:\Users\maria\OneDrive - Estudiantes ITCR\Escritorio\Computadores\6 semestre\bases\Tareas cortas\Tarea corta 1\Tarea1\server\server\bin\Debug\netcoreapp3.1\web.config

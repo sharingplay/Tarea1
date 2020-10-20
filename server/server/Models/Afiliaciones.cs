@@ -14,13 +14,15 @@
     public string Pedidos { get; set; }
     public string Usuario { get; set; }
     public string Password { get; set; }
+    public string Foto { get; set }
 
         public Afiliaciones()
     {
 
     }
-        public Afiliaciones(string productProvincia, string productCanton, string productDistrito, string productCedula, string productNombre, string productApellido, string productDireccion, string productNacimiento, string productTelefono, string productSINPE, string productPedidos, string productUsuario, string productPassword)
+        public Afiliaciones(string productFoto, string productProvincia, string productCanton, string productDistrito, string productCedula, string productNombre, string productApellido, string productDireccion, string productNacimiento, string productTelefono, string productSINPE, string productPedidos, string productUsuario, string productPassword)
         {
+            Foto = productFoto;
             Cedula = productCedula;
             Nombre = productNombre;
             Apellidos = productApellido;

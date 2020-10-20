@@ -10,7 +10,7 @@
 <app-centered-button label="Agregar categoría" (onClick)="addCategory()"></app-centered-button>
 
 <ul>
-    <app-category-tier (openModalWithComponent)="openModalWithComponent()" *ngFor='let category of hhtpService.categorias' [name]='category.nombre' [id]='category.codigo'></app-category-tier>
+    <app-category-tier (openModalWithComponent)="openModalWithComponent(category)" *ngFor='let category of hhtpService.categorias' [name]='category.nombre' [id]='category.codigo'></app-category-tier>
 </ul>
   </div>
 </div>

@@ -15,7 +15,10 @@
     public string Usuario { get; set; }
     public string Password { get; set; }
 
+        public Afiliaciones()
+    {
 
+    }
         public Afiliaciones(string productProvincia, string productCanton, string productDistrito, string productCedula, string productNombre, string productApellido, string productDireccion, string productNacimiento, string productTelefono, string productSINPE, string productPedidos, string productUsuario, string productPassword)
         {
             Cedula = productCedula;

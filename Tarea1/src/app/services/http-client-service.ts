@@ -10,7 +10,7 @@ import {catchError} from 'rxjs/operators';
 export class HttpClientService {
   // `http://localhost:5000/api/`
   // `https://localhost:5001/api/`
-  static URL = `https://localhost:5001/api/`;
+  static URL = `http://localhost/server/api/`;
   categorias: any = {};
   afiliaciones: any = {};
   tops: any = {};

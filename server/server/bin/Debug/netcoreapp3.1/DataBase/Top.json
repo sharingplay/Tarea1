@@ -3,7 +3,7 @@
         "Total": [
           "Manzanas",
           "Naranjas",
-          "Limón",
+          "Limon",
           "Jocotes",
           "Aguacate",
           "Culantro",
@@ -14,18 +14,18 @@
         ],
         "Ganancias": [
           "Aguacate",
-          "Limón",
+          "Limon",
           "Pollo",
           "Jocotes",
           "Naranjas",
           "Fresa",
           "Banano",
-          "Sandía",
+          "Sandia",
           "Pescado",
           "Papaya"
         ],
         "Clientes": [
-          "Fabián Ramírez",
+          "Fabian Ramirez",
           "Mario Araya",
           "Wajib Zaghul",
           "Mariana Vargas",
@@ -38,16 +38,16 @@
         ],
         "Vendidos": [
       {
-        "nombre": "Fabián Ramírez",
+        "nombre": "Fabian Ramirez",
         "productos": [
           "Aguacate",
-          "Limón",
+          "Limon",
           "Pollo",
           "Jocotes",
           "Naranjas",
           "Fresa",
           "Banano",
-          "Sandía",
+          "Sandia",
           "Pescado",
           "Papaya"
         ]
@@ -86,18 +86,17 @@
         "nombre": "Wajib Zagul",
         "productos": [
           "Jocotes",
-          "Limón",
+          "Limon",
           "Pollo",
           "Aguacate",
           "Pescado",
           "Naranjas",
           "Fresa",
-          "Sandía",
+          "Sandia",
           "Banano",
           "Papaya"
         ]
       }
-
     ]
   }
 ]

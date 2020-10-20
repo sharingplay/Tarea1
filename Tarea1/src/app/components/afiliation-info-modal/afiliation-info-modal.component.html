@@ -13,16 +13,17 @@
             <h4 class="modal-text">Nombre: {{productorPropio.nombre}}</h4>
             <h4 class="modal-text">Apellidos: {{productorPropio.apellidos}}</h4>
             <h4 class="modal-text">Cédula:  {{productorPropio.cedula}}</h4>
-            <h4 class="modal-text">Dirección:  {{productorPropio.direccion.provincia}}, {{productorPropio.direccion.canton}}, {{productorPropio.direccion.distrito}}</h4>
-            <h4 class="modal-text">Fecha de nacimiento:  {{productorPropio.fechaNacimiento}}</h4>
+            <h4 class="modal-text">Dirección:  {{productorPropio.Provincia}}, {{productorPropio.canton}}, {{productorPropio.distrito}}</h4>
+            <h4 class="modal-text">Fecha de nacimiento:  {{productorPropio.nacimiento}}</h4>
             <h4 class="modal-text">Teléfono:  {{productorPropio.telefono}}</h4>
-            <h4 class="modal-text">SINPE móvil:  {{productorPropio.numeroSINPE}}</h4>
+            <h4 class="modal-text">SINPE móvil:  {{productorPropio.sinpe}}</h4>
             <h4 class="modal-text">Nombre de Usuario:  {{productorPropio.usuario}}</h4>
+            <h4 class="modal-text">Contraseña:  {{productorPropio.password}}</h4>
 
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Aceptar</button>
-              <button type="button" class="btn btn-primary btn-rejected">Rechazar</button>
+              <button type="button" class="btn btn-primary" (click)="aceptar()">Aceptar</button>
+              <button type="button" class="btn btn-primary btn-rejected" (click)="rechazar()">Rechazar</button>
             </div>
           </div>
         </div>

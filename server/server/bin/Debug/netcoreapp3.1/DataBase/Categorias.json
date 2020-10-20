@@ -1,14 +1,1 @@
-[
-    {
-        "Codigo": "car01",
-        "Nombre": "Carnes"
-    },
-    {
-        "Codigo": "car02",
-        "Nombre": "Papa"
-    },
-    {
-        "Codigo": "car03",
-        "Nombre": "Yuca"
-    }
-]
+[{"Codigo":"ca01","Nombre":"Carne"},{"Codigo":"veg","Nombre":"Vegetales"},{"Codigo":"leg","Nombre":"Legumbres"}]

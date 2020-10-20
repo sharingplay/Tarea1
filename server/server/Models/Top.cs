@@ -7,17 +7,17 @@ namespace server.Models
 {
     public class Top
     {
-        public string Total { get; set; }
-        public string Ganancias { get; set; }
-        public string Vendidos { get; set; }
-        public string Clientes { get; set; }
+        public List<string> Total { get; set; }
+        public List<string> Ganancias { get; set; }
+        public List<object> Vendidos { get; set; }
+        public List<string> Clientes { get; set; }
 
         public Top()
         {
 
         }
 
-        public Top(string topTotal, string topGanancia, string topVendidos, string topClientes)
+        public Top(List<string> topTotal, List<string> topGanancia, List<object> topVendidos, List<string> topClientes)
         {
             Total = topTotal;
             Ganancias = topGanancia;

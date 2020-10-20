@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {HttpClientService} from '../../services/http-client-service';
 
 
 // @ts-ignore
@@ -10,7 +11,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./category-tier.component.scss']
 })
 export class CategoryTierComponent implements OnInit {
-  constructor() { }
+  constructor(public  hhtpService: HttpClientService) { }
 
   @Input() id;
   @Input() name;
@@ -20,6 +21,13 @@ export class CategoryTierComponent implements OnInit {
   }
 
   openModal(): void{
-    this.openModalWithComponent.emit();
+    // @ts-ignore
+    this.openModalWithComponent.emit(this.deleteCategory);
+  }
+  deleteCategory(): void{
+    this.hhtpService.post(HttpClientService.URL + 'Categorias/delete' ,
+      {
+        Codigo: this.id,
+      });
   }
 }

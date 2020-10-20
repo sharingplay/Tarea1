@@ -8,47 +8,50 @@ import {catchError} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HttpClientService {
- categorias: any = {};
- afiliaciones: any = {};
- tops: any = {};
- clientes: any = {};
- pedidos: any = {};
- productores: any = {};
- productos: any = {};
+  // `http://localhost:5000/api/`
+  // `https://localhost:5001/api/`
+  static URL = `https://localhost:5001/api/`;
+  categorias: any = {};
+  afiliaciones: any = {};
+  tops: any = {};
+  clientes: any = {};
+  pedidos: any = {};
+  productores: any = {};
+  productos: any = {};
 
   constructor(private http: HttpClient) {
    console.log('Service Running');
-   http.get('http://localhost/server/api/Categorias')
+   http.get(HttpClientService.URL + 'Categorias')
      .subscribe(resp => {
        this.categorias = resp;
      });
-   http.get('http://localhost/server/api/Pedidos')
+   http.get(HttpClientService.URL + 'Pedidos')
       .subscribe(resp => {
         this.pedidos = resp;
       });
    // Cambiar este URL
-   http.get('../../assets/data/afiliaciones.json')
+   http.get(HttpClientService.URL + 'Afiliaciones')
      .subscribe((resp: HttpResponse<any>) => {
        this.afiliaciones = resp;
      });
    // Cambiar este
-   http.get('../../assets/data/topTen.json')
+   http.get(HttpClientService.URL + 'Top')
       .subscribe((resp: HttpResponse<any>) => {
         this.tops = resp;
       });
-   http.get('http://localhost/server/api/Clientes')
+   http.get(HttpClientService.URL + 'Clientes')
       .subscribe((resp: HttpResponse<any>) => {
         this.clientes = resp;
       });
-   http.get('http://localhost/server/api/Pedidos')
+   http.get(HttpClientService.URL + 'Pedidos')
       .subscribe((resp: HttpResponse<any>) => {
         this.pedidos = resp;
       });
-   http.get('http://localhost/server/api/Productores')
+   http.get(HttpClientService.URL + 'Productores')
       .subscribe((resp: HttpResponse<any>) => {
         this.productores = resp;
       });
-   http.get('http://localhost/server/api/Productos')
+   http.get(HttpClientService.URL + 'Productos')
       .subscribe((resp: HttpResponse<any>) => {
         this.productos = resp;
       });

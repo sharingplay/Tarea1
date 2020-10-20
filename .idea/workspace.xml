@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caf4559-420e-4bd0-b41c-a73ea6da3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/delete-category-modal/delete-category-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/components/afiliation-tier/afiliation-tier.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/administracion-afiliaciones/administracion-afiliaciones.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-administradores.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-administradores.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/components/products-per-producer/products-per-producer.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/src/app/views/vista-administradores/vista-reportes/vista-reportes.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +64,8 @@
       <workItem from="1601863283797" duration="3062000" />
       <workItem from="1601935380296" duration="6649000" />
       <workItem from="1602197896800" duration="4553000" />
+      <workItem from="1602552454799" duration="971000" />
+      <workItem from="1602816644525" duration="3148000" />
     </task>
     <servers />
   </component>
@@ -78,6 +88,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="91" key="#Inspections" timestamp="1602643720228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824/-3840.-1076.1280.680@0.0.1536.824" timestamp="1602643720228" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602467799109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -91,10 +105,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601436142308" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601772598978">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602559043976">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-1076.1280.680@0.0.1536.824" timestamp="1602559043976" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.0.1280.680@0.0.1536.824" timestamp="1601772598978" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601440088516" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tarea1/src/app/components/category-tier/category-tier.component.ts</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,17 +1,19 @@
 .themed-grid-col {
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 1px solid rgba(86, 61, 124, .2);
+  border: 1px solid darkslategrey;
   font-family: Helvetica, serif;
-  background-color: lightgrey;
+  background-color: lightgoldenrodyellow;
+  color: darkslategrey;
+
 
 }
 
 .themed-grid-col-btn {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: rgba(555, 555, 555, 1);
-  border: 1px solid rgba(555, 555, 555, 1);
+  background-color: transparent;
+  border: 1px solid transparent;
   font-family: Helvetica, serif;
 }
 
@@ -110,6 +112,7 @@ html {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+
 }
 
 .col {

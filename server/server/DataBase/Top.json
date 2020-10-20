@@ -1,3 +1,102 @@
 [
-
+    {
+        "Total": [
+          "Manzanas",
+          "Naranjas",
+          "Limon",
+          "Jocotes",
+          "Aguacate",
+          "Culantro",
+          "Yuca",
+          "Papas",
+          "Bananos",
+          "Fresa"
+        ],
+        "Ganancias": [
+          "Aguacate",
+          "Limon",
+          "Pollo",
+          "Jocotes",
+          "Naranjas",
+          "Fresa",
+          "Banano",
+          "Sandia",
+          "Pescado",
+          "Papaya"
+        ],
+        "Clientes": [
+          "Fabian Ramirez",
+          "Mario Araya",
+          "Wajib Zaghul",
+          "Mariana Vargas",
+          "Marco Rivera",
+          "Lionel Messi",
+          "Oscar Hernandez",
+          "Miguel Coto",
+          "Diego Benitez",
+          "Alejandro Rojas"
+        ],
+        "Vendidos": [
+      {
+        "nombre": "Fabian Ramirez",
+        "productos": [
+          "Aguacate",
+          "Limon",
+          "Pollo",
+          "Jocotes",
+          "Naranjas",
+          "Fresa",
+          "Banano",
+          "Sandia",
+          "Pescado",
+          "Papaya"
+        ]
+      },
+      {
+        "nombre": "Mario Araya",
+        "productos": [
+          "Pollo",
+          "Pescado",
+          "Alas de pollo",
+          "Costillas",
+          "Muslos",
+          "Filets",
+          "Pollo entero",
+          "Lomo",
+          "Bufalo",
+          "Chuleta"
+        ]
+      },
+      {
+        "nombre": "Mariana Vargas",
+        "productos": [
+          "Culantro",
+          "Cilantro",
+          "Cebollino",
+          "Pimienta",
+          "Sal",
+          "Lechuga",
+          "Repollo",
+          "Coliflor",
+          "Zanahoria",
+          "Brocoli"
+        ]
+      },
+      {
+        "nombre": "Wajib Zagul",
+        "productos": [
+          "Jocotes",
+          "Limon",
+          "Pollo",
+          "Aguacate",
+          "Pescado",
+          "Naranjas",
+          "Fresa",
+          "Sandia",
+          "Banano",
+          "Papaya"
+        ]
+      }
+    ]
+  }
 ]

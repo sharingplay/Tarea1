@@ -1,26 +1,30 @@
 <app-header-admin></app-header-admin>
+<div class ="imagenFondo">
+  <div class="container">
 
-<app-title text="Vista de Reportes"></app-title>
-<app-subtitle text="Reportes acerca del top 10 de distintas categorías"></app-subtitle>
+    <app-title text="Vista de Reportes"></app-title>
+    <app-subtitle text="Reportes acerca del top 10 de distintas categorías"></app-subtitle>
 
-<div class="container">
-  <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.masVendidos, 'Más Vendidos')">Productos más vendidos</button>
-  </div>
-</div>
-<div class="container">
-  <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.masGanancias, 'Más ganancias')">Productos con más ganancias</button>
-  </div>
-</div>
-<div class="container">
-  <div class="center">
-    <button class="bton" (click)="showReport(hhtpService.tops.tops.clientesMasCompras, 'Clientes con más compras')">Clientes con más compras</button>
-  </div>
-</div>
-<div class="container">
-  <div class="center">
-    <button routerLink="/ProductosPorProductor"  class="bton">Productos más vendidos por productor</button>
-  </div>
-</div>
+    <div class="container">
+      <div class="center">
+        <button class="bton" (click)="showReport(hhtpService.tops[0].total, 'Más Vendidos')">Productos más vendidos</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center">
+        <button class="bton" (click)="showReport(hhtpService.tops[0].ganancias, 'Más ganancias')">Productos con más ganancias</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center">
+        <button class="bton" (click)="showReport(hhtpService.tops[0].clientes, 'Clientes con más compras')">Clientes con más compras</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center">
+        <button routerLink="/ProductosPorProductor"  class="bton">Productos más vendidos por productor</button>
+      </div>
+    </div>
 
+  </div>
+</div>

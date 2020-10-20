@@ -2,7 +2,7 @@
   height: 120px;
   width: auto;
   position: relative;
-  border: 3px solid white;
+  border: 3px solid transparent;
 }
 
 .center {
@@ -14,8 +14,7 @@
   transform: translate(-50%, -50%);
 }
 .bton {
-  color: #fff;
-  border-radius: 4px;
+  color: lightgoldenrodyellow;
   background: #5AADF2;
   text-decoration: none;
   transition: all 0.4s;
@@ -27,4 +26,11 @@
   outline: none !important;
   font-family: Helvetica, Serif, serif;
   font-size: 30px;
+}
+
+.imagenFondo {
+  position: relative;
+  height: 1200px;
+  background: url("../../../../../../image/granja.jpg");
+  background-size: cover;
 }

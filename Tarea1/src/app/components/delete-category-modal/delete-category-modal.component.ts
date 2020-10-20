@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {BsModalRef} from 'ngx-bootstrap/modal';
 
 @Component({
@@ -11,9 +11,15 @@ export class DeleteCategoryModalComponent implements OnInit {
   title: string;
   closeBtnName: string;
   list: any[] = [];
+  @Output() whoDelete: EventEmitter<string> = new EventEmitter();
+  hideModal = false;
   constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
+  }
+  // tslint:disable-next-line:typedef
+  close() {
+    this.hideModal = true;
   }
 
 }
